@@ -12,6 +12,8 @@ struct ListView : View {
 //MARK: - Input required
     @State var listArray : [generalContentModel]
     @State var title : String
+    @State var navigateToDetail : Bool = false
+    @State var navData : generalContentModel?
 //MARK: - Other variables
     @Environment(\.dismiss) private var dismiss
 
@@ -43,14 +45,25 @@ struct ListView : View {
                 } else {
                     ScrollView(showsIndicators: false) {
                         ForEach(listArray, id: \.id){ data in
-                            ComponentListCardView(cardData: data)
+                            ComponentListCardView(cardData: data, viewButtonCallback: {
+                                handleNavigationToList(data: data)
+                            })
                                 .padding(.vertical,3)
                         }
                     }
                 }
             }.padding(.horizontal)
         }.navigationBarBackButtonHidden(true)
+            .navigationDestination(isPresented: $navigateToDetail) {
+                TopDetailView(data: navData)
+              }
     }
+    
+    func handleNavigationToList(data : generalContentModel){
+        navData = data
+        navigateToDetail = true
+    }
+    
 }
 #Preview {
     ListView(listArray: sampleListData, title: "custom Component")

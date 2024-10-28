@@ -24,9 +24,7 @@ struct homeCategoryCardView : View {
                     .bold()
                     .padding(.vertical,6)
                     
-            }.modifier(ViewTapGesture(){
-                
-            })
+            }
         }
     }
 }

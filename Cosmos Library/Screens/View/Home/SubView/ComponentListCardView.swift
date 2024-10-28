@@ -10,16 +10,19 @@ import SwiftUI
 
 struct ComponentListCardView : View {
     @State var cardData : generalContentModel
+    var viewButtonCallback : (() -> Void)?
     var body: some View {
         ZStack{
             VStack{
                 HStack(alignment:.top){
-                    Image(cardData.mainImage)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 130, height: 125)
-                        .cornerRadius(15, corners: .bottomLeft)
-                        .cornerRadius(15, corners: .topLeft)
+                    if cardData.mainImage != ""{
+                        Image(cardData.mainImage)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 130, height: 125)
+                            .cornerRadius(15, corners: .bottomLeft)
+                            .cornerRadius(15, corners: .topLeft)
+                    }
                     VStack(alignment:.leading, spacing: 5){
                         Text(cardData.mainTitle)
                             .bold()
@@ -36,7 +39,7 @@ struct ComponentListCardView : View {
                             .bold()
                             .modifier(buttonView())
                             .modifier(ViewTapGesture(lowerScale: 0.95){
-
+                                viewButtonCallback?()
                             })
                         }
                     }.padding(.horizontal)

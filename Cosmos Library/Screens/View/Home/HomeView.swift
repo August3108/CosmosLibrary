@@ -47,17 +47,16 @@ struct HomeView : View {
                                     handleNavigationToList(title: "Custom Component", listArray: sampleListData)
                                 })
                             Text(" ")
-                            homeCategoryCardView(name: "System Component", img: "systemComponent")
+                            homeCategoryCardView(name: "Interview Question", img: "systemComponent")
                                 .modifier(ViewTapGesture(){
-                                    print("clicked")
-                                    handleNavigationToList(title: "Systen Component", listArray: [])
+                                    handleNavigationToList(title: "Interview Question", listArray: interviewQuestionDataArray)
                                 })
 
                         }.padding(.vertical)
 
                     }
                     
-                    FormTextField(label: "Hellp", hint: "enter", inputBinding: $navListTitle, regex: "^[0-9]{0,2}[A-Z]{0,5}[0-9]{0,4}[A-Z]{0,1}[A-Z0-9]{0,1}Z{0,1}[A-Z0-9]{0,1}$")
+                    
                     Spacer()
                 }.padding(.horizontal)
                 VStack{
