@@ -46,7 +46,7 @@ struct ComponentListCardView : View {
                         .padding(.vertical,5)
                     Spacer()
                 }.frame(height: 125)
-            }.modifier(paddedOverlay(paddingAmount: 0, cornerRadius: 15))
+            }
 
         }.modifier(cardView())
     }

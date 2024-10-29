@@ -44,7 +44,7 @@ struct HomeView : View {
                             homeCategoryCardView(name: "Custom Component", img: "customComponent")
                                 .modifier(ViewTapGesture(){
                                     print("clicked")
-                                    handleNavigationToList(title: "Custom Component", listArray: sampleListData)
+                                    handleNavigationToList(title: "Custom Component", listArray: customComponentModelArray)
                                 })
                             Text(" ")
                             homeCategoryCardView(name: "Interview Question", img: "systemComponent")
@@ -53,6 +53,10 @@ struct HomeView : View {
                                 })
 
                         }.padding(.vertical)
+                        homeCategoryCardView(name: "Interview Question", img: "systemComponent")
+                        .modifier(ViewTapGesture(){
+                            handleNavigationToList(title: "Interview Question", listArray: UIKITQuestionArray)
+                        }).padding(.vertical)
 
                     }
                     

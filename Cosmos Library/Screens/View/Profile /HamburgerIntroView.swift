@@ -18,10 +18,12 @@ struct HamburgerHeaderView: View {
             Text("About App")
                 .bold()
                 .font(.system(size: 20))
+                .foregroundColor(Color.primarycolor)
                 .underline()
                 .padding()
             Spacer()
             Image(systemName: "xmark")
+                .foregroundColor(Color.primarycolor)
                 .modifier(ViewTapGesture() {
                         DispatchQueue.main.async{
                             withAnimation {
@@ -52,6 +54,7 @@ struct HamburgerFooterView: View {
             HStack {
                 Spacer()
                 Text("Created By")
+                    .foregroundColor(Color.primarycolor)
                     .bold()
                     .font(.system(size: 20))
                     .underline()
@@ -65,9 +68,11 @@ struct HamburgerFooterView: View {
                     .cornerRadius(50)
                 VStack {
                     Text("Rahul Jha")
+                        .foregroundColor(Color.primarycolor)
                         .font(.system(size: 20))
                         .bold()
                     Text("iOS Developer")
+                        .foregroundColor(Color.primarycolor)
                         .font(.system(size: 12))
                 }.padding(.horizontal)
                 Spacer()
@@ -76,9 +81,7 @@ struct HamburgerFooterView: View {
             }
             .modifier(paddedOverlay())
             .padding(.vertical)
-            .modifier(ViewTapGesture(lowerScale: 0.95) {
-                navigateToProfile = true
-            })
+            
         }
     }
 }
@@ -96,6 +99,11 @@ struct HamburgerIntroView: View {
                 withAnimation{
                     Color.black.opacity(0.3)
                         .ignoresSafeArea(.all)
+                        .onTapGesture {
+                            withAnimation{
+                                showHamburger = false
+                            }
+                        }
                 }
             }
             if showHamburger {

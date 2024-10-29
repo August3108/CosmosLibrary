@@ -33,6 +33,10 @@ struct TopDetailView: View {
                 Text("\n")
                     .font(.system(size: 9))
                 ScrollView(showsIndicators: false) {
+                    Text(data?.mainDescription ?? "")
+                        .multilineTextAlignment(.leading)
+                        .font(.system(size: 14))
+                    
                     if let descriptionArray = data?.viewComponentDescription{
                         ForEach(descriptionArray, id: \.id){ data in
                             topDetailViewSubView(cardData: data)
@@ -67,8 +71,24 @@ struct topDetailViewSubView: View {
                 .padding(.bottom, 2)
         }
         if let code = cardData?.code, code != "" {
-            codeHighlighterView(codeString: code)
-                .font(.system(size: 14))
+            ScrollView(.horizontal, showsIndicators: false){
+                codeHighlighterView(codeString: code)
+                    .font(.system(size: 14))
+            }
+        }
+        if let view = cardData?.sampleView {
+            HStack{
+                VStack{
+                    Divider()
+                }
+                Text(" Code Output ")
+                    .font(.system(size: 8))
+                VStack{
+                    Divider()
+                }
+            }
+            view
+            Divider()
         }
         
     }
