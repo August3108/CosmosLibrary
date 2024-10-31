@@ -14,6 +14,8 @@ struct ListView : View {
     @State var title : String
     @State var navigateToDetail : Bool = false
     @State var navData : generalContentModel?
+    @State var searchString : String = ""
+    @State var showListWithEmptySearch : Bool = true
 //MARK: - Other variables
     @Environment(\.dismiss) private var dismiss
 
@@ -43,19 +45,37 @@ struct ListView : View {
                         .multilineTextAlignment(.center)
                     Spacer()
                 } else {
+                    SearchBar(searchHint: "Search...", delaySecond: 0.5, searchBar: $searchString, searchAction: {
+                        
+                    }).modifier(paddedOverlay(strokeColor: Color.textcolor.opacity(0.7), paddingAmount: 10))
+                        .padding(.bottom, 10)
                     ScrollView(showsIndicators: false) {
-                        ForEach(listArray, id: \.id){ data in
-                            ComponentListCardView(cardData: data, viewButtonCallback: {
-                                handleNavigationToList(data: data)
-                            })
-                                .padding(.vertical,3)
+                        if searchString != ""{
+                            let elements = searchAndRank(listArray: listArray, searchString: searchString)
+                            ForEach(elements, id: \.id){ data in
+                                if  isKeyContained(data: data){
+                                    ComponentListCardView(cardData: data, viewButtonCallback: {
+                                        handleNavigationToList(data: data)
+                                    })
+                                    .padding(.vertical,3)
+                                }
+                            }
+                        }else{
+                            ForEach(listArray, id: \.id){ data in
+                                if  isKeyContained(data: data){
+                                    ComponentListCardView(cardData: data, viewButtonCallback: {
+                                        handleNavigationToList(data: data)
+                                    })
+                                    .padding(.vertical,3)
+                                }
+                            }
                         }
                     }
                 }
             }.padding(.horizontal)
         }.navigationBarBackButtonHidden(true)
             .navigationDestination(isPresented: $navigateToDetail) {
-                TopDetailView(data: navData)
+                TopDetailView2(data: navData)
               }
     }
     
@@ -63,6 +83,116 @@ struct ListView : View {
         navData = data
         navigateToDetail = true
     }
+    func isKeyContained(data: generalContentModel) -> Bool {
+        let searchWords = searchString.lowercased().components(separatedBy: " ")
+
+        var matches = 0
+        var checkedCharacters = Set<Character>() // Track characters checked in mainTitle
+
+        if data.mainTitle.lowercased().contains(where: { character in
+            if !checkedCharacters.contains(character) {
+                if searchWords.contains(where: { word in
+                    return word.contains(character)
+                }) {
+                    matches += 1
+                    checkedCharacters.insert(character) // Mark character as checked
+                    return true
+                }
+            }
+            return false
+        }) {
+            
+        }
+
+        
+        for keyword in data.keywords {
+            if keyword.lowercased().contains(where: { character in
+                // Check if character is already checked
+                if !checkedCharacters.contains(character) {
+                    // Check if character exists in any search word
+                    if searchWords.contains(where: { word in
+                        return word.contains(character)
+                    }) {
+                        matches += 1
+                        checkedCharacters.insert(character) // Mark character as checked
+                        return true // Stop checking further characters in keyword
+                    }
+                }
+                return false
+            }) {
+                
+            }
+        }
+
+        let matchPercentage = Double(matches) / Double(searchWords.count)
+        return matchPercentage >= 1.0 || (searchString == "" && showListWithEmptySearch)
+    }
+    
+    func searchAndRank(listArray: [generalContentModel], searchString: String) -> [generalContentModel] {
+        let searchWords = searchString.lowercased().components(separatedBy: " ").filter { !$0.isEmpty }
+        let fullSearchString = searchString.lowercased()
+        var rankedArray: [(generalContentModel, Int)] = []
+
+        // Early return if the search string is empty
+        guard !searchWords.isEmpty else { return listArray }
+
+        for data in listArray {
+            var score = 0
+            var matchedWords = Set<String>()
+            
+            // Title matching
+            let title = data.mainTitle.lowercased()
+
+            // Check for matches of each search word in the title
+            for word in searchWords {
+                if title.contains(word) {
+                    score += 100
+                    matchedWords.insert(word)
+                }
+            }
+
+            // Check for substring match for the full search string
+            if title.contains(fullSearchString) {
+                score += 50
+                rankedArray.append((data, score))
+                continue // Skip to the next item if there's a match in the title
+            }
+
+            // Skip individual search word matching if there's a title match
+            // Check for individual search words in title (only if no word was matched)
+            if matchedWords.isEmpty {
+                for word in searchWords {
+                    if title.contains(word) {
+                        score += 25
+                        matchedWords.insert(word)
+                    }
+                }
+            }
+
+            // Keyword matching (only if no title match was found)
+            for keyword in data.keywords {
+                let keywordWords = keyword.lowercased().components(separatedBy: " ")
+                for word in keywordWords {
+                    if searchWords.contains(word) {
+                        score += 15
+                        matchedWords.insert(word)
+                    }
+                }
+            }
+
+            rankedArray.append((data, score))
+        }
+
+        rankedArray.sort { $0.1 > $1.1 }
+        
+        return rankedArray.map { $0.0 }
+    }
+
+
+
+
+
+    
     
 }
 #Preview {

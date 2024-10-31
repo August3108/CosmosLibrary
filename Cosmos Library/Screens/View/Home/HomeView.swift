@@ -32,6 +32,15 @@ struct HomeView : View {
                             })
                         Spacer()
                         Image(systemName: "magnifyingglass")
+                            .modifier(ViewTapGesture{
+                                var elements : [generalContentModel] = []
+                                elements.append(contentsOf: interviewQuestionDataArray)
+                                elements.append(contentsOf: customComponentModelArray)
+                                elements.append(contentsOf: UIKITQuestionArray)
+                                /// NOTE THE MARK BELOW
+                                handleNavigationToList(title: "Search Topic", listArray: elements)
+                                // MARK: this title affect search logic
+                            })
 
                     }.padding(.vertical)
                     ScrollView(showsIndicators:false){
@@ -69,8 +78,9 @@ struct HomeView : View {
             }
 //            MARK: navigations Here
             .navigationDestination(isPresented: $navigateToListView) {
-                ListView(listArray: navListArray,
-                         title: navListTitle)
+                ListView(listArray: navListArray,title: navListTitle)
+//                interviewQuestionSwiftTestDuplicate()
+//                ContentView()
               }
             .navigationDestination(isPresented: $navigateToProfile) {
                 MyResumeView().navigationBarBackButtonHidden(true)

@@ -68,19 +68,23 @@ struct HamburgerFooterView: View {
                     .cornerRadius(50)
                 VStack {
                     Text("Rahul Jha")
-                        .foregroundColor(Color.primarycolor)
                         .font(.system(size: 20))
                         .bold()
                     Text("iOS Developer")
-                        .foregroundColor(Color.primarycolor)
                         .font(.system(size: 12))
                 }.padding(.horizontal)
                 Spacer()
                 Image(systemName: "chevron.right")
-                    .foregroundColor(Color.primarycolor)
             }
-            .modifier(paddedOverlay())
-            .padding(.vertical)
+            
+            .padding(.vertical,5)
+            .padding()
+            .background(Color.black.opacity(0.2))
+            .modifier(paddedOverlay(paddingAmount: 0, cornerRadius: 10))
+            .cornerRadius(10)
+            .modifier(ViewTapGesture(){
+                navigateToProfile = true
+            })
             
         }
     }

@@ -11,6 +11,7 @@
 		6441CC4A2CCFCAA1007210B9 /* InterviewQuestionUIKIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6441CC492CCFCAA1007210B9 /* InterviewQuestionUIKIT.swift */; };
 		6441CC4C2CCFDF92007210B9 /* CustomComponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6441CC4B2CCFDF92007210B9 /* CustomComponentModel.swift */; };
 		6445754F2C9AC2EC00B8DD67 /* CoreAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6445754E2C9AC2EC00B8DD67 /* CoreAnimation.swift */; };
+		646AD49D2CD2472700D3BB0A /* wordSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AD49C2CD2472700D3BB0A /* wordSearch.swift */; };
 		64710D112C746908004A900D /* PlayGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64710D102C746908004A900D /* PlayGround.swift */; };
 		647659D12C904E460079C31C /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647659D02C904E460079C31C /* CoreData.swift */; };
 		647659D62C904F200079C31C /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647659D52C904F200079C31C /* CoreDataController.swift */; };
@@ -99,6 +100,7 @@
 		6441CC492CCFCAA1007210B9 /* InterviewQuestionUIKIT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewQuestionUIKIT.swift; sourceTree = "<group>"; };
 		6441CC4B2CCFDF92007210B9 /* CustomComponentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomComponentModel.swift; sourceTree = "<group>"; };
 		6445754E2C9AC2EC00B8DD67 /* CoreAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimation.swift; sourceTree = "<group>"; };
+		646AD49C2CD2472700D3BB0A /* wordSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordSearch.swift; sourceTree = "<group>"; };
 		64710D102C746908004A900D /* PlayGround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGround.swift; sourceTree = "<group>"; };
 		647659D02C904E460079C31C /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		647659D52C904F200079C31C /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				647A72752C71F201008EA5D9 /* CountDownTimer.swift */,
 				647A72762C71F201008EA5D9 /* OTPBox.swift */,
 				647A72772C71F201008EA5D9 /* TabGenerator.swift */,
+				646AD49C2CD2472700D3BB0A /* wordSearch.swift */,
 			);
 			path = "Custom Components";
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				647A72C02C71F201008EA5D9 /* ResumeData.swift in Sources */,
 				647A72CF2C71F201008EA5D9 /* FileDownload.swift in Sources */,
 				647A72C72C71F201008EA5D9 /* ListView.swift in Sources */,
+				646AD49D2CD2472700D3BB0A /* wordSearch.swift in Sources */,
 				647A72B92C71F201008EA5D9 /* CountDownTimer.swift in Sources */,
 				647A72BA2C71F201008EA5D9 /* OTPBox.swift in Sources */,
 				6445754F2C9AC2EC00B8DD67 /* CoreAnimation.swift in Sources */,
