@@ -6,7 +6,7 @@ Custom Components: Easily reusable components tailored for your needs.
 Utility Functions: A set of commonly used functions to simplify your code.
 Rapid Development: Streamlined development processes with pre-built components.
 
-QuickView Url : 
+QuickView Url : https://youtu.be/zMyw73mpZxE
 
 **Installation**
 Clone the repository:
