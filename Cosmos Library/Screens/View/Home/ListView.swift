@@ -75,7 +75,7 @@ struct ListView : View {
             }.padding(.horizontal)
         }.navigationBarBackButtonHidden(true)
             .navigationDestination(isPresented: $navigateToDetail) {
-                TopDetailView2(data: navData)
+                TopDetailView(data: navData)
               }
     }
     

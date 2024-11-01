@@ -29,7 +29,7 @@ struct SearchBar_Preview: View {
     var body: some View {
         VStack{
             SearchBar(searchHint: "Search", delaySecond: 0.4, searchBar: $searchText) {
-                print("searching for \(searchText)")
+                Text("searching for \(searchText)")
             }
             .padding()
         }

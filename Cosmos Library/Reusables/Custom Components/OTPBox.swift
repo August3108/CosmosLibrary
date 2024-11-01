@@ -97,3 +97,11 @@ extension Binding where Value == String{
     }
 }
 
+struct OTPBoxPreview : View {
+    @State private var otp = ""
+    var body: some View {
+        OTPBoxView(otpText: $otp, autoCompleteFunc: {
+            print("ehllo")
+        })
+    }
+}

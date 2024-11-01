@@ -75,6 +75,7 @@
 		64D136DF2CCF2AE700322DD2 /* InterviewQuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D136DE2CCF2AE700322DD2 /* InterviewQuestionData.swift */; };
 		64D136E12CCF33C700322DD2 /* TopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D136E02CCF33C700322DD2 /* TopDetailView.swift */; };
 		64D136E42CCF354F00322DD2 /* HighlightSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 64D136E32CCF354F00322DD2 /* HighlightSwift */; };
+		64DC7C342CD3F19900FBA7CB /* birdGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 64DC7C332CD3F19900FBA7CB /* birdGif.gif */; };
 		64E363B92CB6911C0039F868 /* shakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E363B82CB6911C0039F868 /* shakeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +167,7 @@
 		647A729F2C71F201008EA5D9 /* ImageSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
 		64D136DE2CCF2AE700322DD2 /* InterviewQuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewQuestionData.swift; sourceTree = "<group>"; };
 		64D136E02CCF33C700322DD2 /* TopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDetailView.swift; sourceTree = "<group>"; };
+		64DC7C332CD3F19900FBA7CB /* birdGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = birdGif.gif; sourceTree = "<group>"; };
 		64E363B82CB6911C0039F868 /* shakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shakeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -472,6 +474,7 @@
 		647A72972C71F201008EA5D9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				64DC7C322CD3F13600FBA7CB /* GIF Resources */,
 				647A72962C71F201008EA5D9 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -518,6 +521,14 @@
 				6441CC492CCFCAA1007210B9 /* InterviewQuestionUIKIT.swift */,
 			);
 			path = "Interview Question Data ";
+			sourceTree = "<group>";
+		};
+		64DC7C322CD3F13600FBA7CB /* GIF Resources */ = {
+			isa = PBXGroup;
+			children = (
+				64DC7C332CD3F19900FBA7CB /* birdGif.gif */,
+			);
+			path = "GIF Resources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -627,6 +638,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64DC7C342CD3F19900FBA7CB /* birdGif.gif in Resources */,
 				647A72392C71F1AD008EA5D9 /* Preview Assets.xcassets in Resources */,
 				647A72CD2C71F201008EA5D9 /* Assets.xcassets in Resources */,
 			);
@@ -882,6 +894,7 @@
 				DEVELOPMENT_TEAM = 9NC5QWVP85;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "App needs Permission to photos to showcase how upload works";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -911,6 +924,7 @@
 				DEVELOPMENT_TEAM = 9NC5QWVP85;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "App needs Permission to photos to showcase how upload works";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

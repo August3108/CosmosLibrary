@@ -31,6 +31,8 @@ struct HomeView : View {
                                 }
                             })
                         Spacer()
+                        gradientTextView()
+                        Spacer()
                         Image(systemName: "magnifyingglass")
                             .modifier(ViewTapGesture{
                                 var elements : [generalContentModel] = []
@@ -43,31 +45,94 @@ struct HomeView : View {
                             })
 
                     }.padding(.vertical)
-                    ScrollView(showsIndicators:false){
-                        homeCategoryCardView(name: "System Component", img: "systemComponent")
-                            .modifier(ViewTapGesture(){
-                                print("clicked")
-                                handleNavigationToList(title: "Systen Component", listArray: [])
+                    ScrollView(showsIndicators: false) {
+                        homeCategoryCardView(
+                            name: "System Component",
+                            lightGradient: LinearGradient(
+                                stops: [
+                                    Gradient.Stop(color: Color.blue.opacity(0.6), location: 0.0),
+                                    Gradient.Stop(color: Color.blue, location: 1.0)
+                                ],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            ),
+                            darkGradient: LinearGradient(
+                                colors: [Color.blue.opacity(0.6), Color.blue.opacity(0.9)],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        )
+                        .modifier(ViewTapGesture {
+                            handleNavigationToList(title: "System Component", listArray: [])
+                        })
+                        
+                        HStack {
+                            homeCategoryCardView(
+                                name: "Custom Component",
+                                lightGradient: LinearGradient(
+                                    stops: [
+                                        Gradient.Stop(color: Color.purple.opacity(0.7), location: 0.0),
+                                        Gradient.Stop(color: Color.pink.opacity(0.7), location: 1.0)
+                                    ],
+                                    startPoint: .leading,
+                                    endPoint: .trailing
+                                ),
+                                darkGradient: LinearGradient(
+                                    colors: [Color.purple.opacity(0.8), Color.pink.opacity(0.9)],
+                                    startPoint: .leading,
+                                    endPoint: .trailing
+                                )
+                            )
+                            .modifier(ViewTapGesture {
+                                handleNavigationToList(title: "Custom Component", listArray: customComponentModelArray)
                             })
-                        HStack{
-                            homeCategoryCardView(name: "Custom Component", img: "customComponent")
-                                .modifier(ViewTapGesture(){
-                                    print("clicked")
-                                    handleNavigationToList(title: "Custom Component", listArray: customComponentModelArray)
-                                })
-                            Text(" ")
-                            homeCategoryCardView(name: "Interview Question", img: "systemComponent")
-                                .modifier(ViewTapGesture(){
-                                    handleNavigationToList(title: "Interview Question", listArray: interviewQuestionDataArray)
-                                })
-
-                        }.padding(.vertical)
-                        homeCategoryCardView(name: "Interview Question", img: "systemComponent")
-                        .modifier(ViewTapGesture(){
-                            handleNavigationToList(title: "Interview Question", listArray: UIKITQuestionArray)
-                        }).padding(.vertical)
-
+                            
+                            Spacer()
+                            
+                            homeCategoryCardView(
+                                name: "UIKit Interview Question",
+                                lightGradient: LinearGradient(
+                                    stops: [
+                                        Gradient.Stop(color: Color.gray.opacity(0.6), location: 0.0),
+                                        Gradient.Stop(color: Color.black.opacity(0.6), location: 1.0)
+                                    ],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                ),
+                                darkGradient: LinearGradient(
+                                    colors: [Color.gray.opacity(0.7), Color.black.opacity(0.8)],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                )
+                            )
+                            .modifier(ViewTapGesture {
+                                handleNavigationToList(title: "UIKit Interview Question", listArray: UIKITQuestionArray)
+                            })
+                        }
+                        .padding(.vertical)
+                        
+                        homeCategoryCardView(
+                            name: "SwiftUI Interview Question",
+                            lightGradient: LinearGradient(
+                                stops: [
+                                    Gradient.Stop(color: Color.green.opacity(0.6), location: 0.0),
+                                    Gradient.Stop(color: Color.green, location: 1.0)
+                                ],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            ),
+                            darkGradient: LinearGradient(
+                                colors: [Color.green.opacity(0.7), Color.green.opacity(0.9)],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        )
+                        .modifier(ViewTapGesture {
+                            handleNavigationToList(title: "SwiftUI Interview Question", listArray: interviewQuestionDataArray)
+                        })
+                        .padding(.vertical)
                     }
+
                     
                     
                     Spacer()
@@ -98,3 +163,33 @@ struct HomeView : View {
 #Preview {
     HomeView()
 }
+
+
+struct gradientTextView : View {
+    @State var animateTextGradient = false
+    
+    var body: some View {
+        Text("Cosmos Library")
+            .font(.system(size: 20))
+            .fontWeight(.black)
+            .foregroundColor(Color.clear)
+            .background(
+                LinearGradient(colors: [.purple, Color.primary], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .hueRotation(.degrees(animateTextGradient ? 45 : 0))
+                    .onAppear{
+                        withAnimation(.easeInOut(duration: 2).repeatForever(autoreverses: true)){
+                            animateTextGradient.toggle()
+                        }
+                    }
+                    .mask(Text("Cosmos Library")
+                        .font(.system(size: 20))
+                        .fontWeight(.black)
+                          
+                    )
+            )
+            
+    }
+    
+}
+
+

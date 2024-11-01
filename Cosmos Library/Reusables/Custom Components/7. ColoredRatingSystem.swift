@@ -79,52 +79,63 @@ extension Color {
 struct RatingSystemSample: View {
     var body: some View {
         VStack {
-            ScrollView{
+            ScrollView(.horizontal){
                 Text("Rating:")
-                ColorRatingView(rating: 4.9)
-                ColorRatingView(rating: 4.8)
-                ColorRatingView(rating: 4.7)
-                ColorRatingView(rating: 4.6)
-                ColorRatingView(rating: 4.5)
-                ColorRatingView(rating: 4.4)
-                ColorRatingView(rating: 4.3)
-                ColorRatingView(rating: 4.3)
-                ColorRatingView(rating: 4.1)
-                ColorRatingView(rating: 4.0)
-                ColorRatingView(rating: 3.8)
-                ColorRatingView(rating: 3.7)
-                ColorRatingView(rating: 3.6)
-                ColorRatingView(rating: 3.5)
-                ColorRatingView(rating: 3.4)
-                ColorRatingView(rating: 3.3)
-                ColorRatingView(rating: 3.3)
-                ColorRatingView(rating: 3.1)
-                ColorRatingView(rating: 2.9)
-                ColorRatingView(rating: 2.8)
-                ColorRatingView(rating: 2.7)
-                ColorRatingView(rating: 2.6)
-                ColorRatingView(rating: 2.5)
-                ColorRatingView(rating: 2.4)
-                ColorRatingView(rating: 2.3)
-                ColorRatingView(rating: 2.3)
-                ColorRatingView(rating: 2.0)
-                ColorRatingView(rating: 1.9)
-                ColorRatingView(rating: 1.8)
-                ColorRatingView(rating: 1.7)
-                ColorRatingView(rating: 1.6)
-                ColorRatingView(rating: 1.5)
-                ColorRatingView(rating: 1.4)
-                ColorRatingView(rating: 1.3)
-                ColorRatingView(rating: 1.3)
-                ColorRatingView(rating: 1.1)
-                ColorRatingView(rating: 2.7)
-                ColorRatingView(rating: 0.9)
+                HStack{
+                    ColorRatingView(rating: 5.0)
+                    ColorRatingView(rating: 4.9)
+                    ColorRatingView(rating: 4.8)
+                    ColorRatingView(rating: 4.7)
+                    ColorRatingView(rating: 4.6)
+                    ColorRatingView(rating: 4.5)
+                    ColorRatingView(rating: 4.4)
+                    ColorRatingView(rating: 4.3)
+                    ColorRatingView(rating: 4.3)
+                    ColorRatingView(rating: 4.1)
+                    ColorRatingView(rating: 4.0)
+                }
+                HStack{
+                    ColorRatingView(rating: 3.9)
+                    ColorRatingView(rating: 3.8)
+                    ColorRatingView(rating: 3.7)
+                    ColorRatingView(rating: 3.6)
+                    ColorRatingView(rating: 3.5)
+                    ColorRatingView(rating: 3.4)
+                    ColorRatingView(rating: 3.3)
+                    ColorRatingView(rating: 3.3)
+                    ColorRatingView(rating: 3.1)
+                    ColorRatingView(rating: 3.0)
+                }
+                HStack{
+                    ColorRatingView(rating: 2.9)
+                    ColorRatingView(rating: 2.8)
+                    ColorRatingView(rating: 2.7)
+                    ColorRatingView(rating: 2.6)
+                    ColorRatingView(rating: 2.5)
+                    ColorRatingView(rating: 2.4)
+                    ColorRatingView(rating: 2.3)
+                    ColorRatingView(rating: 2.2)
+                    ColorRatingView(rating: 2.1)
+                    ColorRatingView(rating: 2.0)
+                }
+                HStack{
+                    
+                    ColorRatingView(rating: 1.9)
+                    ColorRatingView(rating: 1.8)
+                    ColorRatingView(rating: 1.7)
+                    ColorRatingView(rating: 1.6)
+                    ColorRatingView(rating: 1.5)
+                    ColorRatingView(rating: 1.4)
+                    ColorRatingView(rating: 1.3)
+                    ColorRatingView(rating: 1.2)
+                    ColorRatingView(rating: 1.1)
+                    ColorRatingView(rating: 1.0)
+                }
             }
         }
     }
 }
-
+    
 #Preview{
-        RatingSystemSample()
-    }
-
+    RatingSystemSample()
+}

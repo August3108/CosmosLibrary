@@ -34,6 +34,9 @@ struct FilePickerView: View {
                             }
             }  label: {
                 Image(imgName)
+                    .resizable()
+                    .frame(height: imgHeight)
+                    .frame(width: imgWidth)
             }
 
             if !selectedFileURLs.isEmpty, showPreview {
@@ -196,4 +199,18 @@ class PhotoLibraryPermissionManager {
             fatalError("Unknown status of PHPhotoLibrary authorization")
         }
     }
+}
+
+struct SampleFilePickerPreview: View {
+    @State private var selectedFileURLs: [URL] = []
+
+    var body: some View {
+        AnyView(
+            FilePickerView(selectedFileURLs: $selectedFileURLs)
+        )
+    }
+}
+
+#Preview{
+    SampleFilePickerPreview()
 }
