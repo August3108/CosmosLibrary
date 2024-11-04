@@ -75,6 +75,9 @@
 		64D136DF2CCF2AE700322DD2 /* InterviewQuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D136DE2CCF2AE700322DD2 /* InterviewQuestionData.swift */; };
 		64D136E12CCF33C700322DD2 /* TopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D136E02CCF33C700322DD2 /* TopDetailView.swift */; };
 		64D136E42CCF354F00322DD2 /* HighlightSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 64D136E32CCF354F00322DD2 /* HighlightSwift */; };
+		64D9A4422CD641C100315CD3 /* AnimatedTabGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9A4412CD641C100315CD3 /* AnimatedTabGenerator.swift */; };
+		64D9A4442CD641ED00315CD3 /* AnimatedRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9A4432CD641ED00315CD3 /* AnimatedRadio.swift */; };
+		64D9A4462CD6451700315CD3 /* AnimatedCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9A4452CD6451700315CD3 /* AnimatedCheckBox.swift */; };
 		64DC7C342CD3F19900FBA7CB /* birdGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 64DC7C332CD3F19900FBA7CB /* birdGif.gif */; };
 		64E363B92CB6911C0039F868 /* shakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E363B82CB6911C0039F868 /* shakeView.swift */; };
 /* End PBXBuildFile section */
@@ -167,6 +170,9 @@
 		647A729F2C71F201008EA5D9 /* ImageSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
 		64D136DE2CCF2AE700322DD2 /* InterviewQuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewQuestionData.swift; sourceTree = "<group>"; };
 		64D136E02CCF33C700322DD2 /* TopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDetailView.swift; sourceTree = "<group>"; };
+		64D9A4412CD641C100315CD3 /* AnimatedTabGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTabGenerator.swift; sourceTree = "<group>"; };
+		64D9A4432CD641ED00315CD3 /* AnimatedRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedRadio.swift; sourceTree = "<group>"; };
+		64D9A4452CD6451700315CD3 /* AnimatedCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedCheckBox.swift; sourceTree = "<group>"; };
 		64DC7C332CD3F19900FBA7CB /* birdGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = birdGif.gif; sourceTree = "<group>"; };
 		64E363B82CB6911C0039F868 /* shakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shakeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -350,6 +356,9 @@
 				647A72752C71F201008EA5D9 /* CountDownTimer.swift */,
 				647A72762C71F201008EA5D9 /* OTPBox.swift */,
 				647A72772C71F201008EA5D9 /* TabGenerator.swift */,
+				64D9A4412CD641C100315CD3 /* AnimatedTabGenerator.swift */,
+				64D9A4432CD641ED00315CD3 /* AnimatedRadio.swift */,
+				64D9A4452CD6451700315CD3 /* AnimatedCheckBox.swift */,
 				646AD49C2CD2472700D3BB0A /* wordSearch.swift */,
 			);
 			path = "Custom Components";
@@ -698,8 +707,10 @@
 				647A72C82C71F201008EA5D9 /* SearchScreenView.swift in Sources */,
 				647A72BF2C71F201008EA5D9 /* ReusablesView.swift in Sources */,
 				647A72AA2C71F201008EA5D9 /* 12. InlinePickerButtons.swift in Sources */,
+				64D9A4442CD641ED00315CD3 /* AnimatedRadio.swift in Sources */,
 				647A72C22C71F201008EA5D9 /* ComponentListCardView.swift in Sources */,
 				647659D62C904F200079C31C /* CoreDataController.swift in Sources */,
+				64D9A4462CD6451700315CD3 /* AnimatedCheckBox.swift in Sources */,
 				6441CC4A2CCFCAA1007210B9 /* InterviewQuestionUIKIT.swift in Sources */,
 				64D136DF2CCF2AE700322DD2 /* InterviewQuestionData.swift in Sources */,
 				647A72AC2C71F201008EA5D9 /* 14. CheckBox.swift in Sources */,
@@ -723,6 +734,7 @@
 				647A72B92C71F201008EA5D9 /* CountDownTimer.swift in Sources */,
 				647A72BA2C71F201008EA5D9 /* OTPBox.swift in Sources */,
 				6445754F2C9AC2EC00B8DD67 /* CoreAnimation.swift in Sources */,
+				64D9A4422CD641C100315CD3 /* AnimatedTabGenerator.swift in Sources */,
 				647A72B12C71F201008EA5D9 /* 18. SlantedTwinButton.swift in Sources */,
 				647A72A32C71F201008EA5D9 /* Utils.swift in Sources */,
 				647A72A72C71F201008EA5D9 /* 8. SearchBar.swift in Sources */,

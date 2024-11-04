@@ -3424,7 +3424,1050 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: nil
             )
         ]
+    ),generalContentModel(
+        id: 22,
+        mainImage: "",
+        mainTitle: "SwiftUI's View Protocol vs. UIKit’s UIView",
+        mainDescription: "A comparison of SwiftUI's View protocol and UIKit’s UIView, highlighting key differences such as protocol vs. class, declarative vs. imperative approaches, state management, lifecycle, and rendering optimization.",
+        keywords: ["SwiftUI", "UIKit", "View", "UIView", "Declarative", "Imperative", "State Management", "Lifecycle", "Optimization"],
+        technology: "SwiftUI & UIKit",
+        viewComponentDescription: [
+            DescriptionView(
+                id: 1,
+                DImage: "",
+                DTitle: "Protocol vs. Class",
+                DDescription: "SwiftUI’s View is a protocol, usually implemented as a struct, emphasizing immutability and protocol-oriented design. UIKit’s UIView is a concrete class that allows inheritance and subclassing.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 2,
+                DImage: "",
+                DTitle: "Declarative vs. Imperative",
+                DDescription: "SwiftUI follows a declarative syntax where you describe the UI's appearance based on state, automatically updating as the state changes. UIKit requires an imperative approach with explicit UI creation and updates.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 3,
+                DImage: "",
+                DTitle: "State Management",
+                DDescription: "SwiftUI uses property wrappers like @State, @Binding, and @ObservedObject for reactive state management, automatically updating UI based on state. UIKit relies on delegates, target-action patterns, and NotificationCenter, requiring manual UI updates.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 4,
+                DImage: "",
+                DTitle: "Lifecycle and Flexibility",
+                DDescription: "SwiftUI views are transient, recreated on state change, with lifecycle methods like onAppear and onDisappear. UIKit views are persistent, with lifecycle methods like init, layoutSubviews, and removeFromSuperview for updates and cleanup.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 5,
+                DImage: "",
+                DTitle: "Rendering and Optimization",
+                DDescription: "SwiftUI optimizes rendering automatically, only re-rendering affected parts based on state. UIKit requires manual view management, selectively refreshing or re-rendering for performance.",
+                sampleView: nil,
+                code: ""
+            )
+        ]
+    ), generalContentModel(
+        id: 29,
+        mainImage: "",
+        mainTitle: "How to Customize a TabView in SwiftUI",
+        mainDescription: "A seasoned iOS developer’s perspective on customizing TabView in SwiftUI, covering tab items, color customization, custom tab bar views, icon color changes, and animations.",
+        keywords: ["SwiftUI", "TabView", "Customization", "UITabBar", "UIKit Integration", "Tab Bar Color", "Tab Animation"],
+        technology: "SwiftUI",
+        viewComponentDescription: [
+            DescriptionView(
+                id: 1,
+                DImage: "",
+                DTitle: "Basic Customization with tabItem",
+                DDescription: "Start with the tabItem modifier to set an icon and text for each tab. It supports system images or custom icons and text for a basic look.",
+                sampleView: nil,
+                code: """
+                TabView {
+                    FirstView()
+                        .tabItem {
+                            Image(systemName: "house")
+                            Text("Home")
+                        }
+                    SecondView()
+                        .tabItem {
+                            Image(systemName: "gear")
+                            Text("Settings")
+                        }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 2,
+                DImage: "",
+                DTitle: "Customizing Tab Bar Color",
+                DDescription: "To change tab bar appearance, such as background color or tint, use UITabBar.appearance() within UIKit, applying changes globally.",
+                sampleView: nil,
+                code: """
+                UITabBar.appearance().backgroundColor = UIColor.systemBackground
+                UITabBar.appearance().tintColor = UIColor.systemBlue
+                """
+            ),
+            DescriptionView(
+                id: 3,
+                DImage: "",
+                DTitle: "Adding a Custom Tab Bar View",
+                DDescription: "For more complex customizations like rounded indicators or animations, create a custom tab bar using HStack and manage state manually.",
+                sampleView: nil,
+                code: """
+                struct CustomTabView: View {
+                    @State private var selectedTab = 0
+
+                    var body: some View {
+                        VStack {
+                            ZStack {
+                                if selectedTab == 0 {
+                                    FirstView()
+                                } else {
+                                    SecondView()
+                                }
+                            }
+                            Spacer()
+                            HStack {
+                                Button(action: { selectedTab = 0 }) {
+                                    Image(systemName: "house")
+                                    Text("Home")
+                                }
+                                .frame(maxWidth: .infinity)
+
+                                Button(action: { selectedTab = 1 }) {
+                                    Image(systemName: "gear")
+                                    Text("Settings")
+                                }
+                                .frame(maxWidth: .infinity)
+                            }
+                            .padding()
+                            .background(Color.gray.opacity(0.2))
+                        }
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 4,
+                DImage: "",
+                DTitle: "Changing Icon Color for Different States",
+                DDescription: "To set colors for active and inactive tab items, use UITabBar.appearance().unselectedItemTintColor and tintColor for a UIKit-based solution.",
+                sampleView: nil,
+                code: """
+                UITabBar.appearance().unselectedItemTintColor = UIColor.gray
+                UITabBar.appearance().tintColor = UIColor.blue
+                """
+            ),
+            DescriptionView(
+                id: 5,
+                DImage: "",
+                DTitle: "Adding Animation",
+                DDescription: "SwiftUI enables smooth transitions between tabs, such as opacity or scale animations, using .transition(.scale) for a dynamic feel.",
+                sampleView: nil,
+                code: """
+                .transition(.scale)
+                """
+            )
+        ]
+    ),
+    generalContentModel(
+        id: 35,
+        mainImage: "",
+        mainTitle: "Understanding the App Protocol in SwiftUI",
+        mainDescription: "An in-depth explanation of the App protocol in SwiftUI, how it sets up the app's structure, and its use cases in configuring the app's main entry point.",
+        keywords: ["SwiftUI", "App Protocol", "Application Lifecycle", "App Entry Point", "Scene Management"],
+        technology: "SwiftUI",
+        viewComponentDescription: [
+            
+            DescriptionView(
+                id: 1,
+                DImage: "",
+                DTitle: "What is the App Protocol?",
+                DDescription: "Introduced in SwiftUI, the App protocol defines the structure and behavior of an app. It serves as the entry point, allowing you to set up scenes and manage the app lifecycle declaratively.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 2,
+                DImage: "",
+                DTitle: "Basic Implementation of the App Protocol",
+                DDescription: "To create an app, you conform to the App protocol and specify the main view using the body property. SwiftUI automatically uses this as the app’s starting point.",
+                sampleView: nil,
+                code: """
+                @main
+                struct MyApp: App {
+                    var body: some Scene {
+                        WindowGroup {
+                            ContentView()
+                        }
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                        id: 3,
+                        DImage: "",
+                        DTitle: "Scene Management",
+                        DDescription: "The App protocol allows you to define multiple scenes for your app using various types such as WindowGroup, DocumentGroup, or Settings, enabling the management of different UI states and navigations. For instance, you can create a TabView or a NavigationView as a part of a scene.",
+                        sampleView: nil,
+                        code: """
+                        var body: some Scene {
+                            WindowGroup {
+                                TabView {
+                                    FirstView()
+                                        .tabItem {
+                                            Image(systemName: "house")
+                                            Text("Home")
+                                        }
+                                    SecondView()
+                                        .tabItem {
+                                            Image(systemName: "gear")
+                                            Text("Settings")
+                                        }
+                                }
+                            }
+                        }
+                        """
+                    ),
+            DescriptionView(
+                id: 4,
+                DImage: "",
+                DTitle: "Managing App Lifecycle Events",
+                DDescription: "SwiftUI’s App protocol allows you to manage lifecycle events directly with modifiers, such as onChange and onAppear, without needing UIApplicationDelegate.",
+                sampleView: nil,
+                code: """
+                struct MyApp: App {
+                    var body: some Scene {
+                        WindowGroup {
+                            ContentView()
+                                .onAppear {
+                                    print("App appeared")
+                                }
+                                .onChange(of: scenePhase) { newPhase in
+                                    if newPhase == .background {
+                                        print("App went to background")
+                                    }
+                                }
+                        }
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 5,
+                DImage: "",
+                DTitle: "Benefits of the App Protocol in SwiftUI",
+                DDescription: "The App protocol simplifies app initialization by removing the need for AppDelegate. It enables a fully declarative setup, allowing code clarity and consistency across platforms.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                       id: 7,
+                       DImage: "",
+                       DTitle: "Dependency Injection",
+                       DDescription: "The App protocol is also useful for managing app-wide state and dependencies, such as environment objects or app settings. You can inject environment values that need to be accessible throughout your app’s views.",
+                       sampleView: nil,
+                       code: """
+                       var body: some Scene {
+                           WindowGroup {
+                               ContentView()
+                                   .environmentObject(SomeModel())
+                           }
+                       }
+                       """
+                   ),
+            DescriptionView(
+                id: 6,
+                DImage: "",
+                DTitle: "Setting Up Multiple Scenes",
+                DDescription: "For apps supporting multiple windows (e.g., on iPad), you can add additional WindowGroups or other scenes, making the app adaptable to various use cases.",
+                sampleView: nil,
+                code: """
+                var body: some Scene {
+                    WindowGroup {
+                        MainView()
+                    }
+                    WindowGroup("Settings") {
+                        SettingsView()
+                    }
+                }
+                """
+            )
+        ]
+    ),generalContentModel(
+        id: 37,
+        mainImage: "",
+        mainTitle: "Understanding @SceneStorage in SwiftUI",
+        mainDescription: "An overview of the @SceneStorage property wrapper in SwiftUI, explaining its purpose, functionality, and best practices for use in managing view state.",
+        keywords: ["SwiftUI", "@SceneStorage", "State Management", "User Experience", "Property Wrapper"],
+        technology: "SwiftUI",
+        viewComponentDescription: [
+            DescriptionView(
+                id: 1,
+                DImage: "",
+                DTitle: "What is @SceneStorage?",
+                DDescription: "@SceneStorage is a property wrapper in SwiftUI that allows you to persist and restore the state of a view or scene when the app is paused or terminated. It is particularly useful for managing state across app launches, enhancing the user experience.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 2,
+                DImage: "",
+                DTitle: "Purpose and Functionality",
+                DDescription: "@SceneStorage is designed to automatically save and restore state information for views that are part of a scene. It leverages the app’s scene lifecycle to manage data, ensuring that any state marked with @SceneStorage is preserved when the scene goes out of view or when the app is closed and reopened.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 3,
+                DImage: "",
+                DTitle: "Storage Location",
+                DDescription: "The data stored using @SceneStorage is associated with the current scene, meaning it is isolated to the specific tab or window. This is different from @AppStorage, which is used for app-wide settings and preferences.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 4,
+                DImage: "",
+                DTitle: "Usage",
+                DDescription: "You use @SceneStorage in a similar way to @State or @Binding, declaring a variable and specifying a key for storage. The data type can be any type that conforms to Codable or is String or Int. SwiftUI automatically retrieves the saved value when the view appears, and updates the storage when the view state changes.",
+                sampleView: nil,
+                code: """
+                struct ContentView: View {
+                    @SceneStorage("username") private var username: String = ""
+
+                    var body: some View {
+                        TextField("Enter your username", text: $username)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding()
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 5,
+                DImage: "",
+                DTitle: "Lifecycle Considerations",
+                DDescription: "@SceneStorage is reset when the scene is terminated, meaning that if the app is completely closed, the state will be lost. However, it persists as long as the scene remains active, making it ideal for temporary states that do not need to be retained permanently.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 6,
+                DImage: "",
+                DTitle: "Best Practices",
+                DDescription: "Use @SceneStorage for states relevant to the current view that enhance user experience by preserving input, selection, or navigation state. It’s useful for form inputs, scroll positions, or any temporary data that users expect to persist between app launches without relying on more permanent storage solutions.",
+                sampleView: nil,
+                code: ""
+            )
+        ]
+    ),
+    generalContentModel(
+        id: 38,
+        mainImage: "",
+        mainTitle: "Understanding @AppStorage and Keychain in SwiftUI",
+        mainDescription: "An overview of the @AppStorage property wrapper in SwiftUI, detailing its purpose, functionality, and best practices for managing user preferences.",
+        keywords: ["SwiftUI", "@AppStorage", "UserDefaults", "User Preferences", "Property Wrapper"],
+        technology: "SwiftUI",
+        viewComponentDescription: [
+            DescriptionView(
+                id: 1,
+                DImage: "",
+                DTitle: "What is @AppStorage?",
+                DDescription: "@AppStorage is a property wrapper in SwiftUI that simplifies the process of reading and writing user preferences or settings to UserDefaults, allowing for easy management of persistent data between app launches.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 2,
+                DImage: "",
+                DTitle: "How @AppStorage Works",
+                DDescription: "You declare a variable with the @AppStorage property wrapper, specifying a key for UserDefaults. This key is used to automatically store and retrieve the value. Changes to the value update UserDefaults and vice versa, ensuring state synchronization.",
+                sampleView: nil,
+                code: """
+                struct SettingsView: View {
+                    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
+
+                    var body: some View {
+                        Toggle("Dark Mode", isOn: $isDarkMode)
+                            .padding()
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 3,
+                DImage: "",
+                DTitle: "Data Types",
+                DDescription: "@AppStorage works with basic types supported by UserDefaults, such as Bool, Int, Double, String, and Data. It is best for lightweight data that does not require complex structures.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 4,
+                DImage: "",
+                DTitle: "When to Use @AppStorage",
+                DDescription: "Use @AppStorage for storing user preferences, such as themes or settings, enhancing user experience. It is ideal for lightweight, non-sensitive data, as UserDefaults is not encrypted.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 5,
+                DImage: "",
+                DTitle: "More Secure Ways to Store Data using Keychain",
+                DDescription: "For sensitive information, such as passwords or tokens, use the Keychain, which provides secure, encrypted storage accessible only by the app that stored it.",
+                sampleView: nil,
+                code: """
+                import Security
+
+                struct KeychainService {
+                    static func save(key: String, data: Data) -> OSStatus {
+                        let query: [String: Any] = [
+                            kSecClass as String: kSecClassGenericPassword,
+                            kSecAttrAccount as String: key,
+                            kSecValueData as String: data
+                        ]
+                        SecItemDelete(query as CFDictionary) // Delete any existing item
+                        return SecItemAdd(query as CFDictionary, nil)
+                    }
+
+                    static func load(key: String) -> Data? {
+                        let query: [String: Any] = [
+                            kSecClass as String: kSecClassGenericPassword,
+                            kSecAttrAccount as String: key,
+                            kSecReturnData as String: kCFBooleanTrue!,
+                            kSecMatchLimit as String: kSecMatchLimitOne
+                        ]
+                        var dataTypeRef: AnyObject? = nil
+                        let status: OSStatus = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
+                        if status == errSecSuccess {
+                            return dataTypeRef as? Data
+                        }
+                        return nil
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 6,
+                DImage: "",
+                DTitle: "Using Encrypted Storage",
+                DDescription: "Consider using libraries like CryptoKit to encrypt data before storing it in UserDefaults or files for added security.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 7,
+                DImage: "",
+                DTitle: "Summary",
+                DDescription: "In summary, @AppStorage is a convenient way to manage user preferences in SwiftUI. For sensitive data, however, using the Keychain or other secure storage methods is crucial for building secure applications.",
+                sampleView: nil,
+                code: ""
+            )
+        ]
+    ),
+    generalContentModel(
+        id: 39,
+        mainImage: "",
+        mainTitle: "Understanding PreferenceKey in SwiftUI",
+        mainDescription: "An overview of the PreferenceKey protocol in SwiftUI, detailing its purpose, functionality, and various use cases for passing data up the view hierarchy.",
+        keywords: ["SwiftUI", "PreferenceKey", "View Hierarchy", "Custom Layout", "Parent-Child Communication"],
+        technology: "SwiftUI",
+        viewComponentDescription: [
+            DescriptionView(
+                id: 1,
+                DImage: "",
+                DTitle: "What is PreferenceKey?",
+                DDescription: "In SwiftUI, a PreferenceKey is a protocol that allows child views to pass data up the view hierarchy to parent views. This reverse data flow is particularly useful for custom layouts and passing data between views.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 2,
+                DImage: "",
+                DTitle: "How PreferenceKey Works",
+                DDescription: "Creating a PreferenceKey involves defining a struct that conforms to the PreferenceKey protocol, specifying a Value type, and providing a reduce function to combine multiple values from child views.",
+                sampleView: nil,
+                code: """
+                struct CustomPreferenceKey: PreferenceKey {
+                    static var defaultValue: CGFloat = 0
+
+                    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+                        value += nextValue()
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 3,
+                DImage: "",
+                DTitle: "Setting and Reading Preferences",
+                DDescription: "To set a preference, use the .preference(key:value:) modifier in a child view, and then read the preference in the parent view with .onPreferenceChange(_:perform:).",
+                sampleView: nil,
+                code: """
+                struct ChildView: View {
+                    var body: some View {
+                        GeometryReader { geometry in
+                            Color.blue
+                                .frame(width: geometry.size.width, height: 100)
+                                .preference(key: CustomPreferenceKey.self, value: geometry.size.width)
+                        }
+                    }
+                }
+
+                struct ParentView: View {
+                    @State private var childWidth: CGFloat = 0
+
+                    var body: some View {
+                        VStack {
+                            Text("Child Width: \\(childWidth)")
+                            ChildView()
+                        }
+                        .onPreferenceChange(CustomPreferenceKey.self) { value in
+                            childWidth = value
+                        }
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 4,
+                DImage: "",
+                DTitle: "Use Cases for PreferenceKey",
+                DDescription: "PreferenceKey can be used to customize layouts, build navigation bars, track scroll positions, and manage grid or stack layouts by passing child view data up to the parent view.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 5,
+                DImage: "",
+                DTitle: "Customizing Layouts Based on Child Content",
+                DDescription: "PreferenceKey is useful for custom layouts where a parent view needs information from child views, such as calculating the size of each item in a stack for dynamic adjustments.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 6,
+                DImage: "",
+                DTitle: "Building Custom Navigation Bars",
+                DDescription: "PreferenceKey can pass data from child views, such as titles or visibility, to a custom navigation bar in the parent view for a customized navigation experience.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 7,
+                DImage: "",
+                DTitle: "Scroll Position Tracking",
+                DDescription: "In complex scrolling layouts, PreferenceKey can track scroll positions of child views, enabling effects like sticky headers or animations based on scroll position.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 8,
+                DImage: "",
+                DTitle: "Passing Information in Grids or Stacks",
+                DDescription: "PreferenceKey allows a parent view in a grid or stack layout to know each child’s size and adjust the overall layout, enabling custom arrangements based on content.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 9,
+                DImage: "",
+                DTitle: "Summary",
+                DDescription: "In summary, PreferenceKey is a valuable tool in SwiftUI for scenarios where child views need to communicate information back to a parent view. It enables flexible, responsive layouts and is especially useful for UI customizations based on content.",
+                sampleView: nil,
+                code: ""
+            )
+        ]
+    ),
+    generalContentModel(
+        id: 93,
+        mainImage: "",
+        mainTitle: "Making SwiftUI Views Responsive to Different Screen Sizes",
+        mainDescription: "Learn how to create responsive SwiftUI views that adjust dynamically to different screen sizes, orientations, and devices, utilizing flexible layouts and adaptive techniques.",
+        keywords: ["SwiftUI", "Responsive Layout", "GeometryReader", "Size Classes", "Adaptive Layout"],
+        technology: "SwiftUI",
+        viewComponentDescription: [
+            DescriptionView(
+                id: 1,
+                DImage: "",
+                DTitle: "Use Flexible Layout Containers",
+                DDescription: "SwiftUI’s VStack, HStack, ZStack, and Spacer adapt to available space, making them essential for responsive layouts.",
+                sampleView: nil,
+                code: """
+                struct ResponsiveView: View {
+                    var body: some View {
+                        VStack {
+                            Text("Responsive Layout")
+                                .font(.title)
+                            Spacer()
+                            HStack {
+                                Text("Content adjusts")
+                                Spacer()
+                                Text("based on screen size")
+                            }
+                            .padding()
+                        }
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 2,
+                DImage: "",
+                DTitle: "GeometryReader for Dynamic Layouts",
+                DDescription: "GeometryReader provides access to a view’s size and position, enabling custom layouts that respond dynamically to screen dimensions.",
+                sampleView: nil,
+                code: """
+                struct ResponsiveView: View {
+                    var body: some View {
+                        GeometryReader { geometry in
+                            VStack {
+                                Text("Screen Width: \\(geometry.size.width)")
+                                Text("Screen Height: \\(geometry.size.height)")
+                            }
+                        }
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 3,
+                DImage: "",
+                DTitle: "Frame Modifiers with Flexible Dimensions",
+                DDescription: "Using .frame(maxWidth: .infinity, maxHeight: .infinity) allows views to expand within available space, adapting layouts on different screens.",
+                sampleView: nil,
+                code: ""
+            ),
+            DescriptionView(
+                id: 4,
+                DImage: "",
+                DTitle: "Adaptive Grid Layouts",
+                DDescription: "SwiftUI’s LazyVGrid and LazyHGrid provide adaptive layouts, adjusting the number of items per row or column based on screen size.",
+                sampleView: nil,
+                code: """
+                struct AdaptiveGridView: View {
+                    let items = Array(1...20).map { "Item \\($0)" }
+
+                    var body: some View {
+                        let columns = [
+                            GridItem(.adaptive(minimum: 100))
+                        ]
+                        ScrollView {
+                            LazyVGrid(columns: columns) {
+                                ForEach(items, id: \\self) { item in
+                                    Text(item)
+                                        .frame(width: 100, height: 100)
+                                        .background(Color.blue)
+                                        .cornerRadius(8)
+                                }
+                            }
+                        }
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 5,
+                DImage: "",
+                DTitle: "Conditional Modifiers for Device-Specific Adjustments",
+                DDescription: "Using size classes, like .horizontalSizeClass, helps in adapting layouts for compact or regular width, especially useful across iPhone and iPad.",
+                sampleView: nil,
+                code: """
+                struct ConditionalView: View {
+                    @Environment(\\horizontalSizeClass) var sizeClass
+
+                    var body: some View {
+                        if sizeClass == .compact {
+                            VStack { /* Compact layout */ }
+                        } else {
+                            HStack { /* Regular layout */ }
+                        }
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 6,
+                DImage: "",
+                DTitle: "Responsive Images with .scaledToFit",
+                DDescription: "Using .scaledToFit() on images ensures they maintain aspect ratio while adjusting to available space, making them responsive across devices.",
+                sampleView: nil,
+                code: """
+                Image("exampleImage")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity, maxHeight: 300)
+                    .padding()
+                """
+            ),
+            DescriptionView(
+                id: 7,
+                DImage: "",
+                DTitle: "Responsive Text Sizing with .minimumScaleFactor",
+                DDescription: ".minimumScaleFactor() adjusts text size to fit within available space, useful for making long text visible on different screens.",
+                sampleView: nil,
+                code: """
+                Text("This is a long text that should fit in one line on smaller screens.")
+                    .font(.title)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+                """
+            ),
+            DescriptionView(
+                id: 8,
+                DImage: "",
+                DTitle: "Custom Hit Areas with .contentShape",
+                DDescription: "The .contentShape modifier defines the interactive area of a view without altering its visual layout, improving usability on different screens.",
+                sampleView: nil,
+                code: """
+                Button(action: {
+                    // Button action
+                }) {
+                    Image(systemName: "heart.fill")
+                        .frame(width: 20, height: 20)
+                        .contentShape(Rectangle())
+                }
+                """
+            ),
+            DescriptionView(
+                id: 9,
+                DImage: "",
+                DTitle: "Adaptive Layouts with .layoutPriority",
+                DDescription: "Setting .layoutPriority allows views to expand or compress based on space needs, making it helpful for responsive layouts on various screen sizes.",
+                sampleView: nil,
+                code: """
+                Text("Important Text")
+                    .font(.headline)
+                    .layoutPriority(1)
+
+                Text("Additional Info")
+                    .layoutPriority(0)
+                """
+            ),
+            DescriptionView(
+                id: 10,
+                DImage: "",
+                DTitle: "Automatic Resizing Using .dynamicTypeSize",
+                DDescription: "With .dynamicTypeSize, text adapts to the user’s preferred content size, creating a better experience on devices with varied accessibility settings.",
+                sampleView: nil,
+                code: """
+                Text("Adjustable Text")
+                    .dynamicTypeSize(.large ... .xxxLarge)
+                """
+            )
+        ]
+    ),
+    generalContentModel(
+        id: 3,
+        mainImage: "",
+        mainTitle: "SwiftUI Lifecycle vs. UIKit Lifecycle",
+        mainDescription: "Explore the differences between SwiftUI’s declarative lifecycle and UIKit’s traditional, imperative lifecycle, focusing on app initialization, view updates, state management, and resource handling.",
+        keywords: ["SwiftUI", "UIKit", "Lifecycle", "Declarative", "State Management"],
+        technology: "SwiftUI",
+        viewComponentDescription: [
+            DescriptionView(
+                id: 1,
+                DImage: "",
+                DTitle: "Lifecycle Structure",
+                DDescription: "SwiftUI apps use a declarative approach to lifecycle, starting with an App protocol, while UIKit relies on a UIApplicationDelegate and view controllers with specific lifecycle methods.",
+                sampleView: nil,
+                code: """
+                // SwiftUI App entry point
+                @main
+                struct MyApp: App {
+                    var body: some Scene {
+                        WindowGroup {
+                            ContentView()
+                        }
+                    }
+                }
+
+                // UIKit AppDelegate
+                @UIApplicationMain
+                class AppDelegate: UIResponder, UIApplicationDelegate {
+                    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+                        return true
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 2,
+                DImage: "",
+                DTitle: "View Updates and State Management",
+                DDescription: "SwiftUI uses state-driven properties (e.g., @State, @Binding) to trigger automatic view updates, while UIKit requires direct handling of updates in lifecycle methods.",
+                sampleView: nil,
+                code: """
+                // SwiftUI with @State
+                struct ContentView: View {
+                    @State private var counter = 0
+
+                    var body: some View {
+                        VStack {
+                            Text("Counter: \\(counter)")
+                            Button("Increment") { counter += 1 }
+                        }
+                    }
+                }
+
+                // UIKit viewDidLoad and viewWillAppear methods
+                class ViewController: UIViewController {
+                    var counter = 0
+
+                    override func viewDidLoad() {
+                        super.viewDidLoad()
+                        // Setup UI
+                    }
+
+                    override func viewWillAppear(_ animated: Bool) {
+                        super.viewWillAppear(animated)
+                        // Update UI with latest data
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 3,
+                DImage: "",
+                DTitle: "App Initialization and Scene Management",
+                DDescription: "SwiftUI uses the App protocol with @main to define the app structure and manage scenes, whereas UIKit relies on UIApplicationDelegate and UISceneDelegate for multi-window management.",
+                sampleView: nil,
+                code: """
+                // SwiftUI multi-scene setup
+                @main
+                struct MultiSceneApp: App {
+                    var body: some Scene {
+                        WindowGroup {
+                            ContentView()
+                        }
+                    }
+                }
+
+                // UIKit multi-scene setup
+                @UIApplicationMain
+                class AppDelegate: UIResponder, UIApplicationDelegate {
+                    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+                        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 4,
+                DImage: "",
+                DTitle: "Handling Background and Foreground Transitions",
+                DDescription: "SwiftUI handles transitions reactively using @Environment's scenePhase, while UIKit relies on UIApplicationDelegate methods for these transitions.",
+                sampleView: nil,
+                code: """
+                // SwiftUI scenePhase observation
+                @Environment(\\scenePhase) var scenePhase
+
+                var body: some View {
+                    Text("Hello, World!")
+                        .onChange(of: scenePhase) { newPhase in
+                            if newPhase == .background {
+                                // Handle background transition
+                            }
+                        }
+                }
+
+                // UIKit background and foreground handling
+                func applicationDidEnterBackground(_ application: UIApplication) {
+                    // Handle background transition
+                }
+
+                func applicationWillEnterForeground(_ application: UIApplication) {
+                    // Handle foreground transition
+                }
+                """
+            ),
+            DescriptionView(
+                id: 5,
+                DImage: "",
+                DTitle: "Memory Management and Resource Cleanup",
+                DDescription: "SwiftUI handles resource management automatically, whereas UIKit requires developers to manage resources in explicit lifecycle methods like viewDidDisappear or deinit.",
+                sampleView: nil,
+                code: """
+                // SwiftUI automatic resource management
+                struct ContentView: View {
+                    @State private var isActive = true
+
+                    var body: some View {
+                        if isActive {
+                            Text("Active View")
+                        }
+                    }
+                }
+
+                // UIKit resource management with deinit and viewDidDisappear
+                class ViewController: UIViewController {
+                    override func viewDidDisappear(_ animated: Bool) {
+                        super.viewDidDisappear(animated)
+                        // Cleanup resources
+                    }
+
+                    deinit {
+                        // Additional cleanup
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 6,
+                DImage: "",
+                DTitle: "Summary",
+                DDescription: "SwiftUI’s lifecycle simplifies state-driven UI updates, reducing manual control, while UIKit offers more explicit lifecycle handling and direct control over resources and transitions.",
+                sampleView: nil,
+                code: ""
+            )
+        ]
+    ),
+    generalContentModel(
+        id: 11,
+        mainImage: "",
+        mainTitle: "Understanding the Body Property in SwiftUI",
+        mainDescription: "Explore how the body property serves as the core of a SwiftUI view, defining the view's visual structure in a declarative, reactive style.",
+        keywords: ["SwiftUI", "body property", "Declarative UI", "View structure"],
+        technology: "SwiftUI",
+        viewComponentDescription: [
+            DescriptionView(
+                id: 1,
+                DImage: "",
+                DTitle: "What is the Body Property?",
+                DDescription: "In SwiftUI, the `body` property defines the structure and content of a view. It’s a computed property that returns a view hierarchy, which SwiftUI uses to render the UI elements displayed on screen. Every custom SwiftUI view must conform to the `View` protocol and provide a `body` property.",
+                sampleView: nil,
+                code: """
+                struct ContentView: View {
+                    var body: some View {
+                        Text("Hello, SwiftUI!")
+                            .font(.title)
+                            .padding()
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 2,
+                DImage: "",
+                DTitle: "Declarative Syntax and Reactive Updates",
+                DDescription: "SwiftUI’s `body` is written declaratively, allowing developers to specify what the UI should look like rather than how to build it. Any changes in state automatically trigger SwiftUI to re-evaluate the `body` property, updating only the views that depend on the changed state, enabling reactive UI updates.",
+                sampleView: nil,
+                code: """
+                struct CounterView: View {
+                    @State private var count = 0
+
+                    var body: some View {
+                        VStack {
+                            Text("Count: \\(count)")
+                                .font(.largeTitle)
+                            Button("Increment") {
+                                count += 1
+                            }
+                        }
+                        .padding()
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 3,
+                DImage: "",
+                DTitle: "Return Type and View Composition",
+                DDescription: "The `body` property has a `some View` return type, meaning it can return any view type that conforms to the `View` protocol. SwiftUI uses this flexibility to compose complex views by combining basic views like Text, Image, VStack, and HStack, building layered UI hierarchies.",
+                sampleView: nil,
+                code: """
+                struct ProfileView: View {
+                    var body: some View {
+                        VStack {
+                            Image(systemName: "person.circle")
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                            Text("John Doe")
+                                .font(.title)
+                            Text("iOS Developer")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                        }
+                        .padding()
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 4,
+                DImage: "",
+                DTitle: "Conditional and Dynamic Views",
+                DDescription: "Using conditional statements within the `body` property, SwiftUI views can dynamically change based on state or environment values. This capability is useful for building adaptive UIs that respond to user interaction or device conditions.",
+                sampleView: nil,
+                code: """
+                struct DynamicView: View {
+                    @State private var isLoggedIn = false
+
+                    var body: some View {
+                        VStack {
+                            if isLoggedIn {
+                                Text("Welcome back!")
+                            } else {
+                                Text("Please log in")
+                            }
+                            Button("Toggle Login") {
+                                isLoggedIn.toggle()
+                            }
+                        }
+                        .padding()
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 5,
+                DImage: "",
+                DTitle: "Re-evaluation and Efficient Rendering",
+                DDescription: "SwiftUI re-evaluates the `body` property whenever the state changes. However, it optimizes rendering by only updating parts of the view hierarchy affected by those changes, making the `body` property an efficient way to describe the UI without unnecessary re-renders.",
+                sampleView: nil,
+                code: """
+                struct ToggleView: View {
+                    @State private var isOn = false
+
+                    var body: some View {
+                        VStack {
+                            Toggle("Toggle State", isOn: $isOn)
+                            if isOn {
+                                Text("The toggle is ON")
+                            } else {
+                                Text("The toggle is OFF")
+                            }
+                        }
+                        .padding()
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 6,
+                DImage: "",
+                DTitle: "Summary",
+                DDescription: "The `body` property in SwiftUI serves as the blueprint for each view, using a declarative syntax to define structure and state-driven updates. It promotes a clean, efficient approach to UI design and enables responsive, reactive layouts with minimal code.",
+                sampleView: nil,
+                code: ""
+            )
+        ]
     )
+
+
+
+
+
+
+
+
 
 
 
@@ -3522,7 +4565,7 @@ struct interviewQuestionSwiftTestDuplicate : View {
                 print("Title Two :  (Previous Title)") //  Here you'll need to get the previous title using a dictionary or loop.
                 print("################################################")
             } else {
-                print("checked")
+                print("Completed id \(item.id), titile \(item.mainTitle)")
                 seenIds.insert(item.id)
             }
         }
@@ -3530,4 +4573,30 @@ struct interviewQuestionSwiftTestDuplicate : View {
 }
 #Preview{
     interviewQuestionSwiftTestDuplicate()
+}
+struct KeychainService {
+    static func save(key: String, data: Data) -> OSStatus {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: key,
+            kSecValueData as String: data
+        ]
+        SecItemDelete(query as CFDictionary) // Delete any existing item
+        return SecItemAdd(query as CFDictionary, nil)
+    }
+
+    static func load(key: String) -> Data? {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: key,
+            kSecReturnData as String: kCFBooleanTrue!,
+            kSecMatchLimit as String: kSecMatchLimitOne
+        ]
+        var dataTypeRef: AnyObject? = nil
+        let status: OSStatus = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
+        if status == errSecSuccess {
+            return dataTypeRef as? Data
+        }
+        return nil
+    }
 }

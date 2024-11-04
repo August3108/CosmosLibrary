@@ -48,7 +48,7 @@ struct ChildView: View {
 }
 
 // Main View with Search Field
-struct ContentView: View {
+struct ContentView12: View {
     @StateObject private var searchModel = SearchModel()
 
     var body: some View {

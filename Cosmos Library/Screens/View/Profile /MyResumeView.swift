@@ -76,7 +76,7 @@ struct MyResumeView : View {
                         .frame(height: 2)
                         .background(Color.primarycolor)
                     Text("")
-                    TabGenerator(tabsData: [
+                    AnimatedTabsGenerator(tabsData: [
                         TabInputStruct(name: "About me", tabContent: AnyView(
                             VStack{
                                 ScrollView(showsIndicators: false){
