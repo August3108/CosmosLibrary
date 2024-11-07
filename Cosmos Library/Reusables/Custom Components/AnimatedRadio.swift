@@ -23,7 +23,7 @@ struct AnimatedRadio: View {
                 .background(
                     Circle()
                         .fill(filledColor) // Fill color when checked
-                        .frame(width: isChecked ? diameter * 0.8 : 0, height: isChecked ? diameter * 0.8 : 0) // Size for filled state
+                        .frame(width: isChecked ? diameter * 0.8 : 0, height: isChecked ? diameter * 0.8 : 0) 
                 )
                 .onTapGesture {
                     withAnimation(.easeInOut(duration: 0.5)) {

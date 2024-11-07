@@ -10,8 +10,10 @@
 		6438D36E2CCA7F9D008FBB33 /* ContentViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6438D36D2CCA7F9D008FBB33 /* ContentViewRenderer.swift */; };
 		6441CC4A2CCFCAA1007210B9 /* InterviewQuestionUIKIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6441CC492CCFCAA1007210B9 /* InterviewQuestionUIKIT.swift */; };
 		6441CC4C2CCFDF92007210B9 /* CustomComponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6441CC4B2CCFDF92007210B9 /* CustomComponentModel.swift */; };
+		644338852CDBA02B00B43B7A /* CameraPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644338842CDBA02B00B43B7A /* CameraPhoto.swift */; };
 		6445754F2C9AC2EC00B8DD67 /* CoreAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6445754E2C9AC2EC00B8DD67 /* CoreAnimation.swift */; };
 		646AD49D2CD2472700D3BB0A /* wordSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646AD49C2CD2472700D3BB0A /* wordSearch.swift */; };
+		6470805E2CDB0E1C00A02A0B /* Custom Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6470805D2CDB0E1C00A02A0B /* Custom Slider.swift */; };
 		64710D112C746908004A900D /* PlayGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64710D102C746908004A900D /* PlayGround.swift */; };
 		647659D12C904E460079C31C /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647659D02C904E460079C31C /* CoreData.swift */; };
 		647659D62C904F200079C31C /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647659D52C904F200079C31C /* CoreDataController.swift */; };
@@ -103,8 +105,10 @@
 		6438D36D2CCA7F9D008FBB33 /* ContentViewRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRenderer.swift; sourceTree = "<group>"; };
 		6441CC492CCFCAA1007210B9 /* InterviewQuestionUIKIT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewQuestionUIKIT.swift; sourceTree = "<group>"; };
 		6441CC4B2CCFDF92007210B9 /* CustomComponentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomComponentModel.swift; sourceTree = "<group>"; };
+		644338842CDBA02B00B43B7A /* CameraPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPhoto.swift; sourceTree = "<group>"; };
 		6445754E2C9AC2EC00B8DD67 /* CoreAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimation.swift; sourceTree = "<group>"; };
 		646AD49C2CD2472700D3BB0A /* wordSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordSearch.swift; sourceTree = "<group>"; };
+		6470805D2CDB0E1C00A02A0B /* Custom Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom Slider.swift"; sourceTree = "<group>"; };
 		64710D102C746908004A900D /* PlayGround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGround.swift; sourceTree = "<group>"; };
 		647659D02C904E460079C31C /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		647659D52C904F200079C31C /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
@@ -203,6 +207,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		644338832CDBA01E00B43B7A /* Sensor */ = {
+			isa = PBXGroup;
+			children = (
+				644338842CDBA02B00B43B7A /* CameraPhoto.swift */,
+			);
+			path = Sensor;
+			sourceTree = "<group>";
+		};
 		6445754D2C9AC2E000B8DD67 /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +372,7 @@
 				64D9A4432CD641ED00315CD3 /* AnimatedRadio.swift */,
 				64D9A4452CD6451700315CD3 /* AnimatedCheckBox.swift */,
 				646AD49C2CD2472700D3BB0A /* wordSearch.swift */,
+				6470805D2CDB0E1C00A02A0B /* Custom Slider.swift */,
 			);
 			path = "Custom Components";
 			sourceTree = "<group>";
@@ -377,6 +390,7 @@
 		647A727E2C71F201008EA5D9 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				644338832CDBA01E00B43B7A /* Sensor */,
 				647A72782C71F201008EA5D9 /* Custom Components */,
 				647A727B2C71F201008EA5D9 /* Helpers */,
 				647A727C2C71F201008EA5D9 /* Modifiers.swift */,
@@ -701,6 +715,7 @@
 				647A72C62C71F201008EA5D9 /* HomeView.swift in Sources */,
 				647A72B42C71F201008EA5D9 /* 21. HamBurgerMenu.swift in Sources */,
 				647A72AB2C71F201008EA5D9 /* 13. radioButton.swift in Sources */,
+				644338852CDBA02B00B43B7A /* CameraPhoto.swift in Sources */,
 				647A72A92C71F201008EA5D9 /* 10. BottomUpSheetMaker.swift in Sources */,
 				6438D36E2CCA7F9D008FBB33 /* ContentViewRenderer.swift in Sources */,
 				647A72D12C71F201008EA5D9 /* DraggableCard.swift in Sources */,
@@ -710,6 +725,7 @@
 				64D9A4442CD641ED00315CD3 /* AnimatedRadio.swift in Sources */,
 				647A72C22C71F201008EA5D9 /* ComponentListCardView.swift in Sources */,
 				647659D62C904F200079C31C /* CoreDataController.swift in Sources */,
+				6470805E2CDB0E1C00A02A0B /* Custom Slider.swift in Sources */,
 				64D9A4462CD6451700315CD3 /* AnimatedCheckBox.swift in Sources */,
 				6441CC4A2CCFCAA1007210B9 /* InterviewQuestionUIKIT.swift in Sources */,
 				64D136DF2CCF2AE700322DD2 /* InterviewQuestionData.swift in Sources */,
