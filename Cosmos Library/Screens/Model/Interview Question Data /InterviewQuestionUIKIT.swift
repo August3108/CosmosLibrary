@@ -524,8 +524,380 @@ let UIKITQuestionArray = [
     """
             )
         ]
+    ),
+    generalContentModel(
+        id: 2001,
+        mainImage: "",
+        mainTitle: "Strong, Weak and Unowned",
+        mainDescription: "",
+        keywords: ["Important, UIKit, Memory Management"],
+        technology: "UIKit",
+        viewComponentDescription: [
+            DescriptionView(
+                id: 1,
+                DImage: "",
+                DTitle: "Strong Reference",
+                DDescription: """
+                1. Ownership: A strong reference means an object will stay in memory as long as there's a strong reference to it.
+                2. Default Behavior: In Swift, references are strong by default unless specified otherwise.
+                3. Memory Management: As long as there’s a strong reference, the object will not be deallocated.
+                4. Retain Cycles: Can lead to memory leaks if two objects strongly reference each other (a retain cycle).
+                5. Deallocation: When a view controller or object holding a strong reference is deallocated, the object is also deallocated if no other strong references exist.
+                6. If house is deallocated, the strong reference to Person (owner) would also be released. However, if there's another strong reference to the same Person instance elsewhere, it will not be deallocated until all strong references are removed.
+                """,
+                
+                sampleView: nil,
+                
+                code: """
+    class Person {
+        var name: String
+        init(name: String) {
+            self.name = name
+        }
+    }
+
+    class House {
+        var owner: Person? // Strong reference to `Person`
+    }
+
+    let house = House()
+    house.owner = Person(name: "Alice") // `house.owner` keeps `Person` in memory
+
+    """
+            ),
+            DescriptionView(
+                id: 2,
+                DImage: "",
+                DTitle: "Weak Reference",
+                DDescription: """
+                1. No Ownership: A weak reference does not own the object it points to, meaning it doesn’t keep the object in memory.
+                2. Automatic nil Assignment: When the referenced object is deallocated, a weak reference automatically becomes nil.
+                3. Optional by Nature: Weak references must always be optional (nil), as they can lose their object at any time.
+                4. Preventing Retain Cycles: Commonly used in situations like delegates to avoid retain cycles.
+                5. Deallocation: The object will be deallocated if no other strong references exist, even if weak references still point to it.
+                6. When the Teacher instance has no more strong references, it will be deallocated, and classroom.teacher will automatically become nil. When the view closes, any remaining strong references to Teacher will be released, and if there are no strong references, Teacher will be deallocated, leaving teacher as nil.
+                """,
+                
+                sampleView: nil,
+                
+                code: """
+    class Teacher {
+        var name: String
+        init(name: String) {
+            self.name = name
+        }
+    }
+
+    class Classroom {
+        weak var teacher: Teacher? // Weak reference to `Teacher` to avoid retain cycle
+    }
+
+    let classroom = Classroom()
+    classroom.teacher = Teacher(name: "Mr. Smith") // `teacher` points to `Teacher` weakly
+
+    """
+            ),
+            
+            DescriptionView(
+                id: 3,
+                DImage: "",
+                DTitle: "Unowned Reference",
+                DDescription: """
+                1. Non-Optional Reference: An unowned reference assumes that the object it points to will never become nil once set.
+                2. No Ownership: Like weak references, unowned references do not retain the object.
+                3. Non-Optional Requirement: Unlike weak references, unowned references cannot be nil; they are non-optional.
+                4. Stable Relationships: Commonly used when one object has a guaranteed dependent lifecycle on another (e.g., a Customer and their CreditCard).
+                5. Runtime Crash on Deallocation: If the referenced object is deallocated and an unowned reference tries to access it, the app will crash with a runtime error.
+                6. What Happens on View Closure: If customer is deallocated, card.customer will point to deallocated memory, and accessing customer in CreditCard will cause a runtime crash. Therefore, unowned references are safe only when you are certain the referenced object will outlive or live as long as the object containing the unowned reference.
+                """,
+                
+                sampleView: nil,
+                
+                code: """
+    class Teacher {
+        var name: String
+        init(name: String) {
+            self.name = name
+        }
+    }
+
+    class Classroom {
+        weak var teacher: Teacher? // Weak reference to `Teacher` to avoid retain cycle
+    }
+
+    let classroom = Classroom()
+    classroom.teacher = Teacher(name: "Mr. Smith") // `teacher` points to `Teacher` weakly
+
+    """
+            )
+        ]
+    ),generalContentModel(
+        id: 2002,
+        mainImage: "",
+        mainTitle: "Memory Management, Leaks",
+        mainDescription: "The best shortest way to find memory leak is by using breakpoint. Create a symbollic breakpoint and put UIViewcontroller dealloc method in it. it will trigger breakpoint when its deallocated",
+        keywords: [],
+        technology: "UIKit",
+        viewComponentDescription: [
+        ]
+    ),
+    generalContentModel(
+        id: 2003,
+        mainImage: "",
+        mainTitle: "Understanding Async/Await in Swift",
+        mainDescription: "This tutorial explores the async/await syntax in Swift, a powerful feature for simplifying asynchronous code and enhancing your Swift applications.\n in symbol : use the action log message to consol  with --- dealloc @(id)[$arg1 description]@ @(id)[$arg1 title]@",
+        keywords: ["async", "await", "Swift", "Concurrency", "Asynchronous Programming", "Error Handling", "Task Groups"],
+        technology: "Swift",
+        viewComponentDescription: [
+            DescriptionView(
+                id: 1,
+                DImage: "",
+                DTitle: "1. Key Concepts",
+                DDescription: "Let's dive into the core ideas behind async/await in Swift.",
+                sampleView: nil,
+                code: """
+                // async Functions:
+                func fetchData() async throws -> Data {
+                    // ... (Asynchronous operation)
+                }
+
+                // await Keyword:
+                let data = try await fetchData()
+
+                // Concurrency:
+                Task {
+                    // ... (Asynchronous code)
+                }
+
+                // Structured Concurrency:
+                // Tasks automatically canceled when no longer needed
+
+                // Error Handling:
+                do {
+                    let data = try await fetchData()
+                } catch {
+                    // Handle errors
+                }
+                """
+            ),
+            DescriptionView(
+                id: 2,
+                DImage: "",
+                DTitle: "2. Example: Fetching Data from an API",
+                DDescription: "Let's see how async/await makes asynchronous API calls more readable and manageable.",
+                sampleView: nil,
+                code: """
+                // Without async/await (Callback Approach)
+                func fetchData(completion: @escaping (Result<Data, Error>) -> Void) {
+                    URLSession.shared.dataTask(with: URL(string: "https://api.example.com/data")!) { data, response, error in
+                        if let error = error {
+                            completion(.failure(error))
+                            return
+                        }
+                        completion(.success(data!))
+                    }.resume()
+                }
+
+                fetchData { result in
+                    switch result {
+                    case .success(let data):
+                        print("Data received: \\(data)")
+                    case .failure(let error):
+                        print("Error: \\(error)")
+                    }
+                }
+
+                // With async/await
+                func fetchData() async throws -> Data {
+                    let url = URL(string: "https://api.example.com/data")!
+                    let (data, _) = try await URLSession.shared.data(from: url)
+                    return data
+                }
+
+                Task {
+                    do {
+                        let data = try await fetchData()
+                        print("Data received: \\(data)")
+                    } catch {
+                        print("Error: \\(error)")
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 3,
+                DImage: "",
+                DTitle: "3. Using async/await in View Controllers",
+                DDescription: "Here's how to incorporate async/await into SwiftUI or UIKit view controllers.",
+                sampleView: nil,
+                code: """
+                class MyViewController: UIViewController {
+                    override func viewDidLoad() {
+                        super.viewDidLoad()
+                        
+                        Task {
+                            do {
+                                let data = try await fetchData()
+                                // Update UI on the main thread if necessary
+                                DispatchQueue.main.async {
+                                    // Update UI with the fetched data
+                                }
+                            } catch {
+                                print("Error fetching data: \\(error)")
+                            }
+                        }
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 4,
+                DImage: "",
+                DTitle: "4. Benefits of async/await",
+                DDescription: "Let's highlight the advantages of using async/await in Swift.",
+                sampleView: nil,
+                code: """
+                // Improved Readability
+                // Error Handling
+                // Concurrency Management
+                """
+            ),
+            DescriptionView(
+                id: 5,
+                DImage: "",
+                DTitle: "5. Additional async/await Patterns",
+                DDescription: "Explore more advanced async/await techniques.",
+                sampleView: nil,
+                code: """
+                // Parallel Asynchronous Calls
+                async let data1 = fetchData(from: url1)
+                async let data2 = fetchData(from: url2)
+
+                let (result1, result2) = await (data1, data2)
+
+                // Task Groups
+                await withTaskGroup(of: Data.self) { group in
+                    for url in urls {
+                        group.addTask {
+                            try await fetchData(from: url)
+                        }
+                    }
+                }
+                """
+            ),
+            DescriptionView(
+                id: 6,
+                DImage: "",
+                DTitle: "6. Summary",
+                DDescription: "Async/await is a powerful tool for working with asynchronous code in Swift, making your code more readable, efficient, and maintainable.",
+                sampleView: nil,
+                code: """
+                // ... (Summary)
+                """
+            )
+        ]
+    ),
+    generalContentModel(
+        id: 1,
+        mainImage: "",
+        mainTitle: "Understanding Frame and Bounds in UIKit",
+        mainDescription: "This tutorial explains the key differences between `frame` and `bounds` properties in UIKit, two fundamental concepts for positioning and sizing views.",
+        keywords: ["frame", "bounds", "UIView", "UIKit", "positioning", "sizing", "coordinate system", "transformations"],
+        technology: "UIKit",
+        viewComponentDescription: [
+            DescriptionView(
+                id: 1,
+                DImage: "",
+                DTitle: "1. Frame",
+                DDescription: "The `frame` property describes the view's location and size relative to its superview's coordinate system.",
+                sampleView: nil,
+                code: """
+                // Creating a UIView
+                let view = UIView()
+
+                // Setting the frame
+                view.frame = CGRect(x: 50, y: 100, width: 200, height: 100) 
+
+                // Explanation:
+                // - x: 50 points from the left edge of the superview
+                // - y: 100 points from the top edge of the superview
+                // - width: 200 points
+                // - height: 100 points 
+                """
+            ),
+            DescriptionView(
+                id: 2,
+                DImage: "",
+                DTitle: "2. Bounds",
+                DDescription: "The `bounds` property describes the view's location and size in its own coordinate system (not its superview's).",
+                sampleView: nil,
+                code: """
+                let view = UIView()
+
+                // Setting the bounds
+                view.bounds = CGRect(x: 0, y: 0, width: 200, height: 100)
+
+                // Explanation:
+                // - x: 0 (default origin within the view's coordinate system)
+                // - y: 0
+                // - width: 200 points
+                // - height: 100 points
+                """
+            ),
+            DescriptionView(
+                id: 3,
+                DImage: "",
+                DTitle: "3. Key Differences",
+                DDescription: "Let's summarize the key differences between `frame` and `bounds`.",
+                sampleView: nil,
+                code: """
+                // Coordinate System:
+                // - frame: Superview's coordinate system
+                // - bounds: View's own coordinate system
+
+                // Positioning:
+                // - frame: Includes the view's position in the superview
+                // - bounds: Typically has an origin of (0, 0)
+
+                // Changing Origin:
+                // - bounds.origin: Shifts the view's content without moving the view itself
+                // - frame.origin: Changes the view's position relative to its superview
+
+                // Transformations:
+                // - frame: Changes with rotations or scaling to reflect new size/position
+                // - bounds: Size remains the same, but internal layout adjusts
+                """
+            ),
+            DescriptionView(
+                id: 4,
+                DImage: "",
+                DTitle: "4. Example: Modifying `bounds.origin`",
+                DDescription: "This example demonstrates how changing `bounds.origin` affects the view's content without altering its position in the superview.",
+                sampleView: nil,
+                code: """
+                // Shifting the content within the view
+                view.bounds.origin = CGPoint(x: 50, y: 50)
+
+                // Explanation:
+                // - The content of the view will shift 50 points left and 50 points up
+                // - The view itself remains at the same position relative to its superview
+                """
+            ),
+            DescriptionView(
+                id: 5,
+                DImage: "",
+                DTitle: "5. Summary",
+                DDescription: "Understanding the distinction between `frame` and `bounds` is crucial when working with transformations, animations, and complex layouts in UIKit.",
+                sampleView: nil,
+                code: """
+                // frame:  Used for positioning and sizing the view relative to its superview.
+                // bounds: Used for positioning and sizing the content within the view itself.
+                """
+            )
+        ]
     )
 
+    
 
     
     

@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 
+let allComponentArray : [[generalContentModel]] = [customComponentModelArray, UIKITQuestionArray, sensorComponentData]
+
 struct generalContentModel {
     let id : Int // to loop
     let mainImage : String // to show in list

@@ -114,7 +114,8 @@ struct ChildView: View {
 """
             )
         ]
-    ),generalContentModel(
+    ),
+    generalContentModel(
         id: 41,
         mainImage: "",
         mainTitle: "Animation Types in SwiftUI",
@@ -337,7 +338,8 @@ struct ExplicitAnimationExample: View {
     """
                 )
             ]
-        ),generalContentModel(
+        ),
+    generalContentModel(
             id: 14,
             mainImage: "",
             mainTitle: "What are the main differences between @State and @ObservedObject in SwiftUI?",
@@ -691,7 +693,7 @@ struct ContentView: View {
             )
         ]
     ),
-            generalContentModel(
+    generalContentModel(
                 id: 59,
                 mainImage: "",
                 mainTitle: "How does SwiftUI handle environment variables?",
@@ -769,7 +771,8 @@ struct ContentView: View {
                         code: ""
                     )
                 ]
-            ),generalContentModel(
+            ),
+    generalContentModel(
                 id: 62,
                 mainImage: "",
                 mainTitle: "How do you create a TabView in SwiftUI?",
@@ -939,7 +942,8 @@ struct ContentView: View {
             """
                     )
                 ]
-            ),generalContentModel(
+            ),
+    generalContentModel(
                 id: 65,
                 mainImage: "",
                 mainTitle: "What is GeometryReader, and how is it used in SwiftUI?",
@@ -1476,7 +1480,8 @@ struct ContentView: View {
     """
             )
         ]
-    ),generalContentModel(
+    ),
+    generalContentModel(
         id: 77,
         mainImage: "",
         mainTitle: "Benefits of SwiftUI Previews and How to Configure Them",
@@ -2491,7 +2496,8 @@ struct ContentView: View {
 """
             )
         ]
-    ),generalContentModel(
+    ),
+    generalContentModel(
         id: 227,
         mainImage: "",
         mainTitle: "Copy vs. Retain in Swift",
@@ -3424,7 +3430,8 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: nil
             )
         ]
-    ),generalContentModel(
+    ),
+    generalContentModel(
         id: 22,
         mainImage: "",
         mainTitle: "SwiftUI's View Protocol vs. UIKit’s UIView",
@@ -3473,7 +3480,8 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             )
         ]
-    ), generalContentModel(
+    ),
+    generalContentModel(
         id: 29,
         mainImage: "",
         mainTitle: "How to Customize a TabView in SwiftUI",
@@ -4553,7 +4561,7 @@ struct interviewQuestionSwiftTestDuplicate : View {
             }
         }
     }
-    func checkDuplicate(data: [generalContentModel] = interviewQuestionDataArray) {
+    func checkDuplicate(data: [generalContentModel] = UIKITQuestionArray) {
         var seenIds = Set<Int>() // Use a Set to efficiently track seen IDs
         
         for item in data {

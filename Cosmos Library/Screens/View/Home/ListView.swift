@@ -73,10 +73,16 @@ struct ListView : View {
                     }
                 }
             }.padding(.horizontal)
+                .onBackSwipe {
+                    dismiss()
+                }
         }.navigationBarBackButtonHidden(true)
             .navigationDestination(isPresented: $navigateToDetail) {
                 TopDetailView(data: navData)
               }
+            .onBackSwipe {
+                dismiss()
+            }
     }
     
     func handleNavigationToList(data : generalContentModel){

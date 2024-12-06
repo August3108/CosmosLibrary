@@ -46,6 +46,9 @@ struct TopDetailView: View {
                 }
             }.padding(.horizontal)
         }.navigationBarBackButtonHidden(true)
+            .onBackSwipe {
+                dismiss()
+            }
     }
 }
 

@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import AppIntents
 
 @main
 struct Cosmo_LibraryApp: App {
+    private let sceneNavigationModel: NavigationModel
+    
+    
+    init(){
+        let navigationModel = NavigationModel(selectedComponent: customComponentModelArray)
+        sceneNavigationModel = navigationModel
+        
+        AppDependencyManager.shared.add(dependency: navigationModel)
+    }
     var body: some Scene {
         WindowGroup {
             SplashView()
+                .environment(sceneNavigationModel)
         }
     }
 }

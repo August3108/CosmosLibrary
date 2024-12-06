@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-struct PlayGround : View {
+struct matchedGeometrySample : View {
     @State var bool = true
     @Namespace var namespace
     var body: some View {
@@ -34,5 +34,14 @@ struct PlayGround : View {
     }
 }
 #Preview {
-    PlayGround()
+    matchedGeometrySample()
+}
+struct test : View {
+
+    var body: some View {
+        ZStack{
+            
+        }
+        
+    }
 }

@@ -18,8 +18,11 @@ struct HomeView : View {
     @State var navListTitle = ""
 
     @State var navigateToProfile = false
+    @State var navigateToTest = false
+    @Environment(NavigationModel.self) private var navigationModel
 
     var body: some View {
+        @Bindable var navigationModel = navigationModel
         NavigationStack{
             ZStack{
                 VStack{
@@ -47,7 +50,7 @@ struct HomeView : View {
                     }.padding(.vertical)
                     ScrollView(showsIndicators: false) {
                         homeCategoryCardView(
-                            name: "System Component",
+                            name: "Sensors based Components",
                             lightGradient: LinearGradient(
                                 stops: [
                                     Gradient.Stop(color: Color.blue.opacity(0.6), location: 0.0),
@@ -63,7 +66,7 @@ struct HomeView : View {
                             )
                         )
                         .modifier(ViewTapGesture {
-                            handleNavigationToList(title: "System Component", listArray: [])
+                            handleNavigationToList(title: "Sensors based Components", listArray: sensorComponentData)
                         })
                         
                         HStack {
@@ -131,6 +134,10 @@ struct HomeView : View {
                             handleNavigationToList(title: "SwiftUI Interview Question", listArray: interviewQuestionDataArray)
                         })
                         .padding(.vertical)
+                        
+                        Button("Navigate"){
+                            navigateToTest = true
+                        }
                     }
 
                     
@@ -139,17 +146,32 @@ struct HomeView : View {
                 }.padding(.horizontal)
                 VStack{
                     HamburgerIntroView(navigateToProfile: $navigateToProfile, showHamburger: $showMenu)
+                        .modifier(leftAndRightSwipeGesture(
+                            leftSwipe: {
+//                                print("left")
+                            },
+                            rightSwipe: {
+                                withAnimation{
+                                    showMenu = false
+                                }
+                            }
+                        ))
                 }
             }
 //            MARK: navigations Here
             .navigationDestination(isPresented: $navigateToListView) {
                 ListView(listArray: navListArray,title: navListTitle)
-//                interviewQuestionSwiftTestDuplicate()
-//                ContentView()
               }
             .navigationDestination(isPresented: $navigateToProfile) {
                 MyResumeView().navigationBarBackButtonHidden(true)
               }
+            .navigationDestination(isPresented: $navigateToTest) {
+                ParentSwiftUIView().navigationBarBackButtonHidden(true)
+              }
+            .navigationDestination(isPresented: $navigationModel.navigateToComponent) {
+                ListView(listArray: navigationModel.selectedComponent ?? UIKITQuestionArray,title: navigationModel.componentTitle ?? "Component")
+              }
+            
         }
     }
     func handleNavigationToList(title : String, listArray : [generalContentModel]){

@@ -47,7 +47,7 @@ struct CoreAnimationView: UIViewRepresentable {
         let animationGroup = CAAnimationGroup()
         animationGroup.animations = [positionAnimation, opacityAnimation]
         animationGroup.duration = 2.0
-        animationGroup.fillMode = .removed
+//        animationGroup.fillMode = .removed
         animationGroup.isRemovedOnCompletion = false
         
         // Add the animation group to the view's layer

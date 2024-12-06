@@ -159,6 +159,29 @@ struct KeyboardAdaptive: ViewModifier {
     }
 }
 
+struct leftAndRightSwipeGesture: ViewModifier {
+    var leftSwipe: (() -> Void)?
+    var rightSwipe: (() -> Void)?
+    @GestureState var translation: CGFloat = 0
+    
+    func body(content: Content) -> some View {
+        content
+            .gesture(
+                DragGesture()
+                    .updating($translation) { value, state, _ in
+                        state = value.translation.width
+                    }
+                    .onEnded { value in
+                        if value.translation.width > 50 {
+                            leftSwipe?()
+                        } else if value.translation.width < -50 {
+                            rightSwipe?()
+                        }
+                    }
+            )
+    }
+}
+
 struct DragGestureModifier: ViewModifier {
     @Binding var selectedTab : Int
     let upperLimit: Int
