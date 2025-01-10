@@ -205,7 +205,7 @@ struct ListView : View {
     ListView(listArray: sampleListData, title: "custom Component")
 }
 //MARK: - Temp data for Preview
-let sampleListData = [ generalContentModel(id: 1, mainImage: "customComponent", mainTitle: "Component1", mainDescription: "This is lorem text. you may think its not a lorem text but trust me it's lorem and random. Definately not written by me", keywords: ["Drop Down", "SwiftUI"], technology: "SwiftUI", viewComponentDescription: []),
+let sampleListData = [ generalContentModel( mainImage: "customComponent", mainTitle: "Component1", mainDescription: "This is lorem text. you may think its not a lorem text but trust me it's lorem and random. Definately not written by me", keywords: ["Drop Down", "SwiftUI"], technology: "SwiftUI", viewComponentDescription: []),
 
-    generalContentModel(id: 2, mainImage: "customComponent", mainTitle: "Component1", mainDescription: "This is lorem text. you may think its not a lorem text but trust me it's lorem and random. Definately not written by me", keywords: ["Drop Down", "SwiftUI"], technology: "SwiftUI", viewComponentDescription: [])
+    generalContentModel(mainImage: "customComponent", mainTitle: "Component1", mainDescription: "This is lorem text. you may think its not a lorem text but trust me it's lorem and random. Definately not written by me", keywords: ["Drop Down", "SwiftUI"], technology: "SwiftUI", viewComponentDescription: [])
 ]

@@ -11,7 +11,6 @@ import SwiftUI
 
 let interviewQuestionDataArray = [
     generalContentModel(
-        id: 32,
         mainImage: "",
         mainTitle: "How do you create a custom ViewModifier?",
         mainDescription: "",
@@ -19,7 +18,6 @@ let interviewQuestionDataArray = [
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "1. Define the Custom ViewModifier",
                 DDescription: "To create a custom ViewModifier, define a struct that conforms to the ViewModifier protocol and implement the body(content:) method, which describes how to modify the view.",
@@ -63,7 +61,6 @@ Text("Hello, SwiftUI!")
     ),
     
     generalContentModel(
-        id: 18,
         mainImage: "",
         mainTitle: "What is the purpose of @Binding, and how is it used in SwiftUI?",
         mainDescription: "The @Binding property wrapper in SwiftUI is used to create a two-way connection between a parent view and a child view, allowing the child view to read and modify the state stored in the parent view.",
@@ -71,7 +68,6 @@ Text("Hello, SwiftUI!")
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Purpose",
                 DDescription: "State Synchronization: It allows a child view to access and modify state data that belongs to its parent, ensuring that the UI stays in sync with the underlying data model.",
@@ -116,7 +112,6 @@ struct ChildView: View {
         ]
     ),
     generalContentModel(
-        id: 41,
         mainImage: "",
         mainTitle: "Animation Types in SwiftUI",
         mainDescription: "",
@@ -124,7 +119,6 @@ struct ChildView: View {
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "1. Implicit Animation",
                 DDescription: "Animations which are automatically applies when a state value changes are called implicit animations.\nWe just need to define the start and end value and swiftui takes care of the rest",
@@ -155,7 +149,6 @@ struct ImplicitAnimationExample: View {
 """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "2. Explicit Animation",
                 DDescription: "Explicit animations require you to define what should be animated and when it should happen. \nYou specify the animation directly on the views and trigger it based on certain conditions or actions.",
@@ -191,7 +184,7 @@ struct ExplicitAnimationExample: View {
         ]
     ),
     generalContentModel(
-            id: 124,
+
             mainImage: "",
             mainTitle: "How do you create a List view in SwiftUI?",
             mainDescription: "",
@@ -199,7 +192,6 @@ struct ExplicitAnimationExample: View {
             technology: "SwiftUI",
             viewComponentDescription: [
                 DescriptionView(
-                    id: 1,
                     DImage: "",
                     DTitle: "Basic List Implementation",
                     DDescription: "A simple List view displaying static items.",
@@ -217,7 +209,6 @@ struct ExplicitAnimationExample: View {
     """
                 ),
                 DescriptionView(
-                    id: 2,
                     DImage: "",
                     DTitle: "Sticky Section Headers (Title)",
                     DDescription: "Use Section headers to create sticky titles that stay at the top as you scroll.",
@@ -239,7 +230,7 @@ struct ExplicitAnimationExample: View {
     """
                 ),
                 DescriptionView(
-                    id: 3,
+
                     DImage: "",
                     DTitle: "UI Updates with @State",
                     DDescription: "SwiftUI automatically updates the UI when the data changes, using @State for dynamic updates.",
@@ -255,7 +246,6 @@ struct ExplicitAnimationExample: View {
     """
                 ),
                 DescriptionView(
-                    id: 4,
                     DImage: "",
                     DTitle: "List Row Background",
                     DDescription: "Change the background of individual rows using .listRowBackground.",
@@ -268,7 +258,6 @@ struct ExplicitAnimationExample: View {
     """
                 ),
                 DescriptionView(
-                    id: 5,
                     DImage: "",
                     DTitle: "List Style",
                     DDescription: "SwiftUI offers several list styles to customize the List's appearance.",
@@ -281,7 +270,6 @@ struct ExplicitAnimationExample: View {
     """
                 ),
                 DescriptionView(
-                    id: 6,
                     DImage: "",
                     DTitle: "List Separator (Divider) Style",
                     DDescription: "Hide default separators between rows using .listRowSeparator.",
@@ -294,7 +282,6 @@ struct ExplicitAnimationExample: View {
     """
                 ),
                 DescriptionView(
-                    id: 7,
                     DImage: "",
                     DTitle: "UI Updates for Large Data Changes",
                     DDescription: "Use @StateObject or @ObservedObject to handle large data changes in a List view.",
@@ -316,7 +303,6 @@ struct ExplicitAnimationExample: View {
     """
                 ),
                 DescriptionView(
-                    id: 8,
                     DImage: "",
                     DTitle: "Grouped List Sections",
                     DDescription: "Group data into sections with headers and customize them as needed.",
@@ -340,7 +326,6 @@ struct ExplicitAnimationExample: View {
             ]
         ),
     generalContentModel(
-            id: 14,
             mainImage: "",
             mainTitle: "What are the main differences between @State and @ObservedObject in SwiftUI?",
             mainDescription: "",
@@ -348,7 +333,6 @@ struct ExplicitAnimationExample: View {
             technology: "SwiftUI",
             viewComponentDescription: [
                 DescriptionView(
-                    id: 1,
                     DImage: "",
                     DTitle: "Purpose of @State",
                     DDescription: """
@@ -378,7 +362,7 @@ struct ExplicitAnimationExample: View {
     """
                 ),
                 DescriptionView(
-                    id: 2,
+
                     DImage: "",
                     DTitle: "Purpose of @ObservedObject",
                     DDescription: """
@@ -407,7 +391,6 @@ struct ExplicitAnimationExample: View {
     """
                 ),
                 DescriptionView(
-                    id: 3,
                     DImage: "",
                     DTitle: "Key Differences",
                     DDescription: """
@@ -438,7 +421,6 @@ struct ExplicitAnimationExample: View {
             ]
         ), 
     generalContentModel(
-        id: 44,
         mainImage: "",
         mainTitle: "What is the purpose of the onAppear and onDisappear modifiers in SwiftUI?",
         mainDescription: "",
@@ -446,7 +428,6 @@ struct ExplicitAnimationExample: View {
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Purpose of onAppear",
                 DDescription: """
@@ -467,7 +448,6 @@ struct ContentView: View {
 """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Purpose of onDisappear",
                 DDescription: """
@@ -488,7 +468,6 @@ struct ContentView: View {
 """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Key Points",
                 DDescription: """
@@ -519,7 +498,6 @@ struct ContentView: View {
         ]
     ),
     generalContentModel(
-            id: 56,
             mainImage: "",
             mainTitle: "How do you implement a grid layout in SwiftUI using LazyVGrid?",
             mainDescription: "",
@@ -527,7 +505,6 @@ struct ContentView: View {
             technology: "SwiftUI",
             viewComponentDescription: [
                 DescriptionView(
-                    id: 1,
                     DImage: "",
                     DTitle: "1. Creating a Simple Grid with LazyVGrid",
                     DDescription: """
@@ -562,7 +539,6 @@ struct ContentView: View {
     """
                 ),
                 DescriptionView(
-                    id: 2,
                     DImage: "",
                     DTitle: "2. Adjusting Column Width and Spacing",
                     DDescription: """
@@ -582,7 +558,6 @@ struct ContentView: View {
     """
                 ),
                 DescriptionView(
-                    id: 3,
                     DImage: "",
                     DTitle: "3. Adding Dynamic Data and Background Colors",
                     DDescription: """
@@ -620,7 +595,6 @@ struct ContentView: View {
             ]
         ),
     generalContentModel(
-        id: 1,
         mainImage: "",
         mainTitle: "What is SwiftUI, and how does it differ from UIKit?",
         mainDescription: "An overview of SwiftUI, Apple's modern UI framework, and its main differences from UIKit.",
@@ -628,7 +602,6 @@ struct ContentView: View {
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Introduction to SwiftUI",
                 DDescription: "SwiftUI is Apple's declarative framework for building user interfaces across all Apple platforms. Introduced in 2019, it simplifies UI creation by using a declarative syntax, meaning developers describe the desired UI state and SwiftUI handles the rendering.",
@@ -636,7 +609,6 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Difference 1: Declarative vs. Imperative",
                 DDescription: "SwiftUI uses a declarative approach where the code describes the UI and its states. UIKit, on the other hand, is imperative, requiring step-by-step instructions to manipulate the UI.",
@@ -644,7 +616,6 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Difference 2: Platform Compatibility",
                 DDescription: "SwiftUI enables cross-platform UI creation for iOS, macOS, watchOS, and tvOS. UIKit is iOS-specific, requiring AppKit for macOS development.",
@@ -652,7 +623,6 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Difference 3: Code Simplicity",
                 DDescription: "SwiftUI minimizes code verbosity with features like property wrappers (@State, @Binding) to manage UI state. UIKit requires more code for similar functionality, using delegates and data sources for UI updates.",
@@ -660,7 +630,6 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 5,
                 DImage: "",
                 DTitle: "Difference 4: Preview and Live Updates",
                 DDescription: "SwiftUI’s integration with Xcode allows for live previews and updates as you code, streamlining the development process. UIKit development is primarily done through Interface Builder or code without live previews.",
@@ -668,7 +637,6 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 6,
                 DImage: "",
                 DTitle: "Complete Code Sample",
                 DDescription: "A basic SwiftUI example to create a text label and view the declarative syntax in action.",
@@ -694,7 +662,6 @@ struct ContentView: View {
         ]
     ),
     generalContentModel(
-                id: 59,
                 mainImage: "",
                 mainTitle: "How does SwiftUI handle environment variables?",
                 mainDescription: "A guide to understanding and using environment variables in SwiftUI.",
@@ -702,7 +669,6 @@ struct ContentView: View {
                 technology: "SwiftUI",
                 viewComponentDescription: [
                     DescriptionView(
-                        id: 1,
                         DImage: "",
                         DTitle: "Introduction to Environment Variables",
                         DDescription: "Environment variables in SwiftUI allow views to read shared data from their environment, enhancing the reusability and organization of code.",
@@ -710,7 +676,6 @@ struct ContentView: View {
                         code: ""
                     ),
                     DescriptionView(
-                        id: 2,
                         DImage: "",
                         DTitle: "Using @Environment Property Wrapper",
                         DDescription: "The @Environment property wrapper is used to access environment values. You can retrieve values like color scheme or custom environment settings.",
@@ -720,7 +685,6 @@ struct ContentView: View {
             """
                     ),
                     DescriptionView(
-                        id: 3,
                         DImage: "",
                         DTitle: "Example of Accessing Color Scheme",
                         DDescription: "In this example, the current color scheme is used to change the background color of a text view.",
@@ -746,7 +710,6 @@ struct ContentView: View {
             """
                     ),
                     DescriptionView(
-                        id: 4,
                         DImage: "",
                         DTitle: "Injecting Custom Environment Values",
                         DDescription: "You can also inject custom environment values to be accessed by child views. This promotes data flow and keeps components loosely coupled.",
@@ -763,7 +726,6 @@ struct ContentView: View {
             """
                     ),
                     DescriptionView(
-                        id: 5,
                         DImage: "",
                         DTitle: "Summary of Benefits",
                         DDescription: "Using environment variables simplifies state management across multiple views, allowing for a more modular and reusable codebase in SwiftUI applications.",
@@ -773,7 +735,6 @@ struct ContentView: View {
                 ]
             ),
     generalContentModel(
-                id: 62,
                 mainImage: "",
                 mainTitle: "How do you create a TabView in SwiftUI?",
                 mainDescription: "An overview of implementing TabView in SwiftUI and its various applications, including use cases like onboarding screens.",
@@ -781,7 +742,6 @@ struct ContentView: View {
                 technology: "SwiftUI",
                 viewComponentDescription: [
                     DescriptionView(
-                        id: 1,
                         DImage: "",
                         DTitle: "Introduction to TabView",
                         DDescription: "TabView is a container view in SwiftUI that allows you to create a tabbed interface, enabling users to switch between multiple views easily.",
@@ -789,7 +749,6 @@ struct ContentView: View {
                         code: ""
                     ),
                     DescriptionView(
-                        id: 2,
                         DImage: "",
                         DTitle: "Basic Implementation of TabView",
                         DDescription: "To create a simple TabView, use the TabView component with multiple TabItem views representing each tab.",
@@ -814,7 +773,6 @@ struct ContentView: View {
             """
                     ),
                     DescriptionView(
-                        id: 3,
                         DImage: "",
                         DTitle: "Customizing Tab Items",
                         DDescription: "You can customize each tab item using images and text, making the interface more intuitive.",
@@ -827,7 +785,7 @@ struct ContentView: View {
             """
                     ),
                     DescriptionView(
-                        id: 4,
+                
                         DImage: "",
                         DTitle: "TabView Style",
                         DDescription: "SwiftUI provides different styles for TabView, such as DefaultTabViewStyle and PageTabViewStyle, allowing for customizable layouts.",
@@ -840,7 +798,6 @@ struct ContentView: View {
             """
                     ),
                     DescriptionView(
-                        id: 5,
                         DImage: "",
                         DTitle: "Applications of TabView",
                         DDescription: "TabView is commonly used in applications to categorize content, such as social media apps (e.g., feed, notifications, profile) and utility apps (e.g., settings, preferences). It enhances user navigation by keeping related views grouped together.",
@@ -848,7 +805,6 @@ struct ContentView: View {
                         code: ""
                     ),
                     DescriptionView(
-                        id: 6,
                         DImage: "",
                         DTitle: "Using TabView for Onboarding Screens",
                         DDescription: "You can use TabView with the PageTabViewStyle to create swipeable onboarding screens. Each TabView page can represent a step in the onboarding process.",
@@ -904,7 +860,7 @@ struct ContentView: View {
             """
                     ),
                     DescriptionView(
-                        id: 7,
+
                         DImage: "",
                         DTitle: "Complete Code Sample",
                         DDescription: "A full example of a TabView with two tabs: Home and Settings.",
@@ -944,7 +900,7 @@ struct ContentView: View {
                 ]
             ),
     generalContentModel(
-                id: 65,
+       
                 mainImage: "",
                 mainTitle: "What is GeometryReader, and how is it used in SwiftUI?",
                 mainDescription: "An overview of GeometryReader, a view that provides access to layout properties, along with various examples and use cases.",
@@ -952,7 +908,7 @@ struct ContentView: View {
                 technology: "SwiftUI",
                 viewComponentDescription: [
                     DescriptionView(
-                        id: 1,
+                        
                         DImage: "",
                         DTitle: "Introduction to GeometryReader",
                         DDescription: "GeometryReader is a SwiftUI container view that reads the surrounding geometry and provides layout information, allowing you to create dynamic and responsive layouts based on screen size or parent view dimensions.",
@@ -960,7 +916,7 @@ struct ContentView: View {
                         code: ""
                     ),
                     DescriptionView(
-                        id: 2,
+                        
                         DImage: "",
                         DTitle: "Basic Usage of GeometryReader",
                         DDescription: "The GeometryReader closure provides a GeometryProxy object that contains information about the size and position of the view. This allows you to adapt layout to different screen sizes.",
@@ -981,7 +937,7 @@ struct ContentView: View {
             """
                     ),
                     DescriptionView(
-                        id: 3,
+                        
                         DImage: "",
                         DTitle: "Using GeometryReader for Responsive Layouts",
                         DDescription: "You can use GeometryReader to position and size elements dynamically based on the available space, making it ideal for responsive designs.",
@@ -1015,7 +971,7 @@ struct ContentView: View {
             """
                     ),
                     DescriptionView(
-                        id: 4,
+                        
                         DImage: "",
                         DTitle: "Using GeometryReader to Position Elements",
                         DDescription: "You can also use GeometryReader to create custom positioning by applying offsets relative to the available space.",
@@ -1041,7 +997,7 @@ struct ContentView: View {
             """
                     ),
                     DescriptionView(
-                        id: 5,
+                        
                         DImage: "",
                         DTitle: "Animating with GeometryReader",
                         DDescription: "You can use GeometryReader for animations by adjusting properties like frame or position dynamically based on screen size or user interactions.",
@@ -1074,7 +1030,7 @@ struct ContentView: View {
             """
                     ),
                     DescriptionView(
-                        id: 6,
+                        
                         DImage: "",
                         DTitle: "Using GeometryReader with Safe Areas",
                         DDescription: "You can leverage GeometryReader to account for safe areas, which is helpful for creating views that adapt to the notch and other screen interruptions.",
@@ -1106,7 +1062,7 @@ struct ContentView: View {
             """
                     ),
                     DescriptionView(
-                        id: 7,
+                        
                         DImage: "",
                         DTitle: "Complete Code Example",
                         DDescription: "A complete example demonstrating the use of GeometryReader to create a responsive layout.",
@@ -1138,7 +1094,7 @@ struct ContentView: View {
                 ]
             ),
     generalContentModel(
-        id: 67,
+        
         mainImage: "",
         mainTitle: "How does SwiftUI optimize view rendering with @ViewBuilder?",
         mainDescription: "Explanation of @ViewBuilder in SwiftUI, its role in dynamic view composition, and how it optimizes view rendering.",
@@ -1146,7 +1102,7 @@ struct ContentView: View {
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "1. Purpose of @ViewBuilder",
                 DDescription: "@ViewBuilder simplifies complex layouts by allowing multiple views in a single closure. It’s essential for conditional view rendering, promoting code readability and modular UI creation.",
@@ -1154,7 +1110,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "2. Optimization Benefits",
                 DDescription: "@ViewBuilder optimizes view rendering by deferring the creation of non-visible views, reducing memory and processing demands. This improves performance, especially in complex or conditional UI layouts.",
@@ -1162,7 +1118,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "3. Usage Example: Creating a Custom Popup",
                 DDescription: "This example demonstrates a custom popup view using @ViewBuilder, showing how to add dynamic, animated content and dismiss options, with conditional rendering of optional elements.",
@@ -1230,7 +1186,7 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "4. Customizing the Popup",
                 DDescription: "This popup example allows for flexible content, custom header text, and dismiss icons, highlighting @ViewBuilder's ability to create complex, reusable components in a single SwiftUI view.",
@@ -1397,7 +1353,7 @@ struct ContentView: View {
 //        ]
 //    ),
     generalContentModel(
-        id: 70,
+        
         mainImage: "",
         mainTitle: "What are LazyStacks in SwiftUI?",
         mainDescription: "An overview of LazyStacks in SwiftUI, their usage, and how they improve performance with efficient loading of views on demand.",
@@ -1405,7 +1361,7 @@ struct ContentView: View {
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "1. Introduction to LazyStacks",
                 DDescription: "LazyStacks are views in SwiftUI that load and render their child views on-demand. They help with performance optimization, especially when dealing with long lists of items by only loading visible views.",
@@ -1413,7 +1369,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "2. LazyVStack vs. LazyHStack",
                 DDescription: "LazyVStack loads child views vertically, whereas LazyHStack does so horizontally. In both, only visible views are rendered initially, improving memory efficiency.",
@@ -1436,7 +1392,7 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "3. Why Use LazyStacks?",
                 DDescription: "LazyStacks optimize memory usage by only rendering views as needed, making them ideal for displaying large datasets without impacting app performance.",
@@ -1444,7 +1400,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "4. LazyStacks with ScrollView",
                 DDescription: "LazyStacks are often combined with ScrollView to enable scrolling, allowing efficient navigation through large sets of data without preloading all views.",
@@ -1482,7 +1438,7 @@ struct ContentView: View {
         ]
     ),
     generalContentModel(
-        id: 77,
+        
         mainImage: "",
         mainTitle: "Benefits of SwiftUI Previews and How to Configure Them",
         mainDescription: "An overview of SwiftUI Previews, their advantages in development, and configuration options to optimize the preview experience.",
@@ -1490,7 +1446,7 @@ struct ContentView: View {
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "1. Introduction to SwiftUI Previews",
                 DDescription: "SwiftUI Previews allow developers to see live updates to UI components as they code, streamlining design and layout adjustments in real-time within Xcode.",
@@ -1498,7 +1454,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "2. Key Benefits of SwiftUI Previews",
                 DDescription: "SwiftUI Previews enhance development by providing a live, interactive view of the UI without needing to run the app on a simulator or device. This saves time and improves visual accuracy.",
@@ -1506,7 +1462,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "3. Configuring Basic Previews",
                 DDescription: "To enable previews, add a #Preview structure at the end of a SwiftUI view file. Xcode automatically displays the view in the canvas panel for live updates.",
@@ -1534,7 +1490,7 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "4. Device and Color Scheme Selection",
                 DDescription: "You can preview views on different devices and in both light and dark modes to ensure UI adaptability. This is done by adding .previewDevice() and .preferredColorScheme() modifiers.",
@@ -1548,7 +1504,7 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 5,
+                
                 DImage: "",
                 DTitle: "5. Dynamic Type and Accessibility Settings",
                 DDescription: "Configure previews to test different Dynamic Type sizes and accessibility settings. Using .environment(\\.sizeCategory) lets you adjust font sizes for accessibility.",
@@ -1561,7 +1517,7 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 6,
+                
                 DImage: "",
                 DTitle: "6. Preview Layouts for Multiple Screens",
                 DDescription: "Preview multiple layouts by using ForEach to display the view on various devices or configurations side by side. This enables simultaneous testing across devices.",
@@ -1576,7 +1532,7 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 7,
+                
                 DImage: "",
                 DTitle: "7. Complete Example: Configuring Multiple Settings",
                 DDescription: "A combined example showcasing a view in both light and dark modes, with dynamic type adjustments, for multiple devices.",
@@ -1595,7 +1551,7 @@ struct ContentView: View {
         ]
     ),
     generalContentModel(
-        id: 81,
+        
         mainImage: "",
         mainTitle: "Using Path and Shape to Create Custom Graphics in SwiftUI",
         mainDescription: "An overview of how to use the Path and Shape structs in SwiftUI to create custom drawings and complex shapes with ease.",
@@ -1603,7 +1559,7 @@ struct ContentView: View {
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "1. Introduction to Path and Shape in SwiftUI",
                 DDescription: "Path and Shape are fundamental drawing tools in SwiftUI, allowing developers to create custom, complex graphics by specifying points, lines, and curves.",
@@ -1611,7 +1567,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "2. Creating Simple Custom Shapes with Path",
                 DDescription: "The Path struct defines a sequence of drawing commands, making it possible to create custom shapes by setting points, drawing lines, and adding curves.",
@@ -1646,7 +1602,6 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "3. Creating Reusable Custom Shapes with Shape Protocol",
                 DDescription: "The Shape protocol is used to define reusable shapes. Implementing the path(in:) function allows you to specify how the shape should be drawn, making it scalable and adaptable.",
@@ -1681,7 +1636,6 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "4. Filling Shapes with Color and Gradients",
                 DDescription: "Shapes can be filled with colors, gradients, or patterns by using the .fill() modifier, adding visual depth and creativity to custom shapes.",
@@ -1713,7 +1667,6 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 5,
                 DImage: "",
                 DTitle: "5. Combining Multiple Shapes with ZStack",
                 DDescription: "Multiple shapes can be layered using ZStack to create complex graphics. By aligning and overlaying shapes, you can achieve intricate designs.",
@@ -1749,7 +1702,7 @@ struct ContentView: View {
         ]
     ),
     generalContentModel(
-        id: 85,
+        
         mainImage: "",
         mainTitle: "Applying Conditional Modifiers in SwiftUI",
         mainDescription: "Learn how to conditionally apply view modifiers in SwiftUI to customize views based on different conditions.",
@@ -1757,7 +1710,6 @@ struct ContentView: View {
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "1. Introduction to Conditional Modifiers",
                 DDescription: "Conditional modifiers in SwiftUI allow you to apply specific view modifiers based on conditions. This provides flexibility for adapting the UI to different states or values.",
@@ -1765,7 +1717,6 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "2. Using the Conditional Operator (if-else)",
                 DDescription: "Use Swift's conditional operator to apply a modifier only if a certain condition is met.",
@@ -1798,7 +1749,7 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "3. Using Conditional View Modifiers with if Statement",
                 DDescription: "Apply a modifier conditionally by wrapping it with an if statement for more complex conditions.",
@@ -1841,7 +1792,6 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "4. Using Ternary Operators for Simple Conditions",
                 DDescription: "The ternary operator can apply different modifiers based on simple true or false conditions.",
@@ -1874,7 +1824,6 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 5,
                 DImage: "",
                 DTitle: "5. Complete Code Sample",
                 DDescription: "This example shows how to create a view with multiple conditional modifiers applied.",
@@ -1916,7 +1865,7 @@ struct ContentView: View {
         ]
     ),
     generalContentModel(
-        id: 88,
+    
         mainImage: "",
         mainTitle: "@Published, @StateObject, and ObservableObject in SwiftUI",
         mainDescription: "Understanding how @Published and @StateObject work with ObservableObject to manage state changes in SwiftUI.",
@@ -1924,7 +1873,7 @@ struct ContentView: View {
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "1. Introduction to @Published",
                 DDescription: "@Published is a property wrapper used in SwiftUI to automatically announce changes to properties. When a property marked with @Published changes, any views observing that property will be automatically updated.",
@@ -1932,7 +1881,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "2. Using @Published with ObservableObject",
                 DDescription: "To use @Published, you typically define a class conforming to ObservableObject. When properties marked with @Published change, the ObservableObject protocol notifies any subscribers (e.g., SwiftUI views) to update themselves accordingly.",
@@ -1940,7 +1889,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "3. Understanding @StateObject",
                 DDescription: "@StateObject is a property wrapper used to create and manage an instance of an ObservableObject within a SwiftUI view. It ensures that the view correctly initializes the ObservableObject and maintains its lifecycle.",
@@ -1948,7 +1897,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "4. Example of @Published and @StateObject in Action",
                 DDescription: "Here’s an example demonstrating how @Published and @StateObject work together to update a view when data changes.",
@@ -1989,7 +1938,7 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 5,
+                
                 DImage: "",
                 DTitle: "5. Benefits of Using @Published and @StateObject",
                 DDescription: "Using @Published with ObservableObject allows for a clear and reactive way to manage state in SwiftUI. @StateObject ensures the proper lifecycle management of the object, while @Published enables automatic UI updates when the state changes.",
@@ -1997,7 +1946,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 6,
+                
                 DImage: "",
                 DTitle: "6. Complete Code Example",
                 DDescription: "This complete code sample illustrates the interaction between @Published and @StateObject, allowing the UI to reactively update as the count changes.",
@@ -2040,7 +1989,7 @@ struct ContentView: View {
         ]
     ),
     generalContentModel(
-        id: 89,
+        
         mainImage: "",
         mainTitle: "Creating a Form Layout in SwiftUI",
         mainDescription: "An overview of how to create a form layout using the Form view in SwiftUI, including various input types and organization.",
@@ -2048,7 +1997,7 @@ struct ContentView: View {
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "1. Basic Form Implementation",
                 DDescription: "A Form in SwiftUI is used to collect user input. It automatically groups form elements and provides styling suitable for input forms.",
@@ -2056,7 +2005,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "2. Adding Input Fields",
                 DDescription: "You can add various input types like TextField, Toggle, and DatePicker inside a Form. Each element is grouped and can have labels.",
@@ -2064,7 +2013,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "3. Example of a Basic Form",
                 DDescription: "Here’s a simple example of a Form with different input types.",
@@ -2104,7 +2053,7 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "4. Customizing Form Appearance",
                 DDescription: "You can customize the appearance of a Form by changing section headers, adding footers, and adjusting the styles of individual elements.",
@@ -2112,7 +2061,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 5,
+                
                 DImage: "",
                 DTitle: "5. Handling State Changes",
                 DDescription: "Use @State to manage input values, ensuring the UI updates dynamically based on user interaction.",
@@ -2120,7 +2069,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 6,
+                
                 DImage: "",
                 DTitle: "6. Complete Code Example",
                 DDescription: "This complete code example illustrates a functional form layout with state management for user input.",
@@ -2162,7 +2111,7 @@ struct ContentView: View {
         ]
     ),
     generalContentModel(
-        id: 97,
+        
         mainImage: "",
         mainTitle: "Handling Orientation Changes in SwiftUI",
         mainDescription: "An overview of how to handle device orientation changes in SwiftUI, ensuring layouts adapt accordingly.",
@@ -2170,7 +2119,7 @@ struct ContentView: View {
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "1. Understanding Orientation Changes",
                 DDescription: "Orientation changes occur when the device is rotated between portrait and landscape modes. SwiftUI provides tools to respond to these changes dynamically.",
@@ -2178,7 +2127,6 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "2. Using @Environment to Detect Orientation",
                 DDescription: "SwiftUI's @Environment can be used to detect the current size class, which helps in understanding the device's orientation.",
@@ -2186,7 +2134,6 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "3. Example of Handling Orientation Changes",
                 DDescription: "This example shows how to use GeometryReader to adapt the layout based on orientation.",
@@ -2230,7 +2177,7 @@ struct ContentView: View {
     """
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "4. Adapting Layouts with Size Classes",
                 DDescription: "Using size classes, you can create adaptive layouts that change based on the current device orientation, ensuring a responsive design.",
@@ -2238,7 +2185,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 5,
+                
                 DImage: "",
                 DTitle: "5. Using OnChange Modifier",
                 DDescription: "SwiftUI provides the onChange modifier to respond to changes in orientation or size class dynamically, allowing for customized behavior.",
@@ -2246,7 +2193,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 6,
+                
                 DImage: "",
                 DTitle: "6. Complete Code Example",
                 DDescription: "A complete example illustrating the handling of orientation changes using GeometryReader and adapting UI elements.",
@@ -2285,7 +2232,7 @@ struct ContentView: View {
         ]
     ),
     generalContentModel(
-        id: 220,
+        
         mainImage: "",
         mainTitle: " What is code signing, Why is it important for iOS apps?",
         mainDescription: "An overview of code signing, a security mechanism required by Apple to ensure the trustworthiness and integrity of iOS apps.",
@@ -2293,7 +2240,7 @@ struct ContentView: View {
         technology: "iOS",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "1. What is Code Signing?",
                 DDescription: "Code signing involves attaching a digital signature to an app, verifying the developer's identity and ensuring that the code has not been tampered with. Without proper code signing, an app cannot run on actual iOS devices or be distributed via the App Store.",
@@ -2301,7 +2248,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "2. Importance of Code Signing",
                 DDescription: """
@@ -2313,7 +2260,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "3. Components of Code Signing",
                 DDescription: """
@@ -2329,7 +2276,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "4. Code Signing Workflow",
                 DDescription: """
@@ -2342,7 +2289,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 5,
+                
                 DImage: "",
                 DTitle: "5. Example of Code Signing in Xcode",
                 DDescription: """
@@ -2356,7 +2303,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 6,
+                
                 DImage: "",
                 DTitle: "6. Automatic vs. Manual Signing",
                 DDescription: """
@@ -2367,7 +2314,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 7,
+                
                 DImage: "",
                 DTitle: "7. Common Code Signing Issues",
                 DDescription: """
@@ -2382,7 +2329,7 @@ struct ContentView: View {
         ]
     ),
     generalContentModel(
-        id: 215,
+        
         mainImage: "",
         mainTitle: "App States in iOS",
         mainDescription: "An overview of the different app states in iOS and how to manage them using Combine.",
@@ -2390,7 +2337,7 @@ struct ContentView: View {
         technology: "iOS",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "1. Not Running",
                 DDescription: "The app is not running at all. It may be in this state if it hasn't been launched or if it was terminated by the user or the system.",
@@ -2398,7 +2345,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "2. Inactive",
                 DDescription: "The app is running in the foreground but is not receiving events. This occurs when transitioning between active and background states or when an alert is shown.",
@@ -2406,7 +2353,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "3. Active",
                 DDescription: "The app is running in the foreground and receiving events. This is the state when the app is in use and interacting with the user.",
@@ -2414,7 +2361,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "4. Background",
                 DDescription: "The app is running in the background and not visible to the user. It may still be executing code, such as completing a task or handling a background fetch.",
@@ -2422,7 +2369,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 5,
+                
                 DImage: "",
                 DTitle: "5. Suspended",
                 DDescription: "The app is in the background and not executing any code. It remains in memory but is not running, and the system may terminate it to reclaim memory.",
@@ -2430,7 +2377,7 @@ struct ContentView: View {
                 code: ""
             ),
             DescriptionView(
-                id: 6,
+                
                 DImage: "",
                 DTitle: "6. Managing App States with AppState Class",
                 DDescription: """
@@ -2498,7 +2445,7 @@ struct ContentView: View {
         ]
     ),
     generalContentModel(
-        id: 227,
+        
         mainImage: "",
         mainTitle: "Copy vs. Retain in Swift",
         mainDescription: "Understanding value types and reference types in Swift, and how they impact memory management, especially in SwiftUI.",
@@ -2506,7 +2453,7 @@ struct ContentView: View {
         technology: "Swift",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+        
                 DImage: "",
                 DTitle: "1. Copy (Value Types)",
                 DDescription: """
@@ -2530,7 +2477,7 @@ struct ContentView: View {
 """
             ),
             DescriptionView(
-                id: 2,
+        
                 DImage: "",
                 DTitle: "2. Retain (Reference Types)",
                 DDescription: """
@@ -2557,7 +2504,7 @@ struct ContentView: View {
 """
             ),
             DescriptionView(
-                id: 3,
+        
                 DImage: "",
                 DTitle: "3. Copy and Retain in SwiftUI",
                 DDescription: """
@@ -2581,7 +2528,6 @@ struct ContentView: View {
 """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "4. SwiftUI with Reference Types (Retain Behavior)",
                 DDescription: """
@@ -2611,7 +2557,7 @@ struct ContentView: View {
         ]
     ),
     generalContentModel(
-        id: 501,
+        
         mainImage: "",
         mainTitle: "Core Animation in Swift",
         mainDescription: "Understanding Core Animation and how it is used to create smooth animations in SwiftUI with UIViewRepresentable.",
@@ -2619,7 +2565,7 @@ struct ContentView: View {
         technology: "Swift",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "Core Animation Overview",
                 DDescription: """
@@ -2630,7 +2576,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: nil
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "CoreAnimationView Structure",
                 DDescription: """
@@ -2665,7 +2611,7 @@ It operates at a lower level than UIKit animations, providing more control over 
 """
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "Animation Method",
                 DDescription: """
@@ -2704,7 +2650,6 @@ It operates at a lower level than UIKit animations, providing more control over 
 """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Key Components Explained",
                 DDescription: """
@@ -2718,7 +2663,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         ]
     ),
     generalContentModel(
-        id: 502,
         mainImage: "",
         mainTitle: "@Environment in SwiftUI",
         mainDescription: "Understanding the purpose and usage of the @Environment property wrapper in SwiftUI for accessing shared data and settings.",
@@ -2726,7 +2670,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         technology: "Swift",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Purpose of @Environment",
                 DDescription: """
@@ -2737,7 +2680,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: nil
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Usage Example",
                 DDescription: """
@@ -2781,7 +2723,6 @@ It operates at a lower level than UIKit animations, providing more control over 
     """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Explanation",
                 DDescription: """
@@ -2796,7 +2737,6 @@ It operates at a lower level than UIKit animations, providing more control over 
     ),
     
     generalContentModel(
-        id: 504,
         mainImage: "",
         mainTitle: "NavigationStack in SwiftUI",
         mainDescription: "An improved navigation container for SwiftUI, offering enhanced flexibility, state management, and multiple destination support.",
@@ -2804,7 +2744,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "NavigationStack Overview",
                 DDescription: """
@@ -2814,7 +2753,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: nil
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Benefits of NavigationStack",
                 DDescription: """
@@ -2826,7 +2764,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: nil
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Example: Basic Navigation with Data Binding",
                 DDescription: "Create a NavigationStack bound to a data array to track the view hierarchy programmatically.",
@@ -2850,7 +2787,6 @@ It operates at a lower level than UIKit animations, providing more control over 
     """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Navigating Multiple View Types",
                 DDescription: "Use navigationDestination to show different types of views in a single stack by matching NavigationLink types to respective destinations.",
@@ -2878,7 +2814,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         ]
     ),
     generalContentModel(
-        id: 34,
         mainImage: "",
         mainTitle: "Handling User Gestures in SwiftUI",
         mainDescription: "Learn how to handle common user gestures such as tap, swipe, and drag in SwiftUI.",
@@ -2886,7 +2821,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Tap Gesture",
                 DDescription: """
@@ -2907,7 +2841,6 @@ It operates at a lower level than UIKit animations, providing more control over 
     """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Swipe Gesture",
                 DDescription: """
@@ -2935,7 +2868,6 @@ It operates at a lower level than UIKit animations, providing more control over 
     """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Drag Gesture",
                 DDescription: """
@@ -2967,7 +2899,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         ]
     ),
     generalContentModel(
-        id: 51,
         mainImage: "",
         mainTitle: "Integrating UIKit and SwiftUI",
         mainDescription: "Learn how to integrate UIKit views within SwiftUI using UIViewRepresentable and how to navigate to UIKit view controllers from SwiftUI.",
@@ -2975,7 +2906,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         technology: "SwiftUI & UIKit",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Using UIViewRepresentable",
                 DDescription: """
@@ -3004,7 +2934,6 @@ It operates at a lower level than UIKit animations, providing more control over 
     """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Navigating to a Storyboard UIViewController",
                 DDescription: """
@@ -3043,7 +2972,6 @@ It operates at a lower level than UIKit animations, providing more control over 
     """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Adding SwiftUI to UIKit",
                 DDescription: """
@@ -3077,7 +3005,6 @@ It operates at a lower level than UIKit animations, providing more control over 
     """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Using SwiftUI as a View in UIKit",
                 DDescription: """
@@ -3101,7 +3028,7 @@ It operates at a lower level than UIKit animations, providing more control over 
         ]
     ),
     generalContentModel(
-        id: 527,
+        
         mainImage: "",
         mainTitle: "Using Combine for Asynchronous Data Management",
         mainDescription: "Combine is a framework that provides a declarative Swift API for processing values over time. It enables the creation of complex data pipelines for handling asynchronous events.",
@@ -3109,7 +3036,7 @@ It operates at a lower level than UIKit animations, providing more control over 
         technology: "Swift",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "Overview of Combine",
                 DDescription: """
@@ -3119,7 +3046,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: nil
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "Basic Components",
                 DDescription: """
@@ -3130,7 +3057,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: nil
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "Example of Using Combine",
                 DDescription: """
@@ -3164,7 +3091,7 @@ It operates at a lower level than UIKit animations, providing more control over 
     """
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "Benefits of Using Combine",
                 DDescription: """
@@ -3176,7 +3103,7 @@ It operates at a lower level than UIKit animations, providing more control over 
         ]
     ),
     generalContentModel(
-        id: 48,
+        
         mainImage: "",
         mainTitle: "Managing State with Combine and @Published in SwiftUI",
         mainDescription: "Using Combine along with @Published properties allows for reactive state management in SwiftUI apps. This facilitates automatic UI updates when the state changes.",
@@ -3184,7 +3111,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         technology: "Swift",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Overview of State Management",
                 DDescription: """
@@ -3194,7 +3120,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: nil
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "Using @Published",
                 DDescription: """
@@ -3204,7 +3130,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: nil
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "Example of Using @Published",
                 DDescription: """
@@ -3237,7 +3163,7 @@ It operates at a lower level than UIKit animations, providing more control over 
     """
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "Benefits of Using Combine with @Published",
                 DDescription: """
@@ -3249,7 +3175,7 @@ It operates at a lower level than UIKit animations, providing more control over 
         ]
     ),
     generalContentModel(
-        id: 503,
+        
         mainImage: "",
         mainTitle: "Mastering Combine in SwiftUI",
         mainDescription: "Unlock the power of Combine for building dynamic, reactive, and efficient SwiftUI applications. Learn about Publishers, Subscribers, operators, state management, and more!",
@@ -3258,7 +3184,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         viewComponentDescription: [
             // Section 1: Introduction to Combine
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "What is Combine?",
                 DDescription: """
@@ -3268,7 +3193,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: nil
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Basic Components: Publishers, Subscribers, and Operators",
                 DDescription: """
@@ -3284,7 +3208,6 @@ It operates at a lower level than UIKit animations, providing more control over 
             
             // Section 2: Practical Examples
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Example: Simple Publisher & Subscriber",
                 DDescription: "Let's start with a simple example to demonstrate how publishers and subscribers work.",
@@ -3301,7 +3224,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Example: Using Combine for a Network Request",
                 DDescription: "Here's a practical example of how to use Combine to manage a network request, fetching data from a URL.",
@@ -3335,7 +3257,6 @@ It operates at a lower level than UIKit animations, providing more control over 
             
             // Section 3: State Management with Combine
             DescriptionView(
-                id: 5,
                 DImage: "",
                 DTitle: "State Management in SwiftUI with Combine and @Published",
                 DDescription: "Learn how to effortlessly manage your SwiftUI view's state using Combine's reactive capabilities, ensuring the UI updates automatically.",
@@ -3368,7 +3289,6 @@ It operates at a lower level than UIKit animations, providing more control over 
 
             // Section 4: Advanced Techniques
             DescriptionView(
-                id: 6,
                 DImage: "",
                 DTitle: "Powerful Combine Operators",
                 DDescription: """
@@ -3394,7 +3314,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 7,
                 DImage: "",
                 DTitle: "Error Handling with Combine",
                 DDescription: "Learn how to handle errors gracefully in your Combine pipelines using operators like `catch` and `tryMap`.",
@@ -3416,7 +3335,6 @@ It operates at a lower level than UIKit animations, providing more control over 
             
             // Section 5: Benefits of Combine
             DescriptionView(
-                id: 8,
                 DImage: "",
                 DTitle: "Benefits of Using Combine",
                 DDescription: """
@@ -3432,7 +3350,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         ]
     ),
     generalContentModel(
-        id: 22,
         mainImage: "",
         mainTitle: "SwiftUI's View Protocol vs. UIKit’s UIView",
         mainDescription: "A comparison of SwiftUI's View protocol and UIKit’s UIView, highlighting key differences such as protocol vs. class, declarative vs. imperative approaches, state management, lifecycle, and rendering optimization.",
@@ -3440,7 +3357,7 @@ It operates at a lower level than UIKit animations, providing more control over 
         technology: "SwiftUI & UIKit",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "Protocol vs. Class",
                 DDescription: "SwiftUI’s View is a protocol, usually implemented as a struct, emphasizing immutability and protocol-oriented design. UIKit’s UIView is a concrete class that allows inheritance and subclassing.",
@@ -3448,7 +3365,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "Declarative vs. Imperative",
                 DDescription: "SwiftUI follows a declarative syntax where you describe the UI's appearance based on state, automatically updating as the state changes. UIKit requires an imperative approach with explicit UI creation and updates.",
@@ -3456,7 +3373,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "State Management",
                 DDescription: "SwiftUI uses property wrappers like @State, @Binding, and @ObservedObject for reactive state management, automatically updating UI based on state. UIKit relies on delegates, target-action patterns, and NotificationCenter, requiring manual UI updates.",
@@ -3464,7 +3381,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Lifecycle and Flexibility",
                 DDescription: "SwiftUI views are transient, recreated on state change, with lifecycle methods like onAppear and onDisappear. UIKit views are persistent, with lifecycle methods like init, layoutSubviews, and removeFromSuperview for updates and cleanup.",
@@ -3472,7 +3388,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 5,
                 DImage: "",
                 DTitle: "Rendering and Optimization",
                 DDescription: "SwiftUI optimizes rendering automatically, only re-rendering affected parts based on state. UIKit requires manual view management, selectively refreshing or re-rendering for performance.",
@@ -3482,7 +3397,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         ]
     ),
     generalContentModel(
-        id: 29,
         mainImage: "",
         mainTitle: "How to Customize a TabView in SwiftUI",
         mainDescription: "A seasoned iOS developer’s perspective on customizing TabView in SwiftUI, covering tab items, color customization, custom tab bar views, icon color changes, and animations.",
@@ -3490,7 +3404,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Basic Customization with tabItem",
                 DDescription: "Start with the tabItem modifier to set an icon and text for each tab. It supports system images or custom icons and text for a basic look.",
@@ -3511,7 +3424,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Customizing Tab Bar Color",
                 DDescription: "To change tab bar appearance, such as background color or tint, use UITabBar.appearance() within UIKit, applying changes globally.",
@@ -3522,7 +3434,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Adding a Custom Tab Bar View",
                 DDescription: "For more complex customizations like rounded indicators or animations, create a custom tab bar using HStack and manage state manually.",
@@ -3562,7 +3473,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Changing Icon Color for Different States",
                 DDescription: "To set colors for active and inactive tab items, use UITabBar.appearance().unselectedItemTintColor and tintColor for a UIKit-based solution.",
@@ -3573,7 +3483,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 5,
                 DImage: "",
                 DTitle: "Adding Animation",
                 DDescription: "SwiftUI enables smooth transitions between tabs, such as opacity or scale animations, using .transition(.scale) for a dynamic feel.",
@@ -3585,7 +3494,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         ]
     ),
     generalContentModel(
-        id: 35,
         mainImage: "",
         mainTitle: "Understanding the App Protocol in SwiftUI",
         mainDescription: "An in-depth explanation of the App protocol in SwiftUI, how it sets up the app's structure, and its use cases in configuring the app's main entry point.",
@@ -3594,7 +3502,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         viewComponentDescription: [
             
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "What is the App Protocol?",
                 DDescription: "Introduced in SwiftUI, the App protocol defines the structure and behavior of an app. It serves as the entry point, allowing you to set up scenes and manage the app lifecycle declaratively.",
@@ -3602,7 +3509,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Basic Implementation of the App Protocol",
                 DDescription: "To create an app, you conform to the App protocol and specify the main view using the body property. SwiftUI automatically uses this as the app’s starting point.",
@@ -3619,7 +3525,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                        id: 3,
                         DImage: "",
                         DTitle: "Scene Management",
                         DDescription: "The App protocol allows you to define multiple scenes for your app using various types such as WindowGroup, DocumentGroup, or Settings, enabling the management of different UI states and navigations. For instance, you can create a TabView or a NavigationView as a part of a scene.",
@@ -3644,7 +3549,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                         """
                     ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Managing App Lifecycle Events",
                 DDescription: "SwiftUI’s App protocol allows you to manage lifecycle events directly with modifiers, such as onChange and onAppear, without needing UIApplicationDelegate.",
@@ -3668,7 +3572,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 5,
                 DImage: "",
                 DTitle: "Benefits of the App Protocol in SwiftUI",
                 DDescription: "The App protocol simplifies app initialization by removing the need for AppDelegate. It enables a fully declarative setup, allowing code clarity and consistency across platforms.",
@@ -3676,7 +3579,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                       id: 7,
                        DImage: "",
                        DTitle: "Dependency Injection",
                        DDescription: "The App protocol is also useful for managing app-wide state and dependencies, such as environment objects or app settings. You can inject environment values that need to be accessible throughout your app’s views.",
@@ -3691,7 +3593,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                        """
                    ),
             DescriptionView(
-                id: 6,
                 DImage: "",
                 DTitle: "Setting Up Multiple Scenes",
                 DDescription: "For apps supporting multiple windows (e.g., on iPad), you can add additional WindowGroups or other scenes, making the app adaptable to various use cases.",
@@ -3709,7 +3610,7 @@ It operates at a lower level than UIKit animations, providing more control over 
             )
         ]
     ),generalContentModel(
-        id: 37,
+
         mainImage: "",
         mainTitle: "Understanding @SceneStorage in SwiftUI",
         mainDescription: "An overview of the @SceneStorage property wrapper in SwiftUI, explaining its purpose, functionality, and best practices for use in managing view state.",
@@ -3717,7 +3618,7 @@ It operates at a lower level than UIKit animations, providing more control over 
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+
                 DImage: "",
                 DTitle: "What is @SceneStorage?",
                 DDescription: "@SceneStorage is a property wrapper in SwiftUI that allows you to persist and restore the state of a view or scene when the app is paused or terminated. It is particularly useful for managing state across app launches, enhancing the user experience.",
@@ -3725,7 +3626,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "Purpose and Functionality",
                 DDescription: "@SceneStorage is designed to automatically save and restore state information for views that are part of a scene. It leverages the app’s scene lifecycle to manage data, ensuring that any state marked with @SceneStorage is preserved when the scene goes out of view or when the app is closed and reopened.",
@@ -3733,7 +3634,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "Storage Location",
                 DDescription: "The data stored using @SceneStorage is associated with the current scene, meaning it is isolated to the specific tab or window. This is different from @AppStorage, which is used for app-wide settings and preferences.",
@@ -3741,7 +3642,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "Usage",
                 DDescription: "You use @SceneStorage in a similar way to @State or @Binding, declaring a variable and specifying a key for storage. The data type can be any type that conforms to Codable or is String or Int. SwiftUI automatically retrieves the saved value when the view appears, and updates the storage when the view state changes.",
@@ -3759,7 +3660,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 5,
+                
                 DImage: "",
                 DTitle: "Lifecycle Considerations",
                 DDescription: "@SceneStorage is reset when the scene is terminated, meaning that if the app is completely closed, the state will be lost. However, it persists as long as the scene remains active, making it ideal for temporary states that do not need to be retained permanently.",
@@ -3767,7 +3668,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 6,
+                
                 DImage: "",
                 DTitle: "Best Practices",
                 DDescription: "Use @SceneStorage for states relevant to the current view that enhance user experience by preserving input, selection, or navigation state. It’s useful for form inputs, scroll positions, or any temporary data that users expect to persist between app launches without relying on more permanent storage solutions.",
@@ -3777,7 +3678,7 @@ It operates at a lower level than UIKit animations, providing more control over 
         ]
     ),
     generalContentModel(
-        id: 38,
+        
         mainImage: "",
         mainTitle: "Understanding @AppStorage and Keychain in SwiftUI",
         mainDescription: "An overview of the @AppStorage property wrapper in SwiftUI, detailing its purpose, functionality, and best practices for managing user preferences.",
@@ -3785,7 +3686,7 @@ It operates at a lower level than UIKit animations, providing more control over 
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "What is @AppStorage?",
                 DDescription: "@AppStorage is a property wrapper in SwiftUI that simplifies the process of reading and writing user preferences or settings to UserDefaults, allowing for easy management of persistent data between app launches.",
@@ -3793,7 +3694,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "How @AppStorage Works",
                 DDescription: "You declare a variable with the @AppStorage property wrapper, specifying a key for UserDefaults. This key is used to automatically store and retrieve the value. Changes to the value update UserDefaults and vice versa, ensuring state synchronization.",
@@ -3810,7 +3711,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "Data Types",
                 DDescription: "@AppStorage works with basic types supported by UserDefaults, such as Bool, Int, Double, String, and Data. It is best for lightweight data that does not require complex structures.",
@@ -3818,7 +3719,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "When to Use @AppStorage",
                 DDescription: "Use @AppStorage for storing user preferences, such as themes or settings, enhancing user experience. It is ideal for lightweight, non-sensitive data, as UserDefaults is not encrypted.",
@@ -3826,7 +3727,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 5,
+                
                 DImage: "",
                 DTitle: "More Secure Ways to Store Data using Keychain",
                 DDescription: "For sensitive information, such as passwords or tokens, use the Keychain, which provides secure, encrypted storage accessible only by the app that stored it.",
@@ -3863,7 +3764,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 6,
+                
                 DImage: "",
                 DTitle: "Using Encrypted Storage",
                 DDescription: "Consider using libraries like CryptoKit to encrypt data before storing it in UserDefaults or files for added security.",
@@ -3871,7 +3772,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 7,
+                
                 DImage: "",
                 DTitle: "Summary",
                 DDescription: "In summary, @AppStorage is a convenient way to manage user preferences in SwiftUI. For sensitive data, however, using the Keychain or other secure storage methods is crucial for building secure applications.",
@@ -3881,7 +3782,7 @@ It operates at a lower level than UIKit animations, providing more control over 
         ]
     ),
     generalContentModel(
-        id: 39,
+        
         mainImage: "",
         mainTitle: "Understanding PreferenceKey in SwiftUI",
         mainDescription: "An overview of the PreferenceKey protocol in SwiftUI, detailing its purpose, functionality, and various use cases for passing data up the view hierarchy.",
@@ -3889,7 +3790,7 @@ It operates at a lower level than UIKit animations, providing more control over 
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "What is PreferenceKey?",
                 DDescription: "In SwiftUI, a PreferenceKey is a protocol that allows child views to pass data up the view hierarchy to parent views. This reverse data flow is particularly useful for custom layouts and passing data between views.",
@@ -3897,7 +3798,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "How PreferenceKey Works",
                 DDescription: "Creating a PreferenceKey involves defining a struct that conforms to the PreferenceKey protocol, specifying a Value type, and providing a reduce function to combine multiple values from child views.",
@@ -3913,7 +3814,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "Setting and Reading Preferences",
                 DDescription: "To set a preference, use the .preference(key:value:) modifier in a child view, and then read the preference in the parent view with .onPreferenceChange(_:perform:).",
@@ -3945,7 +3846,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 4,
+
                 DImage: "",
                 DTitle: "Use Cases for PreferenceKey",
                 DDescription: "PreferenceKey can be used to customize layouts, build navigation bars, track scroll positions, and manage grid or stack layouts by passing child view data up to the parent view.",
@@ -3953,7 +3854,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 5,
+
                 DImage: "",
                 DTitle: "Customizing Layouts Based on Child Content",
                 DDescription: "PreferenceKey is useful for custom layouts where a parent view needs information from child views, such as calculating the size of each item in a stack for dynamic adjustments.",
@@ -3961,7 +3862,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 6,
+
                 DImage: "",
                 DTitle: "Building Custom Navigation Bars",
                 DDescription: "PreferenceKey can pass data from child views, such as titles or visibility, to a custom navigation bar in the parent view for a customized navigation experience.",
@@ -3969,7 +3870,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 7,
+
                 DImage: "",
                 DTitle: "Scroll Position Tracking",
                 DDescription: "In complex scrolling layouts, PreferenceKey can track scroll positions of child views, enabling effects like sticky headers or animations based on scroll position.",
@@ -3977,7 +3878,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 8,
+
                 DImage: "",
                 DTitle: "Passing Information in Grids or Stacks",
                 DDescription: "PreferenceKey allows a parent view in a grid or stack layout to know each child’s size and adjust the overall layout, enabling custom arrangements based on content.",
@@ -3985,7 +3886,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 9,
                 DImage: "",
                 DTitle: "Summary",
                 DDescription: "In summary, PreferenceKey is a valuable tool in SwiftUI for scenarios where child views need to communicate information back to a parent view. It enables flexible, responsive layouts and is especially useful for UI customizations based on content.",
@@ -3995,7 +3895,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         ]
     ),
     generalContentModel(
-        id: 93,
         mainImage: "",
         mainTitle: "Making SwiftUI Views Responsive to Different Screen Sizes",
         mainDescription: "Learn how to create responsive SwiftUI views that adjust dynamically to different screen sizes, orientations, and devices, utilizing flexible layouts and adaptive techniques.",
@@ -4003,7 +3902,7 @@ It operates at a lower level than UIKit animations, providing more control over 
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+
                 DImage: "",
                 DTitle: "Use Flexible Layout Containers",
                 DDescription: "SwiftUI’s VStack, HStack, ZStack, and Spacer adapt to available space, making them essential for responsive layouts.",
@@ -4027,7 +3926,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "GeometryReader for Dynamic Layouts",
                 DDescription: "GeometryReader provides access to a view’s size and position, enabling custom layouts that respond dynamically to screen dimensions.",
@@ -4046,7 +3944,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Frame Modifiers with Flexible Dimensions",
                 DDescription: "Using .frame(maxWidth: .infinity, maxHeight: .infinity) allows views to expand within available space, adapting layouts on different screens.",
@@ -4054,7 +3951,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 code: ""
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Adaptive Grid Layouts",
                 DDescription: "SwiftUI’s LazyVGrid and LazyHGrid provide adaptive layouts, adjusting the number of items per row or column based on screen size.",
@@ -4082,7 +3978,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 5,
+
                 DImage: "",
                 DTitle: "Conditional Modifiers for Device-Specific Adjustments",
                 DDescription: "Using size classes, like .horizontalSizeClass, helps in adapting layouts for compact or regular width, especially useful across iPhone and iPad.",
@@ -4102,7 +3998,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 6,
+
                 DImage: "",
                 DTitle: "Responsive Images with .scaledToFit",
                 DDescription: "Using .scaledToFit() on images ensures they maintain aspect ratio while adjusting to available space, making them responsive across devices.",
@@ -4116,7 +4012,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 7,
+
                 DImage: "",
                 DTitle: "Responsive Text Sizing with .minimumScaleFactor",
                 DDescription: ".minimumScaleFactor() adjusts text size to fit within available space, useful for making long text visible on different screens.",
@@ -4129,7 +4025,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 8,
                 DImage: "",
                 DTitle: "Custom Hit Areas with .contentShape",
                 DDescription: "The .contentShape modifier defines the interactive area of a view without altering its visual layout, improving usability on different screens.",
@@ -4145,7 +4040,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 9,
                 DImage: "",
                 DTitle: "Adaptive Layouts with .layoutPriority",
                 DDescription: "Setting .layoutPriority allows views to expand or compress based on space needs, making it helpful for responsive layouts on various screen sizes.",
@@ -4160,7 +4054,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 10,
                 DImage: "",
                 DTitle: "Automatic Resizing Using .dynamicTypeSize",
                 DDescription: "With .dynamicTypeSize, text adapts to the user’s preferred content size, creating a better experience on devices with varied accessibility settings.",
@@ -4173,7 +4066,7 @@ It operates at a lower level than UIKit animations, providing more control over 
         ]
     ),
     generalContentModel(
-        id: 3,
+        
         mainImage: "",
         mainTitle: "SwiftUI Lifecycle vs. UIKit Lifecycle",
         mainDescription: "Explore the differences between SwiftUI’s declarative lifecycle and UIKit’s traditional, imperative lifecycle, focusing on app initialization, view updates, state management, and resource handling.",
@@ -4181,7 +4074,7 @@ It operates at a lower level than UIKit animations, providing more control over 
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "Lifecycle Structure",
                 DDescription: "SwiftUI apps use a declarative approach to lifecycle, starting with an App protocol, while UIKit relies on a UIApplicationDelegate and view controllers with specific lifecycle methods.",
@@ -4207,7 +4100,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "View Updates and State Management",
                 DDescription: "SwiftUI uses state-driven properties (e.g., @State, @Binding) to trigger automatic view updates, while UIKit requires direct handling of updates in lifecycle methods.",
@@ -4242,7 +4135,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "App Initialization and Scene Management",
                 DDescription: "SwiftUI uses the App protocol with @main to define the app structure and manage scenes, whereas UIKit relies on UIApplicationDelegate and UISceneDelegate for multi-window management.",
@@ -4268,7 +4160,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Handling Background and Foreground Transitions",
                 DDescription: "SwiftUI handles transitions reactively using @Environment's scenePhase, while UIKit relies on UIApplicationDelegate methods for these transitions.",
@@ -4297,7 +4188,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 5,
+
                 DImage: "",
                 DTitle: "Memory Management and Resource Cleanup",
                 DDescription: "SwiftUI handles resource management automatically, whereas UIKit requires developers to manage resources in explicit lifecycle methods like viewDidDisappear or deinit.",
@@ -4328,7 +4219,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 6,
                 DImage: "",
                 DTitle: "Summary",
                 DDescription: "SwiftUI’s lifecycle simplifies state-driven UI updates, reducing manual control, while UIKit offers more explicit lifecycle handling and direct control over resources and transitions.",
@@ -4338,7 +4228,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         ]
     ),
     generalContentModel(
-        id: 11,
         mainImage: "",
         mainTitle: "Understanding the Body Property in SwiftUI",
         mainDescription: "Explore how the body property serves as the core of a SwiftUI view, defining the view's visual structure in a declarative, reactive style.",
@@ -4346,7 +4235,6 @@ It operates at a lower level than UIKit animations, providing more control over 
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "What is the Body Property?",
                 DDescription: "In SwiftUI, the `body` property defines the structure and content of a view. It’s a computed property that returns a view hierarchy, which SwiftUI uses to render the UI elements displayed on screen. Every custom SwiftUI view must conform to the `View` protocol and provide a `body` property.",
@@ -4362,7 +4250,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Declarative Syntax and Reactive Updates",
                 DDescription: "SwiftUI’s `body` is written declaratively, allowing developers to specify what the UI should look like rather than how to build it. Any changes in state automatically trigger SwiftUI to re-evaluate the `body` property, updating only the views that depend on the changed state, enabling reactive UI updates.",
@@ -4385,7 +4272,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Return Type and View Composition",
                 DDescription: "The `body` property has a `some View` return type, meaning it can return any view type that conforms to the `View` protocol. SwiftUI uses this flexibility to compose complex views by combining basic views like Text, Image, VStack, and HStack, building layered UI hierarchies.",
@@ -4409,7 +4295,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Conditional and Dynamic Views",
                 DDescription: "Using conditional statements within the `body` property, SwiftUI views can dynamically change based on state or environment values. This capability is useful for building adaptive UIs that respond to user interaction or device conditions.",
@@ -4435,7 +4320,7 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 5,
+                
                 DImage: "",
                 DTitle: "Re-evaluation and Efficient Rendering",
                 DDescription: "SwiftUI re-evaluates the `body` property whenever the state changes. However, it optimizes rendering by only updating parts of the view hierarchy affected by those changes, making the `body` property an efficient way to describe the UI without unnecessary re-renders.",
@@ -4459,7 +4344,6 @@ It operates at a lower level than UIKit animations, providing more control over 
                 """
             ),
             DescriptionView(
-                id: 6,
                 DImage: "",
                 DTitle: "Summary",
                 DDescription: "The `body` property in SwiftUI serves as the blueprint for each view, using a declarative syntax to define structure and state-driven updates. It promotes a clean, efficient approach to UI design and enables responsive, reactive layouts with minimal code.",
@@ -4509,7 +4393,6 @@ It operates at a lower level than UIKit animations, providing more control over 
 ]
 
 let dim = generalContentModel(
-    id: 18,
     mainImage: "",
     mainTitle: " ",
     mainDescription: "T",
@@ -4517,7 +4400,6 @@ let dim = generalContentModel(
     technology: "SwiftUI",
     viewComponentDescription: [
         DescriptionView(
-            id: 1,
             DImage: "",
             DTitle: "",
             DDescription: "",
@@ -4557,27 +4439,27 @@ struct interviewQuestionSwiftTestDuplicate : View {
     var body: some View {
         VStack{
             Button("Check Duplicate"){
-                checkDuplicate()
+//                checkDuplicate()
             }
         }
     }
-    func checkDuplicate(data: [generalContentModel] = UIKITQuestionArray) {
-        var seenIds = Set<Int>() // Use a Set to efficiently track seen IDs
-        
-        for item in data {
-            if seenIds.contains(item.id) {
-                print("##################### Duplicate ################")
-                print("Duplicate id : \(item.id)")
-                print("Title One : \(item.mainTitle)")
-                // You can access the previous title by iterating through `data` or by using a dictionary if you need to store all titles.
-                print("Title Two :  (Previous Title)") //  Here you'll need to get the previous title using a dictionary or loop.
-                print("################################################")
-            } else {
-                print("Completed id \(item.id), titile \(item.mainTitle)")
-                seenIds.insert(item.id)
-            }
-        }
-    }
+//    func checkDuplicate(data: [generalContentModel] = UIKITQuestionArray) {
+//        var seenIds = Set<Int>() // Use a Set to efficiently track seen IDs
+//        
+//        for item in data {
+//            if seenIds.contains(item.id) {
+//                print("##################### Duplicate ################")
+//                print("Duplicate id : \(item.id)")
+//                print("Title One : \(item.mainTitle)")
+//                // You can access the previous title by iterating through `data` or by using a dictionary if you need to store all titles.
+//                print("Title Two :  (Previous Title)") //  Here you'll need to get the previous title using a dictionary or loop.
+//                print("################################################")
+//            } else {
+//                print("Completed id \(item.id), titile \(item.mainTitle)")
+//                seenIds.insert(item.id)
+//            }
+//        }
+//    }
 }
 #Preview{
     interviewQuestionSwiftTestDuplicate()

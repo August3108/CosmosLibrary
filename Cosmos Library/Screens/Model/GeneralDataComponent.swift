@@ -11,7 +11,7 @@ import SwiftUI
 let allComponentArray : [[generalContentModel]] = [customComponentModelArray, UIKITQuestionArray, sensorComponentData]
 
 struct generalContentModel {
-    let id : Int // to loop
+    let id = UUID() // to loop
     let mainImage : String // to show in list
     let mainTitle : String // to show in list
     let mainDescription : String // 2-3 lines description for list
@@ -24,7 +24,7 @@ struct generalContentModel {
 }
 
 struct DescriptionView {
-    let id : Int
+    let id = UUID()
     let DImage : String?
     let DTitle : String
     let DDescription : String

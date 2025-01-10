@@ -52,5 +52,5 @@ struct ComponentListCardView : View {
     }
 }
 #Preview {
-    ComponentListCardView(cardData: generalContentModel(id: 1, mainImage: "customComponent", mainTitle: "Component1", mainDescription: "This is lorem text. you may think its not a lorem text but trust me it's lorem and random. Definately not written by me", keywords: ["Drop Down", "SwiftUI"], technology: "SwiftUI", viewComponentDescription: []))
+    ComponentListCardView(cardData: generalContentModel(mainImage: "customComponent", mainTitle: "Component1", mainDescription: "This is lorem text. you may think its not a lorem text but trust me it's lorem and random. Definately not written by me", keywords: ["Drop Down", "SwiftUI"], technology: "SwiftUI", viewComponentDescription: []))
 }

@@ -11,7 +11,6 @@ import SwiftUI
 let sensorComponentData = [
     
     generalContentModel(
-        id: 1,
         mainImage: "",
         mainTitle: "Implementing Secure Authentication with Face ID/Touch ID and PIN",
         mainDescription: "This tutorial demonstrates how to build a secure authentication system in your iOS app, offering users the choice between Face ID/Touch ID (biometric) and PIN authentication.",
@@ -19,7 +18,6 @@ let sensorComponentData = [
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "1. Using the `LocalAuthentication` Framework",
                 DDescription: "The `LocalAuthentication` framework provided by Apple provides a convenient way to implement secure authentication using device passcodes, Face ID, and Touch ID. It handles the underlying security mechanisms, making your code simpler and more secure.",
@@ -38,7 +36,6 @@ let sensorComponentData = [
                 """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "2. Face ID/Touch ID Authentication",
                 DDescription: "The `evaluatePolicy()` method of `LAContext` is used to trigger the authentication process. You can use the `deviceOwnerAuthentication` policy to check if the user is the owner of the device and authorize access.",
@@ -57,7 +54,6 @@ let sensorComponentData = [
                 """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "3. PIN Authentication Fallback",
                 DDescription: "If the device does not support Face ID/Touch ID or the user opts for the PIN fallback method, you need to provide a way to enter their PIN. You can use a `TextField` with `keyboardType` set to `.numberPad` for this purpose.",
@@ -69,7 +65,6 @@ let sensorComponentData = [
                 """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "4. Handling Authentication Errors",
                 DDescription: "The `evaluatePolicy()` method returns an error if authentication fails. You should handle these errors appropriately, providing feedback to the user and potentially allowing them to retry or choose a different authentication method.",
@@ -131,7 +126,6 @@ let sensorComponentData = [
     ,
     
     generalContentModel(
-        id: 2,
         mainImage: "",
         mainTitle: "Building a Compass with Sensory Feedback in SwiftUI",
         mainDescription: "This tutorial guides you through creating a functional compass in SwiftUI that provides haptic feedback based on compass readings, enhancing the user experience.",
@@ -139,7 +133,6 @@ let sensorComponentData = [
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "1. CoreLocation for Compass Data",
                 DDescription: "The `CoreLocation` framework provides access to device location and heading data. We'll use the `CLLocationManager` to obtain heading updates for our compass.",
@@ -181,7 +174,6 @@ let sensorComponentData = [
                 """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "2. Creating the Compass UI with SwiftUI",
                 DDescription: "We'll build the compass UI using SwiftUI. The main view will consist of a rhombus shape representing the compass card and markers for directions.",
@@ -239,7 +231,6 @@ let sensorComponentData = [
                 """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "3. Implementing Compass Markers",
                 DDescription: "We'll create custom `CompassMarkerView` instances to represent the direction markers on the compass. These markers will rotate based on the heading.",
@@ -308,7 +299,6 @@ let sensorComponentData = [
                 """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "4. Adding Sensory Feedback with `UIImpactFeedbackGenerator`",
                 DDescription: "To enhance the user experience, we'll use the `UIImpactFeedbackGenerator` to provide haptic feedback when the compass heading changes to specific angles.",
@@ -366,7 +356,6 @@ let sensorComponentData = [
                 """
             ),
             DescriptionView(
-                id: 5,
                 DImage: "",
                 DTitle: "5. Complete Compass with Sensory Feedback",
                 DDescription: "Putting it all together, we have a functional compass that updates with device heading and provides haptic feedback for specific compass angles.",

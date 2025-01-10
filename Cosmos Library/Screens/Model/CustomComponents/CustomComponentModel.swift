@@ -10,7 +10,6 @@ import SwiftUI
 
 let customComponentModelArray = [
     generalContentModel(
-        id: 1,
         mainImage: "",
         mainTitle: "Animated Changing Text View in SwiftUI",
         mainDescription: "This guide explains how to build an animated text view that simulates typing effects for different phrases.",
@@ -18,7 +17,6 @@ let customComponentModelArray = [
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "1. Define the AnimatedChangingTextView Struct",
                 DDescription: "Create a struct conforming to View to build the animated text component.",
@@ -35,7 +33,6 @@ let customComponentModelArray = [
     """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "2. Build the View Body",
                 DDescription: "Use an HStack to arrange the fixed part, variable part, and an indicator for animation.",
@@ -58,7 +55,6 @@ let customComponentModelArray = [
     """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "3. Handle Text Editing",
                 DDescription: "Create a function to animate the typing of characters from the variable array.",
@@ -100,7 +96,6 @@ let customComponentModelArray = [
     """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "4. Animate the Indicator",
                 DDescription: "Create a function to toggle the indicator's visibility at regular intervals.",
@@ -115,7 +110,6 @@ let customComponentModelArray = [
     """
             ),
             DescriptionView(
-                id: 5,
                 DImage: "",
                 DTitle: "5. Complete Code Implementation",
                 DDescription: "Here is the complete implementation of the AnimatedChangingTextView.",
@@ -195,7 +189,6 @@ let customComponentModelArray = [
         ]
     ),
     generalContentModel(
-        id: 2,
         mainImage: "",
         mainTitle: "Custom Picker View in SwiftUI",
         mainDescription: "This guide shows how to create a dropdown picker view using a SwiftUI Menu and Picker. In this you can customise how view triggering the picker looks",
@@ -203,7 +196,6 @@ let customComponentModelArray = [
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "1. Define pickerView Struct",
                 DDescription: "Define the main struct `pickerView` that conforms to `View`, with a binding for the selected option and a list of options.",
@@ -218,7 +210,6 @@ let customComponentModelArray = [
     """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "2. Build the Menu for Dropdown",
                 DDescription: "Use SwiftUI's `Menu` to create a dropdown interface. The label shows the currently selected option, and an icon.",
@@ -245,7 +236,6 @@ let customComponentModelArray = [
     """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "3. Explanation of Each Component",
                 DDescription: """
@@ -259,7 +249,6 @@ let customComponentModelArray = [
                 code: ""
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "4. Complete Code Implementation",
                 DDescription: "Below is the complete code for `pickerView`.",
@@ -312,7 +301,6 @@ let customComponentModelArray = [
         ]
     ),
     generalContentModel(
-        id: 3,
         mainImage: "",
         mainTitle: "Custom Chips Component with Balanced Dynamic Rows in SwiftUI",
         mainDescription: "Explanation on creating a custom SwiftUI chips component with dynamically arranged rows based on screen width.",
@@ -320,7 +308,6 @@ let customComponentModelArray = [
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Struct Definition and Bindings",
                 DDescription: "The `productChips` struct defines the chips component, where selected chips are passed as a binding, and all chips are provided as a state variable. `onClick` is used for actions triggered upon chip addition.",
@@ -328,7 +315,6 @@ let customComponentModelArray = [
                 code: ""
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Row Arrangement Logic",
                 DDescription: "The `divideIntoRowsProduct` function arranges chips into rows dynamically based on `availableWidth`, ensuring chips fit within the screen’s width by calculating each chip’s width.",
@@ -336,7 +322,6 @@ let customComponentModelArray = [
                 code: ""
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Chip Removal",
                 DDescription: "The `removeChip` function removes a chip from the selected list by locating it by `id` and removing it from `selectedChips`.",
@@ -344,7 +329,6 @@ let customComponentModelArray = [
                 code: ""
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Button to Add Chips",
                 DDescription: "The '+ Add' button calls `onClick` when tapped, allowing further chips to be selected.",
@@ -352,7 +336,6 @@ let customComponentModelArray = [
                 code: ""
             ),
             DescriptionView(
-                id: 5,
                 DImage: "",
                 DTitle: "Complete Code",
                 DDescription: "The complete code for a custom chip component that arranges chips in rows according to available width and handles selection, removal, and addition of chips.",
@@ -443,7 +426,6 @@ let customComponentModelArray = [
         ]
     ),
     generalContentModel(
-        id: 4,
         mainImage: "",
         mainTitle: "Implementing Dynamic Color Rating View in SwiftUI",
         mainDescription: "Steps to create a custom rating view that adjusts its color and text dynamically based on a fractional rating, blending colors for intermediate values.",
@@ -451,7 +433,7 @@ let customComponentModelArray = [
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+
                 DImage: "",
                 DTitle: "Defining the `ColorRatingView` Structure",
                 DDescription: "The main structure `ColorRatingView` takes a rating and dynamically changes its color based on the score, with color transitioning for fractional values. It also rounds the rating for display.",
@@ -459,7 +441,6 @@ let customComponentModelArray = [
                 code: ""
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Color Blending for Fractional Ratings",
                 DDescription: "The `textColor` function calculates a color based on the rating. It transitions smoothly between two colors based on fractional values using `blendColor`.",
@@ -467,7 +448,6 @@ let customComponentModelArray = [
                 code: ""
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Extension for Color Components and Hex Initialization",
                 DDescription: "An extension for `Color` provides RGB component extraction and a hex initializer to allow color customization using hex values.",
@@ -475,7 +455,6 @@ let customComponentModelArray = [
                 code: ""
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Sample View with Ratings Displayed",
                 DDescription: "The `RatingSystemSample` view demonstrates the `ColorRatingView` with various ratings. The preview shows different colors based on the rating, providing a full overview of the gradient effect.",
@@ -564,7 +543,6 @@ let customComponentModelArray = [
         ]
     ),
     generalContentModel(
-                id: 5,
                 mainImage: "",
                 mainTitle: "Implementing a Search Bar with Delayed Search in SwiftUI",
                 mainDescription: "Learn how to create a search bar in SwiftUI that automatically triggers a search action after a brief delay when the user stops typing, improving user experience by reducing unnecessary searches.",
@@ -572,7 +550,6 @@ let customComponentModelArray = [
                 technology: "SwiftUI",
                 viewComponentDescription: [
                     DescriptionView(
-                        id: 1,
                         DImage: "",
                         DTitle: "Creating the `SearchBar` Structure",
                         DDescription: "Define the `SearchBar` struct, which will hold the UI elements and logic for the search bar. It takes properties like `searchHint`, `delaySecond`, and a binding for the search text (`searchBar`).",
@@ -601,7 +578,6 @@ let customComponentModelArray = [
         """
                     ),
                     DescriptionView(
-                        id: 2,
                         DImage: "",
                         DTitle: "Using `onChange` for Text Changes",
                         DDescription: "The `onChange` modifier is attached to the `searchBar` binding to detect changes in the search text. When the text changes, it triggers the logic to manage the timer.",
@@ -616,7 +592,6 @@ let customComponentModelArray = [
         """
                     ),
                     DescriptionView(
-                        id: 3,
                         DImage: "",
                         DTitle: "Managing the Timer",
                         DDescription: "Inside the `onChange` closure, a timer is created with the specified `delaySecond`. When the timer fires, the `searchAction` closure is executed, triggering the search logic.",
@@ -629,7 +604,6 @@ let customComponentModelArray = [
         """
                     ),
                     DescriptionView(
-                        id: 4,
                         DImage: "",
                         DTitle: "Preview Example",
                         DDescription: "Here's a preview example to test the `SearchBar` functionality. You can replace the `print` statement with your actual search logic.",
@@ -652,7 +626,6 @@ let customComponentModelArray = [
                 ]
     ),
     generalContentModel(
-        id: 6,
         mainImage: "",
         mainTitle: "Implementing a Multi-Select Chip Group in SwiftUI",
         mainDescription: "Learn how to create a flexible and customizable chip group view in SwiftUI that supports both single and multiple selections, allowing users to easily choose from a list of options.",
@@ -660,7 +633,6 @@ let customComponentModelArray = [
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Defining the `ChipsInputStruct`",
                 DDescription: "Create a structure to represent each chip in the group. It will contain an `id` for identification and a `name` for displaying the chip's label.",
@@ -673,7 +645,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Creating the `ChipGroup` View",
                 DDescription: "Define the `ChipGroup` view, which will contain the logic for displaying and managing the chips. It takes a binding for the selected chips (`selectedChips`), an array of chips (`chips`), a flag for allowing multiple selections (`allowMultipleSelection`), and optional parameters for customization.",
@@ -800,7 +771,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Creating a Chip View",
                 DDescription: "Inside the `ChipGroup` view, create a helper function `createChipView` to define the appearance and behavior of each individual chip. This function will handle the selection logic, styling, and tap actions.",
@@ -827,7 +797,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Handling Chip Selection",
                 DDescription: "Implement the `toggleSelection` function within the `ChipGroup` view to manage the selection state of the chips. This function determines how the selected chips are updated based on whether multiple selections are allowed.",
@@ -851,7 +820,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 5,
                 DImage: "",
                 DTitle: "Arranging Chips in Rows",
                 DDescription: "Create the `divideIntoRows` function to arrange the chips into multiple rows, ensuring that they fit within the available width of the screen. This helps maintain a visually appealing layout.",
@@ -883,7 +851,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 6,
                 DImage: "",
                 DTitle: "Splitting Chips into Even Rows",
                 DDescription: "Create the `splitWordsEvenly` function to split the chips into an even number of rows for a more visually appealing layout when the `isSelectMarketView` flag is set to true. This function uses a sorting and bucket-filling approach to distribute chips evenly across rows.",
@@ -905,7 +872,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 7,
                 DImage: "",
                 DTitle: "Calculating Text Width",
                 DDescription: "Create a helper function `calculateTextWidth` to determine the width of each chip's text, which is used in the `divideIntoRows` function to accurately calculate the arrangement of chips within the rows.",
@@ -920,7 +886,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 8,
                 DImage: "",
                 DTitle: "Preview Example",
                 DDescription: "This preview example demonstrates how to use the `ChipGroup` view. It creates a list of `ChipsInputStruct` instances and passes them to the `ChipGroup` along with the necessary configuration options.",
@@ -947,7 +912,6 @@ let customComponentModelArray = [
         ]
     ),
     generalContentModel(
-        id: 7,
         mainImage: "",
         mainTitle: "Playing GIFs in SwiftUI using WKWebView",
         mainDescription: "Learn how to display animated GIFs within your SwiftUI views using the WKWebView framework. This technique provides flexibility for loading and displaying GIFs from your project's resources.",
@@ -955,7 +919,6 @@ let customComponentModelArray = [
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Creating the `GifImage` Structure",
                 DDescription: "Define the `GifImage` struct, which conforms to the `UIViewRepresentable` protocol. This struct will bridge the gap between SwiftUI and the `WKWebView` for displaying the GIF.",
@@ -994,7 +957,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Implementing `makeUIView`",
                 DDescription: "Inside the `GifImage` struct, implement the `makeUIView` function. This function is responsible for creating a `WKWebView` instance, loading the GIF data from your project's resources, and setting up the web view to display the animation.",
@@ -1017,7 +979,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Implementing `updateUIView`",
                 DDescription: "Implement the `updateUIView` function to handle updates to the `GifImage` view. In this case, it simply reloads the `WKWebView` to ensure the animation continues if needed.",
@@ -1029,7 +990,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Using `GifImage` in your SwiftUI View",
                 DDescription: "To use the `GifImage` in your SwiftUI view, simply create an instance of the `GifImage` struct, passing the name of your GIF file as the argument. Make sure your GIF is in a file, not an asset, in your project's resources.",
@@ -1048,7 +1008,6 @@ let customComponentModelArray = [
         ]
     ),
     generalContentModel(
-        id: 8,
         mainImage: "",
         mainTitle: "Displaying Files in SwiftUI using QLPreviewController",
         mainDescription: "Learn how to integrate the `QLPreviewController` from Quick Look into your SwiftUI views to provide a native file preview experience for various file types.",
@@ -1056,7 +1015,6 @@ let customComponentModelArray = [
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Creating the `FilePreview` Structure",
                 DDescription: "Define the `FilePreview` struct, which conforms to the `UIViewRepresentable` protocol. This struct will bridge the gap between SwiftUI and the `QLPreviewController`.",
@@ -1101,7 +1059,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Implementing `makeUIView`",
                 DDescription: "Inside the `FilePreview` struct, implement the `makeUIView` function. This function creates a `QLPreviewController` instance, sets its data source to the coordinator (which handles data retrieval), and returns the preview controller.",
@@ -1115,7 +1072,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Implementing `makeCoordinator`",
                 DDescription: "Implement the `makeCoordinator` function to create a coordinator object that conforms to the `QLPreviewControllerDataSource` protocol. This coordinator will be responsible for providing the file URL to the `QLPreviewController`.",
@@ -1127,7 +1083,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "The Coordinator Class",
                 DDescription: "Define the `Coordinator` class, which conforms to the `QLPreviewControllerDataSource` protocol. This class implements the required methods to provide data to the `QLPreviewController`, such as the number of preview items and the preview item at a given index.",
@@ -1151,7 +1106,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 5,
                 DImage: "",
                 DTitle: "Using `FilePreview` in your SwiftUI View",
                 DDescription: "To use the `FilePreview` in your SwiftUI view, create an instance of the `FilePreview` struct, passing the URL of the file you want to preview. Make sure the file exists and is accessible.",
@@ -1168,7 +1122,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 6,
                 DImage: "",
                 DTitle: "Handling Photo Library Permissions",
                 DDescription: "For previewing files from the photo library, you'll need to request permission from the user. Create a utility class like `PhotoLibraryPermissionManager` to handle the permission request.",
@@ -1199,7 +1152,6 @@ let customComponentModelArray = [
         ]
     ),
     generalContentModel(
-        id: 9,
         mainImage: "",
         mainTitle: "Implementing Autocomplete Functionality in SwiftUI",
         mainDescription: "Learn how to build an autocomplete feature in SwiftUI to enhance user input and provide suggestions as they type. This tutorial covers the basic implementation using a `TextField` and a `List` for suggestions.",
@@ -1207,7 +1159,6 @@ let customComponentModelArray = [
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Creating the `autoComplete` Structure",
                 DDescription: "Define the `autoComplete` struct, which will hold the UI elements and logic for the autocomplete feature. It takes a binding for the search text (`searchText`), an array of suggestions (`suggestions`), and manages the visibility of the suggestion list.",
@@ -1253,7 +1204,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "Using a `TextField` for Input",
                 DDescription: "The `autoComplete` view uses a `TextField` to capture the user's input. The `searchText` binding is connected to the `TextField`, so changes in the text field will update the `searchText` variable.",
@@ -1265,7 +1215,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "Managing the Suggestion List Visibility",
                 DDescription: "The `showLists` state variable controls the visibility of the suggestion list. It's initially set to `true` and is updated using the `onChange` modifier on the `searchText` binding.",
@@ -1285,7 +1234,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 4,
                 DImage: "",
                 DTitle: "Filtering Suggestions",
                 DDescription: "The `List` displays suggestions from the `suggestions` array. It uses `filter` to show only suggestions that match the current search text (case-insensitive).",
@@ -1299,7 +1247,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 5,
                 DImage: "",
                 DTitle: "Handling Tap Gestures",
                 DDescription: "Each suggestion in the `List` has an `onTapGesture` attached. When a suggestion is tapped, the `searchText` is updated with the selected suggestion, and the `clickedListItem` state variable is set to `true` to hide the suggestion list.",
@@ -1313,7 +1260,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 6,
                 DImage: "",
                 DTitle: "Preview Example",
                 DDescription: "Here's a preview example that shows the `autoComplete` view in action. It uses a sample list of suggestions to demonstrate the autocomplete functionality.",
@@ -1334,7 +1280,6 @@ let customComponentModelArray = [
         ]
     ),
     generalContentModel(
-        id: 10,
         mainImage: "",
         mainTitle: "Implementing a Countdown Timer in SwiftUI",
         mainDescription: "Learn how to create a countdown timer in SwiftUI that displays the remaining time and provides the functionality to execute a custom action when the timer reaches zero. This tutorial covers the basics of using `Timer` and state management for the countdown logic.",
@@ -1342,7 +1287,6 @@ let customComponentModelArray = [
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Creating the `CountDownTimer` Structure",
                 DDescription: "Define the `CountDownTimer` struct, which will hold the UI elements and logic for the countdown timer. It takes the initial `timeRemaining` as a state variable and uses a timer to update the remaining time. It also provides an optional closure (`timeReachedZeroAction`) to execute when the timer reaches zero.",
@@ -1412,7 +1356,7 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 2,
+
                 DImage: "",
                 DTitle: "Using a `Timer`",
                 DDescription: "The `CountDownTimer` view uses a `Timer` to update the time remaining. The timer publishes events every second, which are then received by the view's `onReceive` modifier. Inside the `onReceive` closure, the remaining time is calculated and updated based on the elapsed time.",
@@ -1426,7 +1370,7 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "Calculating Remaining Time",
                 DDescription: "The countdown logic calculates the elapsed time since the start time and subtracts it from the initial `timeRemaining`. The `remainingTime` state variable is updated with the new value.",
@@ -1440,7 +1384,7 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "Handling Timer Completion",
                 DDescription: "When the `remainingTime` reaches zero or less, the optional `timeReachedZeroAction` closure is executed, allowing you to trigger custom actions when the timer completes.",
@@ -1452,7 +1396,7 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 5,
+                
                 DImage: "",
                 DTitle: "Formatting the Time Display",
                 DDescription: "The `formattedTime` computed property formats the remaining time into a readable string. It handles displaying hours, minutes, and seconds appropriately based on the remaining time.",
@@ -1471,7 +1415,6 @@ let customComponentModelArray = [
         ]
     ),
     generalContentModel(
-        id: 11,
         mainImage: "",
         mainTitle: "Creating a Custom OTP (One-Time Password) Input View in SwiftUI",
         mainDescription: "Learn how to design a visually appealing and user-friendly OTP input view in SwiftUI. This tutorial covers the implementation of a custom view that displays a series of boxes for entering digits, along with features like input validation and a done button on the keyboard.",
@@ -1479,7 +1422,7 @@ let customComponentModelArray = [
         technology: "SwiftUI",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "Creating the `OTPBoxView` Structure",
                 DDescription: "Define the `OTPBoxView` struct, which will contain the UI elements and logic for the OTP input. It takes a binding for the OTP text (`otpText`), a property for the number of digits (`numberOfDigit`), and an optional closure for handling the completion of the OTP entry (`autoCompleteFunc`).",
@@ -1567,7 +1510,7 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "Using an `HStack` for OTP Boxes",
                 DDescription: "The `OTPBoxView` uses an `HStack` to arrange the individual OTP boxes side by side. This creates the familiar layout of separate boxes for entering each digit of the OTP.",
@@ -1581,7 +1524,7 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "Creating the `OTPTextBox` View",
                 DDescription: "Define a helper function `OTPTextBox` within the `OTPBoxView` to create the individual box view for each digit. This function handles displaying the digit, adding the bottom line, and providing the visual styling.",
@@ -1612,7 +1555,7 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "Using `onChange` for Input Validation",
                 DDescription: "Attach the `onChange` modifier to the `otpText` binding to monitor changes in the OTP input. Inside the `onChange` closure, you can implement logic to filter invalid characters, enforce a maximum length, and trigger actions like `autoCompleteFunc` when the OTP is complete.",
@@ -1632,7 +1575,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 5,
                 DImage: "",
                 DTitle: "Adding a `Done` Button to the Keyboard",
                 DDescription: "Use the `toolbar` modifier to add a custom `Done` button to the keyboard. This allows the user to dismiss the keyboard after entering the OTP.",
@@ -1648,7 +1590,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 6,
                 DImage: "",
                 DTitle: "Using the `limit` Extension for Text Length",
                 DDescription: "Create an extension for the `Binding` type (specifically for `String` values) to limit the length of the text field. This helps enforce the maximum number of digits in the OTP input.",
@@ -1668,7 +1609,6 @@ let customComponentModelArray = [
         """
             ),
             DescriptionView(
-                id: 7,
                 DImage: "",
                 DTitle: "Using `OTPBoxView` in your SwiftUI View",
                 DDescription: "To use the `OTPBoxView` in your SwiftUI view, create an instance of the `OTPBoxView` struct, passing a binding for the OTP text, the number of digits, and an optional closure for the autocompletion action.",

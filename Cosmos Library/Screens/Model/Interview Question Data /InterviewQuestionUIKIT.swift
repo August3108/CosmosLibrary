@@ -10,7 +10,6 @@ import SwiftUI
 
 let UIKITQuestionArray = [
     generalContentModel(
-    id: 135,
     mainImage: "",
     mainTitle: "Different ways to dismiss keyboard in UIKit",
     mainDescription: "",
@@ -18,7 +17,6 @@ let UIKITQuestionArray = [
     technology: "UIKit",
     viewComponentDescription: [
                   DescriptionView(
-                      id: 1,
                       DImage: "",
                       DTitle: "Using resignFirstResponder on the Text Field",
                       DDescription: "This is the simplest way to dismiss the keyboard programmatically. Call resignFirstResponder() on the active text field.",
@@ -28,7 +26,6 @@ let UIKITQuestionArray = [
       """
                   ),
                   DescriptionView(
-                      id: 2,
                       DImage: "",
                       DTitle: "End Editing on View",
                       DDescription: "Use endEditing(true) on the parent view to dismiss the keyboard from any active text field within that view.",
@@ -38,7 +35,6 @@ let UIKITQuestionArray = [
       """
                   ),
                   DescriptionView(
-                      id: 3,
                       DImage: "",
                       DTitle: "Tap Gesture on View",
                       DDescription: "Add a tap gesture recognizer to the view, which calls endEditing(true) to dismiss the keyboard when the view is tapped.",
@@ -57,7 +53,6 @@ let UIKITQuestionArray = [
       """
                   ),
                   DescriptionView(
-                      id: 4,
                       DImage: "",
                       DTitle: "UITextFieldDelegate - textFieldShouldReturn",
                       DDescription: "Implement the textFieldShouldReturn method to dismiss the keyboard when the return key is tapped.",
@@ -70,7 +65,6 @@ let UIKITQuestionArray = [
       """
                   ),
                   DescriptionView(
-                      id: 5,
                       DImage: "",
                       DTitle: "NSNotification for Keyboard",
                       DDescription: "Listen for keyboard hide notifications to take actions related to dismissing the keyboard programmatically.",
@@ -91,7 +85,6 @@ let UIKITQuestionArray = [
               ]
           ),
     generalContentModel(
-           id: 72,
            mainImage: "",
            mainTitle: "How do you implement a UICollectionView with a custom cell in UIKit?",
            mainDescription: "",
@@ -99,7 +92,6 @@ let UIKITQuestionArray = [
            technology: "UIKit",
            viewComponentDescription: [
                DescriptionView(
-                   id: 1,
                    DImage: "",
                    DTitle: "Implementing UICollectionView with Custom Cell",
                    DDescription: "This example shows how to set up a UICollectionView with a custom cell using delegate and data source methods.",
@@ -186,7 +178,6 @@ let UIKITQuestionArray = [
                )
            ]
        ), generalContentModel(
-        id: 127,
         mainImage: "",
         mainTitle: "What are layoutMargins, and how do they differ from constraints in UIKit?",
         mainDescription: "",
@@ -194,7 +185,6 @@ let UIKITQuestionArray = [
         technology: "UIKit",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "Understanding layoutMargins and Constraints",
                 DDescription: """
@@ -248,7 +238,6 @@ let UIKITQuestionArray = [
         ]
     ),
     generalContentModel(
-        id: 91,
         mainImage: "",
         mainTitle: "How do you handle the lifecycle of a UIViewController in UIKit?",
         mainDescription: "In UIKit, view controllers are essential for managing a screen of content. They encapsulate the logic for a view and its behavior, allowing developers to control how views appear and respond to user interactions. Each view controller manages a view hierarchy and facilitates transitions between different screens. Understanding the lifecycle of a UIViewController is crucial for efficient resource management, ensuring that views are loaded, updated, and released correctly during the app's execution. This knowledge helps in implementing smooth user experiences and optimizing performance.",
@@ -256,7 +245,6 @@ let UIKITQuestionArray = [
         technology: "UIKit",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
                 DImage: "",
                 DTitle: "init",
                 DDescription: """
@@ -271,7 +259,6 @@ let UIKITQuestionArray = [
     """
             ),
             DescriptionView(
-                id: 2,
                 DImage: "",
                 DTitle: "required init(coder:)",
                 DDescription: """
@@ -285,7 +272,6 @@ let UIKITQuestionArray = [
     """
             ),
             DescriptionView(
-                id: 3,
                 DImage: "",
                 DTitle: "loadView",
                 DDescription: """
@@ -300,7 +286,7 @@ let UIKITQuestionArray = [
     """
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "viewDidLoad",
                 DDescription: """
@@ -315,7 +301,7 @@ let UIKITQuestionArray = [
     """
             ),
             DescriptionView(
-                id: 5,
+                
                 DImage: "",
                 DTitle: "viewWillAppear",
                 DDescription: """
@@ -330,7 +316,7 @@ let UIKITQuestionArray = [
     """
             ),
             DescriptionView(
-                id: 6,
+                
                 DImage: "",
                 DTitle: "viewWillLayoutSubviews",
                 DDescription: """
@@ -345,7 +331,7 @@ let UIKITQuestionArray = [
     """
             ),
             DescriptionView(
-                id: 7,
+                
                 DImage: "",
                 DTitle: "viewDidLayoutSubviews",
                 DDescription: """
@@ -360,7 +346,7 @@ let UIKITQuestionArray = [
     """
             ),
             DescriptionView(
-                id: 8,
+                
                 DImage: "",
                 DTitle: "viewDidAppear",
                 DDescription: """
@@ -375,7 +361,7 @@ let UIKITQuestionArray = [
     """
             ),
             DescriptionView(
-                id: 9,
+                
                 DImage: "",
                 DTitle: "viewWillDisappear",
                 DDescription: """
@@ -390,7 +376,7 @@ let UIKITQuestionArray = [
     """
             ),
             DescriptionView(
-                id: 10,
+                
                 DImage: "",
                 DTitle: "viewDidDisappear",
                 DDescription: """
@@ -405,7 +391,7 @@ let UIKITQuestionArray = [
     """
             ),
             DescriptionView(
-                id: 11,
+                
                 DImage: "",
                 DTitle: "deinit",
                 DDescription: """
@@ -420,7 +406,7 @@ let UIKITQuestionArray = [
             )
         ]
     ), generalContentModel(
-        id: 92,
+        
         mainImage: "",
         mainTitle: "How do you implement pull-to-refresh functionality in a UITableView?",
         mainDescription: "",
@@ -428,7 +414,7 @@ let UIKITQuestionArray = [
         technology: "UIKit",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "Setup UITableView",
                 DDescription: """
@@ -460,7 +446,7 @@ let UIKITQuestionArray = [
     """
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "Adding UIRefreshControl",
                 DDescription: """
@@ -480,7 +466,7 @@ let UIKITQuestionArray = [
     """
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "Implementing the Refresh Method",
                 DDescription: """
@@ -498,7 +484,7 @@ let UIKITQuestionArray = [
     """
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "UITableView Data Source Methods",
                 DDescription: """
@@ -526,7 +512,7 @@ let UIKITQuestionArray = [
         ]
     ),
     generalContentModel(
-        id: 2001,
+        
         mainImage: "",
         mainTitle: "Strong, Weak and Unowned",
         mainDescription: "",
@@ -534,7 +520,7 @@ let UIKITQuestionArray = [
         technology: "UIKit",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "Strong Reference",
                 DDescription: """
@@ -566,7 +552,7 @@ let UIKITQuestionArray = [
     """
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "Weak Reference",
                 DDescription: """
@@ -599,7 +585,7 @@ let UIKITQuestionArray = [
             ),
             
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "Unowned Reference",
                 DDescription: """
@@ -632,7 +618,7 @@ let UIKITQuestionArray = [
             )
         ]
     ),generalContentModel(
-        id: 2002,
+        
         mainImage: "",
         mainTitle: "Memory Management, Leaks",
         mainDescription: "The best shortest way to find memory leak is by using breakpoint. Create a symbollic breakpoint and put UIViewcontroller dealloc method in it. it will trigger breakpoint when its deallocated",
@@ -642,7 +628,7 @@ let UIKITQuestionArray = [
         ]
     ),
     generalContentModel(
-        id: 2003,
+        
         mainImage: "",
         mainTitle: "Understanding Async/Await in Swift",
         mainDescription: "This tutorial explores the async/await syntax in Swift, a powerful feature for simplifying asynchronous code and enhancing your Swift applications.\n in symbol : use the action log message to consol  with --- dealloc @(id)[$arg1 description]@ @(id)[$arg1 title]@",
@@ -650,7 +636,7 @@ let UIKITQuestionArray = [
         technology: "Swift",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "1. Key Concepts",
                 DDescription: "Let's dive into the core ideas behind async/await in Swift.",
@@ -681,7 +667,7 @@ let UIKITQuestionArray = [
                 """
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "2. Example: Fetching Data from an API",
                 DDescription: "Let's see how async/await makes asynchronous API calls more readable and manageable.",
@@ -725,7 +711,7 @@ let UIKITQuestionArray = [
                 """
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "3. Using async/await in View Controllers",
                 DDescription: "Here's how to incorporate async/await into SwiftUI or UIKit view controllers.",
@@ -751,7 +737,7 @@ let UIKITQuestionArray = [
                 """
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "4. Benefits of async/await",
                 DDescription: "Let's highlight the advantages of using async/await in Swift.",
@@ -763,7 +749,7 @@ let UIKITQuestionArray = [
                 """
             ),
             DescriptionView(
-                id: 5,
+                
                 DImage: "",
                 DTitle: "5. Additional async/await Patterns",
                 DDescription: "Explore more advanced async/await techniques.",
@@ -786,7 +772,7 @@ let UIKITQuestionArray = [
                 """
             ),
             DescriptionView(
-                id: 6,
+                
                 DImage: "",
                 DTitle: "6. Summary",
                 DDescription: "Async/await is a powerful tool for working with asynchronous code in Swift, making your code more readable, efficient, and maintainable.",
@@ -798,7 +784,7 @@ let UIKITQuestionArray = [
         ]
     ),
     generalContentModel(
-        id: 1,
+        
         mainImage: "",
         mainTitle: "Understanding Frame and Bounds in UIKit",
         mainDescription: "This tutorial explains the key differences between `frame` and `bounds` properties in UIKit, two fundamental concepts for positioning and sizing views.",
@@ -806,7 +792,7 @@ let UIKITQuestionArray = [
         technology: "UIKit",
         viewComponentDescription: [
             DescriptionView(
-                id: 1,
+                
                 DImage: "",
                 DTitle: "1. Frame",
                 DDescription: "The `frame` property describes the view's location and size relative to its superview's coordinate system.",
@@ -826,7 +812,7 @@ let UIKITQuestionArray = [
                 """
             ),
             DescriptionView(
-                id: 2,
+                
                 DImage: "",
                 DTitle: "2. Bounds",
                 DDescription: "The `bounds` property describes the view's location and size in its own coordinate system (not its superview's).",
@@ -845,7 +831,7 @@ let UIKITQuestionArray = [
                 """
             ),
             DescriptionView(
-                id: 3,
+                
                 DImage: "",
                 DTitle: "3. Key Differences",
                 DDescription: "Let's summarize the key differences between `frame` and `bounds`.",
@@ -869,7 +855,7 @@ let UIKITQuestionArray = [
                 """
             ),
             DescriptionView(
-                id: 4,
+                
                 DImage: "",
                 DTitle: "4. Example: Modifying `bounds.origin`",
                 DDescription: "This example demonstrates how changing `bounds.origin` affects the view's content without altering its position in the superview.",
@@ -884,7 +870,7 @@ let UIKITQuestionArray = [
                 """
             ),
             DescriptionView(
-                id: 5,
+                
                 DImage: "",
                 DTitle: "5. Summary",
                 DDescription: "Understanding the distinction between `frame` and `bounds` is crucial when working with transformations, animations, and complex layouts in UIKit.",
@@ -907,7 +893,7 @@ let UIKITQuestionArray = [
     ]
 
 let tempUOKIT = generalContentModel(
-    id: 18,
+    
     mainImage: "",
     mainTitle: " ",
     mainDescription: "T",
@@ -915,7 +901,7 @@ let tempUOKIT = generalContentModel(
     technology: "SwiftUI",
     viewComponentDescription: [
         DescriptionView(
-            id: 1,
+            
             DImage: "",
             DTitle: "",
             DDescription: "",

@@ -81,6 +81,7 @@
 		647A72D02C71F201008EA5D9 /* SOLID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A729C2C71F201008EA5D9 /* SOLID.swift */; };
 		647A72D12C71F201008EA5D9 /* DraggableCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A729E2C71F201008EA5D9 /* DraggableCard.swift */; };
 		647A72D22C71F201008EA5D9 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A729F2C71F201008EA5D9 /* ImageSlider.swift */; };
+		647E27FD2D0878B7007A260B /* Principles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E27FC2D0878B7007A260B /* Principles.swift */; };
 		648B9C9B2CF4C29500341623 /* SwiftuiViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648B9C9A2CF4C29500341623 /* SwiftuiViews.swift */; };
 		648B9C9D2CF4C2B700341623 /* UIHostingUIkitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648B9C9C2CF4C2B700341623 /* UIHostingUIkitView.swift */; };
 		648B9CA02CF4C69A00341623 /* CustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648B9C9F2CF4C69A00341623 /* CustomAnimation.swift */; };
@@ -195,6 +196,7 @@
 		647A729C2C71F201008EA5D9 /* SOLID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOLID.swift; sourceTree = "<group>"; };
 		647A729E2C71F201008EA5D9 /* DraggableCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableCard.swift; sourceTree = "<group>"; };
 		647A729F2C71F201008EA5D9 /* ImageSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
+		647E27FC2D0878B7007A260B /* Principles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Principles.swift; sourceTree = "<group>"; };
 		648B9C9A2CF4C29500341623 /* SwiftuiViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftuiViews.swift; sourceTree = "<group>"; };
 		648B9C9C2CF4C2B700341623 /* UIHostingUIkitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHostingUIkitView.swift; sourceTree = "<group>"; };
 		648B9C9F2CF4C69A00341623 /* CustomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimation.swift; sourceTree = "<group>"; };
@@ -457,20 +459,12 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		647A72822C71F201008EA5D9 /* SystemComponents */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SystemComponents;
-			sourceTree = "<group>";
-		};
 		647A72842C71F201008EA5D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				64D136DD2CCF2A9D00322DD2 /* Interview Question Data  */,
 				647A727F2C71F201008EA5D9 /* CustomComponents */,
 				647A72812C71F201008EA5D9 /* Profile */,
-				647A72822C71F201008EA5D9 /* SystemComponents */,
 				647A72832C71F201008EA5D9 /* GeneralDataComponent.swift */,
 			);
 			path = Model;
@@ -606,6 +600,7 @@
 				64D136DE2CCF2AE700322DD2 /* InterviewQuestionData.swift */,
 				6441CC492CCFCAA1007210B9 /* InterviewQuestionUIKIT.swift */,
 				64EF891E2CDE1BFA005FBE19 /* SensorComponentData.swift */,
+				647E27FC2D0878B7007A260B /* Principles.swift */,
 			);
 			path = "Interview Question Data ";
 			sourceTree = "<group>";
@@ -814,6 +809,7 @@
 				647A72B82C71F201008EA5D9 /* BalancedChips.swift in Sources */,
 				647A72B32C71F201008EA5D9 /* 20.Custom Gesture.swift in Sources */,
 				647A72BE2C71F201008EA5D9 /* Modifiers.swift in Sources */,
+				647E27FD2D0878B7007A260B /* Principles.swift in Sources */,
 				647A72BC2C71F201008EA5D9 /* AppConstant.swift in Sources */,
 				648C37562CDCEFF8005A1C76 /* BiometricAuth.swift in Sources */,
 				648B9C9D2CF4C2B700341623 /* UIHostingUIkitView.swift in Sources */,
