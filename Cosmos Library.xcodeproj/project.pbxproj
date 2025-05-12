@@ -10,6 +10,7 @@
 		640248F22CDF2B5000EF83A4 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640248F12CDF2B5000EF83A4 /* AppIntent.swift */; };
 		640686742CDDD03A002B605C /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640686732CDDD03A002B605C /* Accelerometer.swift */; };
 		640686762CDDDA4E002B605C /* Compass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640686752CDDDA4E002B605C /* Compass.swift */; };
+		640BAFC32D548FC7007443DF /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640BAFC22D548FC7007443DF /* WebView.swift */; };
 		6438D36E2CCA7F9D008FBB33 /* ContentViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6438D36D2CCA7F9D008FBB33 /* ContentViewRenderer.swift */; };
 		6441CC4A2CCFCAA1007210B9 /* InterviewQuestionUIKIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6441CC492CCFCAA1007210B9 /* InterviewQuestionUIKIT.swift */; };
 		6441CC4C2CCFDF92007210B9 /* CustomComponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6441CC4B2CCFDF92007210B9 /* CustomComponentModel.swift */; };
@@ -97,6 +98,7 @@
 		64D9A4462CD6451700315CD3 /* AnimatedCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9A4452CD6451700315CD3 /* AnimatedCheckBox.swift */; };
 		64DC7C342CD3F19900FBA7CB /* birdGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 64DC7C332CD3F19900FBA7CB /* birdGif.gif */; };
 		64E363B92CB6911C0039F868 /* shakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E363B82CB6911C0039F868 /* shakeView.swift */; };
+		64E88E272DB9FE6000D5BC04 /* smaple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E88E262DB9FE6000D5BC04 /* smaple.swift */; };
 		64EF891D2CDE1750005FBE19 /* CoreGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EF891C2CDE1750005FBE19 /* CoreGraphics.swift */; };
 		64EF891F2CDE1BFA005FBE19 /* SensorComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EF891E2CDE1BFA005FBE19 /* SensorComponentData.swift */; };
 /* End PBXBuildFile section */
@@ -122,6 +124,7 @@
 		640248F12CDF2B5000EF83A4 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		640686732CDDD03A002B605C /* Accelerometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accelerometer.swift; sourceTree = "<group>"; };
 		640686752CDDDA4E002B605C /* Compass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compass.swift; sourceTree = "<group>"; };
+		640BAFC22D548FC7007443DF /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		6438D36D2CCA7F9D008FBB33 /* ContentViewRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRenderer.swift; sourceTree = "<group>"; };
 		6441CC492CCFCAA1007210B9 /* InterviewQuestionUIKIT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewQuestionUIKIT.swift; sourceTree = "<group>"; };
 		6441CC4B2CCFDF92007210B9 /* CustomComponentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomComponentModel.swift; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 		64D9A4452CD6451700315CD3 /* AnimatedCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedCheckBox.swift; sourceTree = "<group>"; };
 		64DC7C332CD3F19900FBA7CB /* birdGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = birdGif.gif; sourceTree = "<group>"; };
 		64E363B82CB6911C0039F868 /* shakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shakeView.swift; sourceTree = "<group>"; };
+		64E88E262DB9FE6000D5BC04 /* smaple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smaple.swift; sourceTree = "<group>"; };
 		64EF891C2CDE1750005FBE19 /* CoreGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphics.swift; sourceTree = "<group>"; };
 		64EF891E2CDE1BFA005FBE19 /* SensorComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorComponentData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,6 +245,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		640BAFC12D548FB6007443DF /* ReusableScreens */ = {
+			isa = PBXGroup;
+			children = (
+				640BAFC22D548FC7007443DF /* WebView.swift */,
+			);
+			path = ReusableScreens;
+			sourceTree = "<group>";
+		};
 		644338832CDBA01E00B43B7A /* Sensor */ = {
 			isa = PBXGroup;
 			children = (
@@ -507,6 +519,7 @@
 		647A72922C71F201008EA5D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				640BAFC12D548FB6007443DF /* ReusableScreens */,
 				647A728D2C71F201008EA5D9 /* Home */,
 				647A72912C71F201008EA5D9 /* Profile  */,
 			);
@@ -601,6 +614,7 @@
 				6441CC492CCFCAA1007210B9 /* InterviewQuestionUIKIT.swift */,
 				64EF891E2CDE1BFA005FBE19 /* SensorComponentData.swift */,
 				647E27FC2D0878B7007A260B /* Principles.swift */,
+				64E88E262DB9FE6000D5BC04 /* smaple.swift */,
 			);
 			path = "Interview Question Data ";
 			sourceTree = "<group>";
@@ -822,6 +836,8 @@
 				647A72AF2C71F201008EA5D9 /* 16. OutlinedTextBox.swift in Sources */,
 				647A72B22C71F201008EA5D9 /* 19. Upload.swift in Sources */,
 				647A72AD2C71F201008EA5D9 /* 15. GIFImageViewer.swift in Sources */,
+				64E88E272DB9FE6000D5BC04 /* smaple.swift in Sources */,
+				640BAFC32D548FC7007443DF /* WebView.swift in Sources */,
 				647A72C02C71F201008EA5D9 /* ResumeData.swift in Sources */,
 				647A72CF2C71F201008EA5D9 /* FileDownload.swift in Sources */,
 				647A72C72C71F201008EA5D9 /* ListView.swift in Sources */,

@@ -10,8 +10,14 @@ import SwiftUI
 import HighlightSwift
 
 struct TopDetailView: View {
-    @State var data : generalContentModel?
+    @Binding var data : generalContentModel?
     @Environment(\.dismiss) private var dismiss
+    @State var presentWebCompiler : Bool = false
+    @State var shouldShowCompiler : Bool = false
+    @State var isScrollingDown : Bool = false
+    @State private var scrollPosition: CGFloat = 0
+    @State private var previousScrollPosition: CGFloat = 0
+    var changeIndexCallback : ((Int)->Void)?
     var body: some View {
         ZStack{
             VStack{
@@ -32,19 +38,106 @@ struct TopDetailView: View {
                 .foregroundColor(Color.primarycolor)
                 Text("\n")
                     .font(.system(size: 9))
-                ScrollView(showsIndicators: false) {
-                    Text(data?.mainDescription ?? "")
-                        .multilineTextAlignment(.leading)
-                        .font(.system(size: 14))
-                    
-                    if let descriptionArray = data?.viewComponentDescription{
-                        ForEach(descriptionArray, id: \.id){ data in
-                            topDetailViewSubView(cardData: data)
-                                .padding(.vertical,5)
+                ScrollViewReader { proxy in
+                    ScrollView(showsIndicators: false) {
+                        VStack {
+                            Text(data?.mainDescription ?? "")
+                                .multilineTextAlignment(.leading)
+                                .font(.system(size: 14))
+                                .id("top")
+                            
+                            if let descriptionArray = data?.viewComponentDescription {
+                                ForEach(descriptionArray, id: \.id) { data in
+                                    topDetailViewSubView(cardData: data)
+                                        .padding(.vertical, 5)
+                                }
+                            }
+                            HStack{
+                                // empty space to scroll down and see content easily
+                            }.frame(height: 150)
+                            
                         }
+                        .background(GeometryReader { geometry in
+                            Color.clear.onAppear {
+                                scrollPosition = geometry.frame(in: .global).minY
+                            }
+                            .onChange(of: geometry.frame(in: .global).minY) { old,newPosition in
+                                previousScrollPosition = scrollPosition
+                                scrollPosition = newPosition
+                                withAnimation{
+                                    isScrollingDown = scrollPosition < previousScrollPosition
+                                }
+                            }
+                        })
                     }
                 }
             }.padding(.horizontal)
+            if true { //!isScrollingDown{
+                VStack(){
+                    Spacer()
+                    HStack{
+                        HStack {
+                            Button(action: {
+                                changeIndexCallback?(-1)
+                            }) {
+                                VStack{
+                                    Image(systemName: "chevron.left")
+                                    Text("Prev")
+                                }
+                            }
+                            Spacer()
+                            Button(action: {
+                                presentWebCompiler.toggle()
+                            }) {
+                                VStack{
+                                    Image(systemName: "globe")
+                                    Text("Compiler")
+                                }
+                            }
+                            Spacer()
+                            Button(action: {
+                                changeIndexCallback?(1)
+                            }) {
+                                VStack{
+                                    Image(systemName: "chevron.right")
+                                    Text("Next")
+                                }
+                            }
+                        }
+                        .font(.system(size: 16, weight: .semibold))
+                        .padding(.horizontal)
+                        .padding(.vertical, 7)
+                        .background(.ultraThinMaterial)
+                        .foregroundColor(Color.primarycolor)
+                    }
+                }
+            }
+            if presentWebCompiler {
+                VStack{
+                    VStack{
+                        Text(".")
+                            .foregroundColor(.clear)
+                            .frame(height: AppConstants.topSafeAreaHeight)
+                        HStack{
+                            HStack{
+                                Image(systemName: "chevron.left")
+                                Text("Go back")
+                            }.foregroundColor(Color.primarycolor)
+                                .modifier(ViewTapGesture(){
+                                    presentWebCompiler = false
+                                })
+                            .padding()
+                            Spacer()
+                        }.background(.black)
+                        
+                        
+                        if let url = URL(string: "https://nextleap.app/online-compiler/swift-programming"){
+                            WebView(url: url)
+                        }
+                        Spacer()
+                    }
+                }.ignoresSafeArea(.all)
+            }
         }.navigationBarBackButtonHidden(true)
             .onBackSwipe {
                 dismiss()

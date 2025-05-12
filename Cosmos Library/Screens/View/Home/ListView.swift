@@ -13,6 +13,7 @@ struct ListView : View {
     @State var listArray : [generalContentModel]
     @State var title : String
     @State var navigateToDetail : Bool = false
+    @State var navIndex : Int?
     @State var navData : generalContentModel?
     @State var searchString : String = ""
     @State var showListWithEmptySearch : Bool = true
@@ -52,19 +53,21 @@ struct ListView : View {
                     ScrollView(showsIndicators: false) {
                         if searchString != ""{
                             let elements = searchAndRank(listArray: listArray, searchString: searchString)
-                            ForEach(elements, id: \.id){ data in
-                                if  isKeyContained(data: data){
+                            ForEach(0..<elements.count, id: \.self) { index in
+                                let data = listArray[index]
+                                if isKeyContained(data: data) {
                                     ComponentListCardView(cardData: data, viewButtonCallback: {
-                                        handleNavigationToList(data: data)
+                                        handleNavigationToList(index: index)
                                     })
                                     .padding(.vertical,3)
                                 }
                             }
                         }else{
-                            ForEach(listArray, id: \.id){ data in
-                                if  isKeyContained(data: data){
+                            ForEach(0..<listArray.count, id: \.self) { index in
+                                let data = listArray[index]
+                                if isKeyContained(data: data) {
                                     ComponentListCardView(cardData: data, viewButtonCallback: {
-                                        handleNavigationToList(data: data)
+                                        handleNavigationToList(index: index)
                                     })
                                     .padding(.vertical,3)
                                 }
@@ -78,15 +81,29 @@ struct ListView : View {
                 }
         }.navigationBarBackButtonHidden(true)
             .navigationDestination(isPresented: $navigateToDetail) {
-                TopDetailView(data: navData)
+                if let navData = navData {
+                    TopDetailView(data: $navData, changeIndexCallback: { ind in
+                        if navIndex == 0, ind == -1 {
+                            return
+                        }
+                        navIndex = (navIndex ?? 0) + ind
+                        if navIndex ?? 0 >= listArray.count {
+                            return
+                        }
+                        
+                        self.navData = listArray[navIndex ?? 0]
+                        
+                    })
+                }
               }
             .onBackSwipe {
                 dismiss()
             }
     }
     
-    func handleNavigationToList(data : generalContentModel){
-        navData = data
+    func handleNavigationToList(index : Int){
+        navIndex = index
+        navData = listArray[index]
         navigateToDetail = true
     }
     func isKeyContained(data: generalContentModel) -> Bool {

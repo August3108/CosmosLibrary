@@ -113,28 +113,48 @@ struct HomeView : View {
                             })
                         }
                         .padding(.vertical)
-                        
-                        homeCategoryCardView(
-                            name: "SwiftUI Interview Question",
-                            lightGradient: LinearGradient(
-                                stops: [
-                                    Gradient.Stop(color: Color.green.opacity(0.6), location: 0.0),
-                                    Gradient.Stop(color: Color.green, location: 1.0)
-                                ],
-                                startPoint: .top,
-                                endPoint: .bottom
-                            ),
-                            darkGradient: LinearGradient(
-                                colors: [Color.green.opacity(0.7), Color.green.opacity(0.9)],
-                                startPoint: .top,
-                                endPoint: .bottom
+                        HStack{
+                            homeCategoryCardView(
+                                name: "SwiftUI Interview Question",
+                                lightGradient: LinearGradient(
+                                    stops: [
+                                        Gradient.Stop(color: Color.green.opacity(0.6), location: 0.0),
+                                        Gradient.Stop(color: Color.green, location: 1.0)
+                                    ],
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                                ),
+                                darkGradient: LinearGradient(
+                                    colors: [Color.green.opacity(0.7), Color.green.opacity(0.9)],
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                                )
                             )
-                        )
-                        .modifier(ViewTapGesture {
-                            handleNavigationToList(title: "SwiftUI Interview Question", listArray: interviewQuestionDataArray)
-                        })
-                        .padding(.vertical)
-                        
+                            .modifier(ViewTapGesture {
+                                handleNavigationToList(title: "SwiftUI Interview Question", listArray: interviewQuestionDataArray)
+                            })
+                            .padding(.vertical)
+                            homeCategoryCardView(
+                                name: "Swift Language Interview Question",
+                                lightGradient: LinearGradient(
+                                    stops: [
+                                        Gradient.Stop(color: Color.orange.opacity(0.6), location: 0.0),
+                                        Gradient.Stop(color: Color.orange, location: 1.0)
+                                    ],
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                                ),
+                                darkGradient: LinearGradient(
+                                    colors: [Color.orange.opacity(0.7), Color.orange.opacity(0.9)],
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                                )
+                            )
+                            .modifier(ViewTapGesture {
+                                handleNavigationToList(title: "Swift Language Interview Question", listArray: IQSwiftBasics)
+                            })
+                            .padding(.vertical)
+                        }
                         Button("Navigate"){
                             navigateToTest = true
                         }
